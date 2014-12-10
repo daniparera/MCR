@@ -1,0 +1,34 @@
+import os
+
+fi = open('input.txt','r')
+num_lines = sum(1 for line in fi) # get number of lines
+fi.seek(0, 0)
+
+fo = open('output.txt','w')
+
+rl = '12'
+rlgp = '99'
+
+
+idioms = ['eng-30', 'cat-30', 'eus-30', 'glg-30' , 'spa-30']
+
+for lng in idioms:
+
+	c_last = 0
+	fo.write('INSERT INTO `wei_'+lng+'_relation` (`relation`, `sourceSynset`, `sourcePos`, `targetSynset`, `targetPos`, `csco`, `method`, `version`, `wnSource`) VALUES \n')
+	for line in fi:
+
+		x, y = line.rstrip().split('#')
+		trash, a = x.rstrip().split('-')
+		trash, b = y.rstrip().split('-')
+
+		fo.write('('+rl+', \''+lng+'-'+x+'\', \''+a+'\', \''+lng+'-'+y+'\', \''+b+'\', '+rlgp+', \'mn\', \'1\', \''+lng+'\')')
+		if (c_last<num_lines-1): fo.write(',\n') # write ',' in every line except for last
+
+		c_last += 1
+
+	fo.write(';\n\n') # last ends with ';'
+	fi.seek(0, 0)
+
+fo.close()
+fi.close()
