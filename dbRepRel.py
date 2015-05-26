@@ -6,7 +6,7 @@ parserarg = argparse.ArgumentParser(
      prog='dbRepRel',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         get score for an imput text and input keyword
+         check repeated relations in MCR
          --------------------------------
 
              example of use $python3 %(prog)s --host host --user user --pwd password --db database [[--debug --name --select]]
