@@ -10,7 +10,7 @@ import os, subprocess
 import textwrap, argparse
 
 parserarg = argparse.ArgumentParser(
-     prog='dbRepRel',
+     prog='ponderate',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
          calculate ponderated vectors
