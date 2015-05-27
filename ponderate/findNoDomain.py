@@ -1,13 +1,15 @@
 #!/usr/bin/python
 
+# deprecated version, with threshold variation loop no assigned domain synsets exists
+
 import re
 import textwrap, argparse
 
 parserarg = argparse.ArgumentParser(
-     prog='find',
+     prog='findNoDomain',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         find information in ponderated result file
+         find synsets without assigned domain in ponderated result file
          --------------------------------
              example of use $python3 %(prog)s --file res.txt [[--debug]]
          '''))
@@ -21,7 +23,7 @@ debug = not(bool(args.debug))
 
 infile = open(args.input_file, 'r')
 
-text = ''.join(infile.splitlines())
+text = ''.join(infile.read().splitlines())
 
 try:
     found = re.findall('(\#+)(.+?)(\#+)', text)
