@@ -4,7 +4,7 @@ import os, subprocess
 import textwrap, argparse
 
 parserarg = argparse.ArgumentParser(
-     prog='ponderateSynset',
+     prog='ponderateSynsetWraped',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
          calculate ponderated vectors for specific synset
