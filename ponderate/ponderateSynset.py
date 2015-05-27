@@ -79,7 +79,7 @@ while result == "":
 
 	result = subprocess.check_output(cmd, shell=True)
 
-if debug: sys.stderr.write("\tThreshold: "+str(threshold)+"\n")
+if debug: sys.stderr.write("\tThreshold: "+str(threshold)+"\n\n")
 
 acc_dom = ''
 
