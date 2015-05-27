@@ -63,8 +63,7 @@ result = subprocess.check_output(cmd, shell=True)
 w, wn = result.split(" ")
 wn = wn.strip()
 
-if debug: sys.stderr.write("\tAcumulated Weight: "+str(w))
-if debug: sys.stderr.write("\tNormalized Acumulated weight: "+str(wn)+"\n")
+if debug: sys.stderr.write("\tAcumulated Weight: "+str(w)+"\n\tNormalized Acumulated weight: "+str(wn)+"\n")
 
 threshold = 0.1
 
@@ -80,7 +79,7 @@ while result == "":
 
 	result = subprocess.check_output(cmd, shell=True)
 
-if debug: sys.stderr.write("\tThreshold: "+str(threshold))
+if debug: sys.stderr.write("\tThreshold: "+str(threshold)+"\n")
 
 acc_dom = ''
 
@@ -88,22 +87,22 @@ for res_lin in result.splitlines()[:-1]:
 
 	dom, synset, aw, dw, sup, val = res_lin.split(" ")
 
-	if debug: sys.stderr.write("\tDomain: "+dom)
-	if debug: sys.stderr.write("\tSynset: "+synset)
-	if debug: sys.stderr.write("\tAcumulated Weight: "+str(aw))
-	if debug: sys.stderr.write("\tDomain Weight: "+str(dw))
-	if debug: sys.stderr.write("\tSupport: "+str(sup))
-	if debug: sys.stderr.write("\tValue: "+str(val)+"\n")
+	if debug: sys.stderr.write("\tDomain: "+dom+"\n")
+	if debug: sys.stderr.write("\tSynset: "+synset+"\n")
+	if debug: sys.stderr.write("\tAcumulated Weight: "+str(aw)+"\n")
+	if debug: sys.stderr.write("\tDomain Weight: "+str(dw)+"\n")
+	if debug: sys.stderr.write("\tSupport: "+str(sup)+"\n")
+	if debug: sys.stderr.write("\tValue: "+str(val)+"\n\n")
 	acc_dom = acc_dom + dom.split('.')[0]+"#"
 
 dom, synset, aw, dw, sup, val = result.splitlines()[-1].split(" ")
 
-if debug: sys.stderr.write("\tDomain: "+dom)
-if debug: sys.stderr.write("\tSynset: "+synset)
-if debug: sys.stderr.write("\tAcumulated Weight: "+str(aw))
-if debug: sys.stderr.write("\tDomain Weight: "+str(dw))
-if debug: sys.stderr.write("\tSupport: "+str(sup))
-if debug: sys.stderr.write("\tValue: "+str(val)+"\n")
+if debug: sys.stderr.write("\tDomain: "+dom+"\n")
+if debug: sys.stderr.write("\tSynset: "+synset+"\n")
+if debug: sys.stderr.write("\tAcumulated Weight: "+str(aw)+"\n")
+if debug: sys.stderr.write("\tDomain Weight: "+str(dw)+"\n")
+if debug: sys.stderr.write("\tSupport: "+str(sup)+"\n")
+if debug: sys.stderr.write("\tValue: "+str(val)+"\n\n")
 
 acc_dom = acc_dom + dom.split('.')[0]
 
