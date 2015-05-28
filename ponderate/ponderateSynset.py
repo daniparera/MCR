@@ -26,16 +26,23 @@ syn = args.synset
 
 ########### Get information about Synset ############################################
 
-cmd = "fgrep "+syn+" wei_eng-30_variant.tsv | nawk '{print $1$2}'"
+cmd = "fgrep "+syn+" wei_eng-30_variant.tsv | nawk '{print $1,$2}'"
 if debug: sys.stderr.write("\tCMD: "+cmd+"\n")
 
 tmp = subprocess.check_output(cmd, shell=True)
-var = ''
+variants = ''
 
-for aux in tmp.splitlines():
-	var = var + aux + "/"
+for variant in tmp.splitlines()[:-1]:
 
-if debug: sys.stderr.write("Synset: "+syn+" -> "+var)
+	aux = variant.split()
+	variants = variants + aux[0] + "_" + aux[1] + "/"
+
+variant = tmp.splitlines()[-1]
+aux = variant.split()
+
+variants = variants + aux[0] + "_" + aux[1]
+
+if debug: sys.stderr.write("Synset: "+syn+" -> "+variants)
 	
 ########### Get accumulated weight ############################################
 
