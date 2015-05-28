@@ -23,7 +23,7 @@ else:		deb=""
 
 syn = args.synset
 
-cmd = "python ponderacioSynset.py --synset "+syn+" "+deb
+cmd = "python ponderateSynset.py --synset "+syn+" "+deb
 
 result = subprocess.check_output(cmd, shell=True).strip()
 
