@@ -57,8 +57,9 @@ def select_rel(n):
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
 #db = pymysql.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
+#cur = db.cursor(MySQLdb.cursors.DictCursor) 
+#cur = db.cursor(pymysql.cursors.DictCursor) 
 
-cur = db.cursor(MySQLdb.cursors.DictCursor) 
 cur.execute("select * FROM wei_languages")
 rows = cur.fetchall()
 
@@ -98,7 +99,7 @@ for lang in languages:
 
 	for synset in synsets:
 
-		cmd = "python ponderacioSynset.py --synset "+synset[0]+" "+deb
+		cmd = "python ponderateSynset.py --synset "+synset[0]+" "+deb
 
 		result = subprocess.check_output(cmd, shell=True).strip()
 
