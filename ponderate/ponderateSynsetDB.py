@@ -2,7 +2,10 @@
 
 import textwrap, argparse
 import os, sys, subprocess
-import MySQLdb
+
+#use one of them
+#import MySQLdb
+#import pymysql
 
 parserarg = argparse.ArgumentParser(
      prog='ponderateSynsetDB',
@@ -51,7 +54,10 @@ def select_rel(n):
 	if (n == 70): return '<'
 	return str(n)
 
-db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db, port=80) 
+#choose one of them
+#db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
+#db = pymysql.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
+
 cur = db.cursor(MySQLdb.cursors.DictCursor) 
 cur.execute("select * FROM wei_languages")
 rows = cur.fetchall()
