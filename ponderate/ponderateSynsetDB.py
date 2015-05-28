@@ -72,8 +72,8 @@ rows = cur.fetchall()
 # we build lists of file_outputs.
 languages = []
 for row in rows: languages.append(row["code"])
-print languages
-print languages[1]
+if debug: print languages
+if debug: print languages[1]
 
 cmd = "python infoVariantSynset.py --synset "+syn+" "+deb
 result_var = subprocess.check_output(cmd, shell=True).strip()
