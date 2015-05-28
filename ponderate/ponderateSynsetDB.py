@@ -2,10 +2,10 @@
 
 import textwrap, argparse
 import os, sys, subprocess
+import pymysql
 
-#use one of them
+#can use this also
 #import MySQLdb
-#import pymysql
 
 parserarg = argparse.ArgumentParser(
      prog='ponderateSynsetDB',
@@ -13,7 +13,7 @@ parserarg = argparse.ArgumentParser(
      description=textwrap.dedent('''\
          calculate ponderated vectors for synset in mcr database
          --------------------------------
-             example of use $python3 %(prog)s --synset synset --host host --user user --pwd password --db database [[--debug]]
+             example of use $python3 %(prog)s --synset synset --host host --user user --pwd password --db database [[--debug --variant --relinfo]]
          '''))
 
 parserarg.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
@@ -21,7 +21,9 @@ parserarg.add_argument('--user', dest='user_db', required=True, type=str , help=
 parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
 parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
-parserarg.add_argument('--debug', action='store_false', default='TRUE', help='to show aditional information')
+parserarg.add_argument('--debug', action='store_false', default='TRUE', help='to show debug information')
+parserarg.add_argument('--variant', action='store_false', default='TRUE', help='to show variant information')
+parserarg.add_argument('--relinfo', action='store_false', default='TRUE', help='to show additional relation information')
 parserarg.add_argument('--synset', dest='synset', required=True, default='', type=str , help='input synsets (required)')
 
 args = parserarg.parse_args()
@@ -29,6 +31,9 @@ args = parserarg.parse_args()
 debug = not(bool(args.debug))
 if debug:	deb="--debug"
 else:		deb=""
+
+variant = not(bool(args.variant))
+relinfo = not(bool(args.relinfo))
 
 syn = args.synset
 
@@ -56,9 +61,10 @@ def select_rel(n):
 
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
-#db = pymysql.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
 #cur = db.cursor(MySQLdb.cursors.DictCursor) 
-#cur = db.cursor(pymysql.cursors.DictCursor) 
+
+db = pymysql.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
+cur = db.cursor(pymysql.cursors.DictCursor) 
 
 cur.execute("select * FROM wei_languages")
 rows = cur.fetchall()
@@ -67,8 +73,12 @@ rows = cur.fetchall()
 languages = []
 for row in rows: languages.append(row["code"])
 print languages
-
 print languages[1]
+
+cmd = "python infoVariantSynset.py --synset "+syn+" "+deb
+result_var = subprocess.check_output(cmd, shell=True).strip()
+
+if variant: print "Variants: "+result_var
 
 acc_delete = ''
 acc_names = ''
@@ -78,15 +88,25 @@ languages = [languages[1]] ## Only second language, english, comment this line t
 for lang in languages:
 
 	synsets = []
-	if debug: occ = 0
+
 
 	cur.execute("SELECT * FROM `wei_"+lang+"_relation` WHERE `sourceSynset` LIKE '"+lang+"-"+syn+"'")
 	rows = cur.fetchall()
 
 	for row in rows:
 
-		synsets.append([row['targetSynset'].replace(lang+"-", ""),row['relation']])
-		if debug: occ = occ + 1
+		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+syn+"'")
+		rows_dom = cur.fetchall()
+
+		dom = ''
+
+		for row_dom in rows_dom[:-1]:
+
+			dom = dom + row_dom['domain']+"#"
+
+		dom = dom + rows_dom[-1]['domain']
+
+		synsets.append([dom,row['targetSynset'].replace(lang+"-", ""),row['relation']])
 
 
 	cur.execute("SELECT * FROM `wei_"+lang+"_relation` WHERE `targetSynset` LIKE '"+lang+"-"+syn+"'")
@@ -94,18 +114,32 @@ for lang in languages:
 
 	for row in rows:
 
-		synsets.append([row['sourceSynset'].replace(lang+"-", ""),row['relation']])
-		if debug: occ = occ + 1
+		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+syn+"'")
+		rows_dom = cur.fetchall()
+
+		dom = ''
+
+		for row_dom in rows_dom[:-1]:
+
+			dom = dom + row_dom['domain']+"#"
+
+		dom = dom + rows_dom[-1]['domain']
+
+		synsets.append([dom,row['sourceSynset'].replace(lang+"-", ""),row['relation']])
+
 
 	for synset in synsets:
 
-		cmd = "python ponderateSynset.py --synset "+synset[0]+" "+deb
+		cmd = "python ponderateSynset.py --synset "+synset[1]+" "+deb
+		result_pond = subprocess.check_output(cmd, shell=True).strip()
 
-		result = subprocess.check_output(cmd, shell=True).strip()
+		cmd = "python infoVariantSynset.py --synset "+synset[1]
+		result_var = subprocess.check_output(cmd, shell=True).strip()
 
 		print "++++++++++++++++++++++"
 
-		print result+"$"+synset[0]+"$"+str(synset[1])
+		print synset[0]+"$"+result_pond
 
-if debug: sys.stderr.write("SYN LEN : "+str(len(synsets))+"\n")
-if debug: sys.stderr.write("OCC     : "+str(occ)+"\n")
+		if relinfo: print synset[1]+"$"+str(synset[2])
+
+		if variant: print "Variants: "+result_var
