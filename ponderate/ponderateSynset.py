@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# to create file xwndg.txt
+# nawk 'BEGIN{FS="|"}{print $1 ".ppv"}' wei_ili_to_domains.csv | sort | uniq -c | nawk '{print $2,$1}' > xwndg.txt
+
 import os, sys, subprocess
 import textwrap, argparse
 
