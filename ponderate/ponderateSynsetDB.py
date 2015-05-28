@@ -106,7 +106,7 @@ for lang in languages:
 
 		dom = dom + rows_dom[-1]['domain']
 
-		synsets.append([dom,row['targetSynset'].replace(lang+"-", ""),row['relation']])
+		synsets.append([dom,row['targetSynset'].replace(lang+"-", ""),row['relation'],"s"])
 
 
 	cur.execute("SELECT * FROM `wei_"+lang+"_relation` WHERE `targetSynset` LIKE '"+lang+"-"+syn+"'")
@@ -125,7 +125,7 @@ for lang in languages:
 
 		dom = dom + rows_dom[-1]['domain']
 
-		synsets.append([dom,row['sourceSynset'].replace(lang+"-", ""),row['relation']])
+		synsets.append([dom,row['sourceSynset'].replace(lang+"-", ""),row['relation'],"t"])
 
 
 	for synset in synsets:
@@ -140,6 +140,6 @@ for lang in languages:
 
 		print synset[0]+"$"+result_pond
 
-		if relinfo: print synset[1]+"$"+str(synset[2])
+		if relinfo: print synset[1]+"$"+str(synset[2])+"$"+synset[3]
 
 		if variant: print "Variants: "+result_var
