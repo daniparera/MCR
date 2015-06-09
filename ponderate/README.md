@@ -22,7 +22,7 @@ $ python ponderateSynsetRelationsDB.py --host adimen.si.ehu.es --user guest --pw
 to show helpful information
 $ python ponderateSynsetRelationsDB.py --help
 
-# Issues
+# output format
 
 ponderate category $ mcr category
 factotum$atomic_physic
