@@ -25,8 +25,13 @@ $ python ponderateSynsetRelationsDB.py --help
 # output format
 
 ponderate category $ mcr category
+
 factotum$atomic_physic
+
 synset $ relation $ position:source or target
+
 00674270-a$61$s 
+
 variant information of relation
+
 Variants: homemade_1
