@@ -40,14 +40,6 @@ python ponderateSynsetRelationsDB.py --help
 output format
 -------
 
-ponderate category $ mcr category
-
-factotum$atomic_physic
-
-synset $ relation $ position:source or target
-
-00674270-a$61$s 
-
-variant information of relation
-
-Variants: homemade_1
+* factotum$atomic_physic (mcr category $ ponderate category)
+* 00674270-a$61$s (synset $ relation $ position:source or target)
+* Variants: homemade_1 (variant information of relation)
