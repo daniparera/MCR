@@ -22,8 +22,10 @@ parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='p
 parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
 parserarg.add_argument('--debug', action='store_false', default='TRUE', help='to show debug information')
+parserarg.add_argument('--weka', action='store_false', default='TRUE', help='to store in weka format')
 parserarg.add_argument('--variant', action='store_false', default='TRUE', help='to show variant information')
 parserarg.add_argument('--relinfo', action='store_false', default='TRUE', help='to show additional relation information')
+
 parserarg.add_argument('--synset', dest='synset', required=True, default='', type=str , help='input synsets (required)')
 
 args = parserarg.parse_args()
@@ -32,6 +34,7 @@ debug = not(bool(args.debug))
 if debug:	deb="--debug"
 else:		deb=""
 
+weka = not(bool(args.weka))
 variant = not(bool(args.variant))
 relinfo = not(bool(args.relinfo))
 
@@ -82,6 +85,12 @@ if variant: print "Variants: "+result_var
 
 acc_delete = ''
 acc_names = ''
+
+if weka:
+
+	## TODO
+	print "TODO"
+
 
 languages = [languages[1]] ## Only second language, english, comment this line to get all languages.
 
@@ -136,10 +145,16 @@ for lang in languages:
 		cmd = "python infoVariantSynset.py --synset "+synset[1]
 		result_var = subprocess.check_output(cmd, shell=True).strip()
 
-		print "++++++++++++++++++++++"
+		if weka:
 
-		print synset[0]+"$"+result_pond
+			## TODO
+			print synset[0]+"$"+result_pond
+			
+		else:
+			print "++++++++++++++++++++++"
 
-		if relinfo: print synset[1]+"$"+str(synset[2])+"$"+synset[3]
+			print synset[0]+"$"+result_pond
 
-		if variant: print "Variants: "+result_var
+			if relinfo: print synset[1]+"$"+str(synset[2])+"$"+synset[3]
+
+			if variant: print "Variants: "+result_var
