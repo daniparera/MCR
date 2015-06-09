@@ -75,7 +75,7 @@ for row in rows: languages.append(row["code"])
 if debug: print languages
 if debug: print languages[1]
 
-cmd = "python infoVariantSynset.py --synset "+syn+" "+deb
+cmd = "python infoVariantSynset.py --synset "+syn
 result_var = subprocess.check_output(cmd, shell=True).strip()
 
 if variant: print "Variants: "+result_var
