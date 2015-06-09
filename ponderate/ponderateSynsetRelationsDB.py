@@ -88,9 +88,12 @@ acc_names = ''
 
 if weka:
 
-	## TODO
-	print "TODO"
-
+	categories_pond = {}
+	categories_mcr = {}
+	with open("xwndg.txt", "r") as cat_file:
+		for line in cat_file:
+			categories_pond[line.split('.')[0]] = 0
+			categories_mcr[line.split('.')[0]] = 0
 
 languages = [languages[1]] ## Only second language, english, comment this line to get all languages.
 
@@ -136,7 +139,7 @@ for lang in languages:
 
 		synsets.append([dom,row['sourceSynset'].replace(lang+"-", ""),row['relation'],"t"])
 
-
+	# to walk around all the constructed list in step before
 	for synset in synsets:
 
 		cmd = "python ponderateSynset.py --synset "+synset[1]+" "+deb
@@ -148,7 +151,8 @@ for lang in languages:
 		if weka:
 
 			## TODO
-			print synset[0]+"$"+result_pond
+			categories_mcr[synset[0]] = categories_mcr[synset[0]] + 1
+			categories_pond[result_pond] = categories_mcr[result_pond] + 1
 			
 		else:
 			print "++++++++++++++++++++++"
@@ -158,3 +162,7 @@ for lang in languages:
 			if relinfo: print synset[1]+"$"+str(synset[2])+"$"+synset[3]
 
 			if variant: print "Variants: "+result_var
+
+if weka:
+	print categories_mcr
+	print categories_pond
