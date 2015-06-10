@@ -2,6 +2,8 @@
 Ponderate Synset Relations
 =======
 
+This script (ponderateSynsetRelationsDB.py) work as folows. From a synset given recovery the categories that relationated synset's has in mcr and from ponderated categorization formula.
+
 Requirements
 -------
 
