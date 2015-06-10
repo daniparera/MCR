@@ -108,18 +108,17 @@ for lang in languages:
 
 	for row in rows:
 
-		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+syn+"'")
+		rlsyn =  row['targetSynset'].replace(lang+"-", "")
+		rl = row['relation']
+
+		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+rlsyn+"'")
 		rows_dom = cur.fetchall()
 
+		# join domains in a single string separated by "#". Check that query dont return empty set.
 		dom = ''
+		dom = "#".join(x['domain'] for x in rows_dom if x)
 
-		for row_dom in rows_dom[:-1]:
-
-			dom = dom + row_dom['domain']+"#"
-
-		dom = dom + rows_dom[-1]['domain']
-
-		synsets.append([dom,row['targetSynset'].replace(lang+"-", ""),row['relation'],"s"])
+		synsets.append([dom,rlsyn,rl,"s"])
 
 
 	cur.execute("SELECT * FROM `wei_"+lang+"_relation` WHERE `targetSynset` LIKE '"+lang+"-"+syn+"'")
@@ -127,18 +126,17 @@ for lang in languages:
 
 	for row in rows:
 
-		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+syn+"'")
+		rlsyn =  row['sourceSynset'].replace(lang+"-", "")
+		rl = row['relation']
+
+		cur.execute("SELECT * FROM `wei_ili_to_domains` WHERE `iliOffSet` LIKE 'ili-30-"+rlsyn+"'")
 		rows_dom = cur.fetchall()
 
+		# join domains in a single string separated by "#". Check that query dont return empty set.
 		dom = ''
+		dom = "#".join(x['domain'] for x in rows_dom if x)
 
-		for row_dom in rows_dom[:-1]:
-
-			dom = dom + row_dom['domain']+"#"
-
-		dom = dom + rows_dom[-1]['domain']
-
-		synsets.append([dom,row['sourceSynset'].replace(lang+"-", ""),row['relation'],"t"])
+		synsets.append([dom,rlsyn,rl,"t"])
 
 	# to walk around all the constructed list in step before
 	for synset in synsets:
@@ -156,8 +154,10 @@ for lang in languages:
 			if debug: sys.stderr.write(synset[1]+"$"+str(synset[2])+"$"+synset[3]+"\n")
 			if debug: sys.stderr.write("Variants: "+result_var+"\n")
 
-			for cat_mcr in synset[0].split("#"):
-				categories_mcr[cat_mcr] = categories_mcr[cat_mcr] + 1
+			# check that domain field is not empty
+			if synset[0]:
+				for cat_mcr in synset[0].split("#"):
+					categories_mcr[cat_mcr] = categories_mcr[cat_mcr] + 1
 			for cat_pond in result_pond.split("#"):
 				categories_pond[cat_pond] = categories_pond[cat_pond] + 1
 			
@@ -171,9 +171,11 @@ for lang in languages:
 			if variant: print "Variants: "+result_var
 
 if weka:
-	print categories_mcr
-	print categories_pond
 	categories_mcr_ord = OrderedDict(sorted(categories_mcr.items(), key=lambda t: t[0], reverse=False))
 	categories_pond_ord = OrderedDict(sorted(categories_pond.items(), key=lambda t: t[0], reverse=False))
-	print categories_mcr_ord
-	print categories_pond_ord
+
+	categories_mcr_strVal = "#".join(map(str, categories_mcr_ord.values()))
+	categories_pond_strVal = "#".join(map(str, categories_pond_ord.values()))
+
+	print categories_mcr_strVal
+	print categories_pond_strVal
