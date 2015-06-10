@@ -1,5 +1,6 @@
 
-ponderateSynsetRelationsDB.py
+Ponderate Synset Relations
+=======
 
 Requirements
 -------
