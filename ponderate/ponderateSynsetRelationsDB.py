@@ -2,6 +2,7 @@
 
 import textwrap, argparse
 import os, sys, subprocess
+from collections import OrderedDict
 import pymysql
 
 #can use this also
@@ -31,12 +32,12 @@ parserarg.add_argument('--synset', dest='synset', required=True, default='', typ
 args = parserarg.parse_args()
 
 debug = not(bool(args.debug))
-if debug:	deb="--debug"
-else:		deb=""
-
 weka = not(bool(args.weka))
 variant = not(bool(args.variant))
 relinfo = not(bool(args.relinfo))
+
+if debug and not weka:	deb="--debug"
+else:					deb=""
 
 syn = args.synset
 
@@ -150,9 +151,15 @@ for lang in languages:
 
 		if weka:
 
-			## TODO
-			categories_mcr[synset[0]] = categories_mcr[synset[0]] + 1
-			categories_pond[result_pond] = categories_mcr[result_pond] + 1
+			if debug: sys.stderr.write("++++++++++++++++++++++\n")
+			if debug: sys.stderr.write(synset[0]+"$"+result_pond+"\n")
+			if debug: sys.stderr.write(synset[1]+"$"+str(synset[2])+"$"+synset[3]+"\n")
+			if debug: sys.stderr.write("Variants: "+result_var+"\n")
+
+			for cat_mcr in synset[0].split("#"):
+				categories_mcr[cat_mcr] = categories_mcr[cat_mcr] + 1
+			for cat_pond in result_pond.split("#"):
+				categories_pond[cat_pond] = categories_pond[cat_pond] + 1
 			
 		else:
 			print "++++++++++++++++++++++"
@@ -166,3 +173,7 @@ for lang in languages:
 if weka:
 	print categories_mcr
 	print categories_pond
+	categories_mcr_ord = OrderedDict(sorted(categories_mcr.items(), key=lambda t: t[0], reverse=False))
+	categories_pond_ord = OrderedDict(sorted(categories_pond.items(), key=lambda t: t[0], reverse=False))
+	print categories_mcr_ord
+	print categories_pond_ord
