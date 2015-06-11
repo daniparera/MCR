@@ -34,8 +34,6 @@ relinfo = not(bool(args.relinfo))
 
 wek, var, rli, deb = ["", "", "", ""]
 
-for val in enumerate(array)
-
 if weka: wek_str="--weka"	
 if variant: var="--variant"	
 if relinfo: rli="--relinfo"
@@ -86,4 +84,4 @@ for syn in content:
 
 		print "++++++++++++++++++++++"
 
-		print "Syn: "syn+" Pond: "+result_syn+" Dom: "+dom_syn+" Rl: "+result_rl
+		print "Syn: "+syn+" Pond: "+result_syn+" Dom: "+dom_syn+" Rl: "+result_rl
