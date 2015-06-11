@@ -37,7 +37,7 @@ variant = not(bool(args.variant))
 relinfo = not(bool(args.relinfo))
 
 if debug and not weka:	deb="--debug"
-else:					deb=""
+else:			deb=""
 
 syn = args.synset
 
@@ -171,11 +171,13 @@ for lang in languages:
 			if variant: print "Variants: "+result_var
 
 if weka:
+	# order dictionaries by key
 	categories_mcr_ord = OrderedDict(sorted(categories_mcr.items(), key=lambda t: t[0], reverse=False))
 	categories_pond_ord = OrderedDict(sorted(categories_pond.items(), key=lambda t: t[0], reverse=False))
 
+	# convert dictionaries in string
 	categories_mcr_strVal = "#".join(map(str, categories_mcr_ord.values()))
 	categories_pond_strVal = "#".join(map(str, categories_pond_ord.values()))
 
 	print categories_mcr_strVal
-	print categories_pond_strVal
+	print "$"+categories_pond_strVal
