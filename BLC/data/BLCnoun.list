@@ -1,0 +1,649 @@
+00001740-n 03 155 entity
+00002684-n 03 953 object physical_object
+00004475-n 03 134 organism being
+00006484-n 03 134 cell
+00007347-n 03 64 causal_agent cause causal_agency
+00007846-n 03 4792 person individual someone somebody mortal soul
+00015388-n 03 282 animal animate_being beast brute creature fauna
+00017222-n 03 324 plant flora plant_life
+00019128-n 03 185 natural_object
+00019613-n 03 74 substance
+00020090-n 03 221 substance
+00020827-n 03 115 matter
+00021939-n 03 1629 artifact artefact
+00023271-n 03 554 cognition knowledge noesis
+00023773-n 03 43 motivation motive need
+00024264-n 03 379 attribute
+00024720-n 03 1148 state
+00029677-n 03 224 process physical_process
+00030358-n 03 1846 act deed human_action human_activity
+00031264-n 03 454 group grouping
+00031921-n 03 314 relation
+00033020-n 03 1058 communication
+00033615-n 03 206 measure quantity amount
+00077419-n 04 25 acquisition
+00145218-n 04 24 joining connection connexion
+00191142-n 04 720 change
+00209943-n 04 126 termination ending conclusion
+00220522-n 04 21 murder slaying execution
+00235435-n 04 34 beginning start commencement
+00283568-n 04 23 walk walking
+00331950-n 04 103 motion movement move motility
+00351638-n 04 73 decrease diminution reduction step-down
+00363260-n 04 54 increase step-up
+00378985-n 04 23 combination combining compounding
+00383606-n 04 20 separation
+00385791-n 04 23 division
+00391599-n 04 33 removal remotion
+00407535-n 04 1935 activity
+00428270-n 04 101 dancing dance terpsichore saltation
+00488225-n 04 48 card_game cards
+00520257-n 04 46 show
+00523513-n 04 175 sport athletics
+00586262-n 04 130 position post berth office spot billet place situation
+00606370-n 04 48 trade craft
+00624738-n 04 53 exercise exercising physical_exercise physical_exertion workout
+00635850-n 04 38 examination scrutiny
+00657604-n 04 38 medical_care medical_aid
+00661091-n 04 52 therapy
+00671351-n 04 161 operation surgery surgical_operation surgical_procedure surgical_process
+00712225-n 04 23 application coating covering
+00722479-n 04 29 position
+00752431-n 04 20 deception deceit dissembling dissimulation
+00766234-n 04 69 crime offense criminal_offense criminal_offence offence law-breaking
+00780889-n 04 20 larceny theft thievery thieving stealing
+00863513-n 04 31 reflex reflex_response reflex_action instinctive_reflex innate_reflex inborn_reflex unconditioned_reflex physiological_reaction
+00869583-n 04 21 mathematical_process mathematical_operation operation
+00877127-n 04 22 look looking looking_at
+00887081-n 04 27 teaching instruction pedagogy
+00913705-n 04 49 production
+00933420-n 04 26 art artistic_creation artistic_production
+00956485-n 04 96 pitched_battle
+00973077-n 04 44 war warfare
+00981830-n 04 35 intelligence intelligence_activity intelligence_operation
+00986938-n 04 40 fire firing
+01028082-n 04 52 religious_ceremony religious_ritual
+01090446-n 04 127 commerce commercialism mercantilism
+01170962-n 04 20 fight fighting combat scrap
+01173038-n 04 42 blow
+01184814-n 04 45 proceeding legal_proceeding proceedings
+01187810-n 04 20 judgment judgement judicial_decision
+01321854-n 05 26 young_mammal
+01335659-n 05 52 animal_virus
+01342529-n 05 254 animal_order
+01352574-n 05 41 bacteria_genus
+01355326-n 05 69 eubacteria eubacterium true_bacteria
+01388130-n 05 42 protoctist_genus
+01389507-n 05 49 protozoan protozoon
+01397114-n 05 35 alga algae
+01428580-n 05 126 soft-finned_fish malacopterygian
+01429349-n 05 170 fish_family
+01432517-n 05 288 fish_genus
+01471682-n 05 179 vertebrate craniate
+01482330-n 05 39 shark
+01503061-n 05 292 bird
+01504437-n 05 142 bird_family
+01507175-n 05 398 bird_genus
+01525720-n 05 238 oscine oscine_bird
+01605630-n 05 33 hawk
+01626600-n 05 40 amphibian_genus
+01629276-n 05 35 salamander
+01639765-n 05 53 frog toad toad_frog anuran batrachian salientian
+01656813-n 05 45 reptile_family
+01657723-n 05 161 reptile_genus
+01662784-n 05 30 turtle
+01674464-n 05 42 lizard
+01676755-n 05 20 iguanid iguanid_lizard
+01727646-n 05 51 colubrid_snake colubrid
+01745125-n 05 23 elapid elapid_snake
+01759182-n 05 180 arthropod_family
+01762525-n 05 255 arthropod_genus
+01767661-n 05 125 arthropod
+01789740-n 05 26 domestic_fowl fowl poultry
+01846331-n 05 43 duck
+01862557-n 05 114 mammal_family
+01864707-n 05 359 mammal_genus
+01874434-n 05 36 marsupial pouched_mammal
+01886756-n 05 423 placental placental_mammal eutherian eutherian_mammal
+01938850-n 05 36 mollusk_family
+01939598-n 05 44 mollusk_genus
+01942177-n 05 33 gastropod univalve
+01955933-n 05 34 bivalve pelecypod lamellibranch
+02000954-n 05 125 wading_bird wader
+02021795-n 05 74 seabird sea_bird seafowl
+02083346-n 05 33 canine canid
+02084071-n 05 122 dog domestic_dog Canis_familiaris
+02087551-n 05 27 hound hound_dog
+02092468-n 05 37 terrier
+02159955-n 05 385 insect
+02283201-n 05 69 moth
+02309337-n 05 29 caterpillar
+02329401-n 05 138 rodent gnawer
+02374451-n 05 95 horse Equus_caballus
+02394477-n 05 23 even-toed_ungulate artiodactyl artiodactyl_mammal
+02399000-n 05 76 ruminant
+02402425-n 05 29 cattle cows kine oxen Bos_taurus
+02419796-n 05 33 antelope
+02430045-n 05 23 deer cervid
+02441326-n 05 41 musteline_mammal mustelid musteline
+02484473-n 05 21 Old_World_monkey catarrhine
+02512053-n 05 73 fish
+02528163-n 05 26 teleost_fish teleost teleostan
+02552171-n 05 101 spiny-finned_fish acanthopterygian
+02554730-n 05 247 percoid_fish percoid percoidean
+02691156-n 06 33 airplane aeroplane plane
+02716866-n 06 63 antibiotic antibiotic_drug
+02727825-n 06 74 apparatus setup
+02740764-n 06 33 armor_plate armour_plate armor_plating plate_armor plate_armour
+02743547-n 06 59 art fine_art
+02778669-n 06 34 ball
+02784218-n 06 48 band
+02796623-n 06 75 barrier
+02815950-n 06 23 beam
+02818832-n 06 23 bed
+02856463-n 06 31 board
+02858304-n 06 63 boat
+02866578-n 06 35 bomb
+02870092-n 06 23 book volume
+02913152-n 06 292 building edifice
+02954340-n 06 31 cap
+02958343-n 06 39 car auto automobile machine motorcar
+02968473-n 06 24 carriage equipage rig
+03001627-n 06 35 chair
+03045337-n 06 29 cloak
+03051540-n 06 202 clothing article_of_clothing vesture wear wearable habiliment
+03057021-n 06 27 coat
+03082979-n 06 32 computer computing_machine computing_device data_processor electronic_computer information_processing_system
+03091374-n 06 53 connection connexion connector connecter connective
+03094503-n 06 628 container
+03100490-n 06 129 conveyance transport
+03101986-n 06 31 cooking_utensil cookware
+03106110-n 06 53 cord
+03183080-n 06 1693 device
+03236735-n 06 20 dress frock
+03247620-n 06 180 drug
+03265032-n 06 46 edge_tool
+03278248-n 06 68 electronic_equipment
+03294048-n 06 250 equipment
+03309808-n 06 282 fabric cloth material textile
+03323703-n 06 143 fastener fastening holdfast fixing
+03391770-n 06 94 framework
+03405725-n 06 140 furniture piece_of_furniture article_of_furniture
+03417345-n 06 23 garden
+03419014-n 06 189 garment
+03467984-n 06 71 gun
+03485997-n 06 21 handle grip handgrip hold
+03489162-n 06 154 hand_tool
+03497657-n 06 32 hat chapeau lid
+03526198-n 06 32 hole
+03563967-n 06 328 implement
+03589791-n 06 26 jacket
+03600977-n 06 23 joint
+03620052-n 06 25 kitchen_appliance
+03623556-n 06 29 knife
+03636248-n 06 33 lamp
+03665366-n 06 20 light light_source
+03733925-n 06 244 measuring_instrument measuring_system measuring_device
+03736970-n 06 135 mechanical_device
+03739693-n 06 45 medical_instrument
+03740161-n 06 369 medicine medication medicament medicinal_drug
+03791235-n 06 38 motor_vehicle automotive_vehicle
+03828465-n 06 20 nonsteroidal_anti-inflammatory nonsteroidal_anti-inflammatory_drug NSAID
+03872495-n 06 27 pad
+03876519-n 06 24 painting picture
+03895293-n 06 38 passage
+03895585-n 06 25 passageway
+03915437-n 06 26 percussion_instrument percussive_instrument
+03925226-n 06 51 photograph photo exposure picture pic
+03959936-n 06 43 plate
+03961939-n 06 58 platform
+03963982-n 06 36 playing_card
+03988170-n 06 23 post
+04014297-n 06 154 protective_covering protective_cover protection
+04076846-n 06 150 representation
+04096066-n 06 52 road route
+04105893-n 06 195 room
+04108268-n 06 26 rope
+04128837-n 06 27 sailing_vessel sailing_ship
+04157320-n 06 29 sculpture
+04180314-n 06 27 sewing_stitch embroidery_stitch
+04194289-n 06 82 ship
+04199027-n 06 36 shoe
+04202417-n 06 49 shop store
+04334599-n 06 25 street
+04338517-n 06 44 stringed_instrument
+04341686-n 06 753 structure construction
+04377057-n 06 89 system
+04381994-n 06 41 tableware
+04411264-n 06 21 tent collapsible_shelter
+04451818-n 06 93 tool
+04493505-n 06 72 tube tubing
+04511002-n 06 32 university
+04565375-n 06 95 weapon arm weapon_system
+04574999-n 06 38 wheel
+04599396-n 06 20 work piece_of_work
+04602044-n 06 80 workplace work
+04616059-n 07 423 trait
+04623612-n 07 98 disposition temperament
+04723816-n 07 1117 quality
+04743605-n 07 21 similarity
+04916342-n 07 876 property
+04956594-n 07 138 color colour coloring colouring
+05064037-n 07 35 shape form configuration contour conformation
+05074774-n 07 107 position spatial_relation
+05079866-n 07 20 position posture attitude
+05084201-n 07 33 distance
+05138488-n 07 39 value
+05155821-n 07 26 advantage vantage
+05168261-n 07 21 importance
+05174653-n 07 87 right
+05220461-n 08 535 body_part
+05225602-n 08 371 structure anatomical_structure complex_body_part bodily_structure body_structure
+05230603-n 08 28 craniometric_point
+05249636-n 08 38 orifice opening porta
+05250659-n 08 42 duct epithelial_duct canal channel
+05254795-n 08 41 hair
+05256862-n 08 23 hairdo hairstyle hair_style coiffure coif
+05267548-n 08 124 animal_tissue
+05269901-n 08 117 bone os
+05289297-n 08 28 muscle musculus
+05289861-n 08 70 skeletal_muscle striated_muscle
+05328867-n 08 25 exocrine_gland exocrine duct_gland
+05333777-n 08 118 artery arteria arterial_blood_vessel
+05397468-n 08 71 liquid_body_substance bodily_fluid body_fluid humor humour
+05407119-n 08 69 hormone endocrine internal_secretion
+05418717-n 08 191 vein vena venous_blood_vessel
+05426243-n 08 62 membrane tissue_layer
+05436752-n 08 26 gene cistron factor
+05474346-n 08 34 nerve nervus
+05617606-n 09 22 intelligence
+05625879-n 09 34 imaginary_place mythical_place fictitious_place
+05660268-n 09 33 method
+05661996-n 09 58 system system_of_rules
+05701944-n 09 220 basic_cognitive_process
+05726596-n 09 61 arrangement organization organisation system
+05739043-n 09 31 diagnostic_test diagnostic_assay
+05752544-n 09 30 learning acquisition
+05770926-n 09 147 thinking thought thought_process cerebration intellection mentation
+05788149-n 09 25 decision_making deciding
+05809192-n 09 172 content cognitive_content mental_object
+05833840-n 09 364 idea thought
+05839024-n 09 35 kind sort form variety
+05849789-n 09 24 feature characteristic
+05872982-n 09 70 law law_of_nature
+05941423-n 09 108 belief
+05943300-n 09 160 doctrine philosophy philosophical_system school_of_thought ism
+05946687-n 09 100 religion faith religious_belief
+05993844-n 09 37 scientific_theory
+05996646-n 09 93 discipline subject subject_area subject_field field field_of_study study bailiwick
+05999797-n 09 175 science scientific_discipline
+06000644-n 09 48 mathematics math maths
+06037666-n 09 70 biology biological_science
+06043075-n 09 69 medicine medical_specialty
+06090869-n 09 49 physics natural_philosophy
+06158346-n 09 24 philosophy
+06172789-n 09 20 linguistics
+06196584-n 09 41 inclination disposition tendency
+06212839-n 09 51 political_orientation ideology political_theory
+06271778-n 10 29 telecommunication telecom
+06286395-n 10 128 word
+06333653-n 10 47 name
+06339416-n 10 20 title title_of_respect form_of_address
+06351202-n 10 24 orthography writing_system
+06355894-n 10 22 code computer_code
+06362953-n 10 257 writing written_material piece_of_writing
+06377442-n 10 39 poem verse_form
+06387980-n 10 99 text textual_matter
+06394865-n 10 77 book
+06410904-n 10 88 book
+06429590-n 10 67 sacred_text sacred_writing religious_writing religious_text
+06479665-n 10 208 legal_document legal_instrument official_document instrument
+06481320-n 10 90 list listing
+06502378-n 10 40 written_record written_account
+06520944-n 10 31 contract
+06566077-n 10 38 software software_program computer_software software_system software_package package
+06568978-n 10 76 program programme computer_program computer_programme
+06589574-n 10 50 publication
+06598915-n 10 523 message content subject_matter substance
+06613686-n 10 22 movie film picture moving_picture moving-picture_show motion_picture motion-picture_show picture_show pic flick
+06619065-n 10 55 show
+06652242-n 10 44 rule prescript
+06656408-n 10 41 policy
+06722453-n 10 372 statement
+06758225-n 10 20 misrepresentation deceit deception
+06791372-n 10 264 signal signaling sign
+06808720-n 10 33 mathematical_notation
+06814870-n 10 86 musical_notation
+06817782-n 10 21 mark
+06818970-n 10 42 character grapheme graphic_symbol
+06828818-n 10 82 letter letter_of_the_alphabet alphabetic_character
+06841365-n 10 20 punctuation punctuation_mark
+06876309-n 10 32 gesture motion
+06880664-n 10 31 emblem allegory
+06894544-n 10 51 artificial_language
+06906971-n 10 21 Algonquian Algonquin Algonquian_language
+06962600-n 10 33 Latin
+06991980-n 10 31 Bantu Bantoid_language
+07020895-n 10 301 music
+07059255-n 10 34 popular_music popular_music_genre
+07066659-n 10 150 expressive_style style
+07098193-n 10 61 rhetorical_device
+07109196-n 10 52 speech speech_communication spoken_communication spoken_language language voice_communication oral_communication
+07109847-n 10 78 utterance vocalization
+07133701-n 10 27 conversation
+07142566-n 10 25 conference group_discussion
+07151380-n 10 29 saying expression locution
+07260623-n 10 77 standard criterion measure touchstone
+07283608-n 11 715 happening occurrence occurrent natural_event
+07314427-n 11 24 mishap misadventure mischance
+07371293-n 11 149 sound
+07405893-n 11 43 flow flowing
+07450842-n 11 22 ceremony ceremonial ceremonial_occasion observance
+07456188-n 11 71 contest competition
+07458453-n 11 43 race
+07519253-n 12 23 fear fearfulness fright
+07546465-n 12 29 hate hatred
+07555863-n 13 129 food solid_food
+07557434-n 13 315 dish
+07561112-n 13 22 diet
+07566340-n 13 122 foodstuff food_product
+07570720-n 13 127 nutriment nourishment nutrition sustenance aliment alimentation victuals
+07597365-n 13 62 candy confect
+07609840-n 13 60 dessert sweet afters
+07622708-n 13 47 pastry
+07628870-n 13 101 cake
+07649854-n 13 97 meat
+07653394-n 13 100 cut cut_of_meat
+07679356-n 13 109 bread breadstuff staff_of_life
+07698915-n 13 26 pasta alimentary_paste
+07705931-n 13 196 edible_fruit
+07707451-n 13 175 vegetable veggie veg
+07737081-n 13 22 edible_nut
+07775905-n 13 57 saltwater_fish
+07783210-n 13 29 shellfish
+07809368-n 13 185 flavorer flavourer flavoring flavouring seasoner seasoning
+07829412-n 13 73 sauce
+07850329-n 13 37 cheese
+07881800-n 13 245 beverage drink drinkable potable
+07885223-n 13 23 drink
+07891726-n 13 68 wine vino
+07911677-n 13 25 cocktail
+07942152-n 14 128 people
+07951464-n 14 364 collection aggregation accumulation assemblage
+07965085-n 14 86 body
+07971582-n 14 31 dynasty
+07975026-n 14 183 gathering assemblage
+07992450-n 14 68 taxonomic_group taxonomic_category taxon
+07993929-n 14 30 animal_group
+07999699-n 14 20 set
+08008335-n 14 620 organization organisation
+08050678-n 14 25 government authorities regime
+08058098-n 14 50 company
+08061042-n 14 73 business concern business_concern business_organization business_organisation
+08065234-n 14 38 industry
+08081668-n 14 41 religion faith organized_religion
+08102555-n 14 48 phylum
+08103777-n 14 149 class
+08107499-n 14 204 family
+08108972-n 14 76 genus
+08123167-n 14 21 executive_department
+08147188-n 14 29 Protestant_denomination
+08149781-n 14 33 sect religious_sect religious_order
+08198398-n 14 84 military_unit military_force military_group force
+08208560-n 14 27 team squad
+08252602-n 14 26 party
+08276720-n 14 65 school
+08312559-n 14 24 council
+08324514-n 14 47 committee commission
+08329453-n 14 36 court tribunal judicature
+08337324-n 14 105 agency federal_agency government_agency bureau office authority
+08392137-n 14 107 terrorist_organization terrorist_group foreign_terrorist_organization FTO
+08457976-n 14 90 series
+08466643-n 14 26 artistic_movement art_movement
+08497294-n 15 106 area country
+08512259-n 15 92 boundary bound bounds
+08524735-n 15 909 city metropolis urban_center
+08544813-n 15 225 country state land
+08552138-n 15 154 district territory territorial_dominion dominion
+08566028-n 15 34 end terminal
+08574314-n 15 483 geographical_area geographic_area geographical_region geographic_region
+08600992-n 15 48 national_park
+08630039-n 15 180 region part
+08654360-n 15 84 state province
+08655464-n 15 52 American_state
+08665504-n 15 288 town
+09190918-n 17 31 agent
+09203827-n 17 54 archipelago
+09215664-n 17 35 bay embayment
+09225146-n 17 126 body_of_water water
+09252970-n 17 77 constellation
+09257949-n 17 109 covering natural_covering cover
+09303008-n 17 20 hill
+09316454-n 17 161 island
+09328904-n 17 63 lake
+09360122-n 17 68 mountain_peak
+09379111-n 17 48 opening gap
+09385911-n 17 50 part piece
+09386422-n 17 68 particle subatomic_particle
+09388848-n 17 34 peninsula
+09403734-n 17 55 range mountain_range range_of_mountains chain mountain_chain chain_of_mountains
+09411430-n 17 200 river
+09426788-n 17 41 sea
+09444100-n 17 45 star
+09446115-n 17 21 strait sound
+09472597-n 17 27 volcano
+09483738-n 18 34 imaginary_being imaginary_creature
+09484664-n 18 128 mythical_being
+09505418-n 18 195 deity divinity god immortal
+09513902-n 18 53 Semitic_deity
+09522978-n 18 58 Hindu_deity
+09545324-n 18 29 spirit disembodied_spirit
+09551356-n 18 94 Greek_deity
+09587565-n 18 82 fictional_character fictitious_character character
+09608709-n 18 39 benefactor helper
+09612848-n 18 67 consumer
+09614684-n 18 100 defender guardian protector shielder
+09627906-n 18 34 recipient receiver
+09631463-n 18 110 unpleasant_person disagreeable_person
+09633969-n 18 47 wrongdoer offender
+09641757-n 18 128 Asian Asiatic
+09645091-n 18 113 Indian American_Indian Red_Indian
+09646608-n 18 31 Algonquian Algonquin
+09669125-n 18 25 Sioux Siouan
+09686536-n 18 145 European
+09701148-n 18 27 English_person
+09728403-n 18 20 Russian
+09738708-n 18 74 American
+09740085-n 18 22 American_Revolutionary_leader
+09765278-n 18 137 actor histrion player thespian role_player
+09777353-n 18 52 agent
+09796323-n 18 28 anthropologist
+09805475-n 18 68 architect designer
+09812338-n 18 90 artist creative_person
+09816771-n 18 25 associate
+09820263-n 18 179 athlete jock
+09821253-n 18 20 attacker aggressor assailant assaulter
+09821831-n 18 45 attendant attender tender
+09855630-n 18 118 biologist life_scientist
+09857200-n 18 21 bishop
+09870208-n 18 36 boxer pugilist
+09882007-n 18 50 businessman man_of_affairs
+09913824-n 18 98 chemist
+09917593-n 18 24 child kid youngster minor shaver nipper small_fry tiddler tike tyke fry nestling
+09927451-n 18 66 clergyman reverend man_of_the_cloth
+09947232-n 18 119 composer
+09977660-n 18 102 criminal felon crook outlaw malefactor
+09989502-n 18 43 dancer professional_dancer terpsichorean
+09998101-n 18 35 deceiver cheat cheater trickster beguiler slicker
+10016103-n 18 36 disciple adherent
+10020890-n 18 109 doctor doc physician MD Dr. medico
+10043643-n 18 32 economist economic_expert
+10045713-n 18 65 educator pedagogue pedagog
+10053004-n 18 46 emperor
+10078806-n 18 20 farmer husbandman granger sodbuster
+10088390-n 18 50 film_maker filmmaker film_producer movie_maker
+10123844-n 18 77 general full_general
+10177150-n 18 34 historian historiographer
+10197967-n 18 23 idler loafer do-nothing layabout bum
+10204177-n 18 20 industrialist
+10214637-n 18 34 inventor discoverer artificer
+10231515-n 18 146 king male_monarch Rex
+10241300-n 18 76 laborer manual_laborer labourer jack
+10249950-n 18 21 lawyer attorney
+10271677-n 18 32 Lord noble nobleman
+10284064-n 18 70 maker shaper
+10287213-n 18 65 man adult_male
+10301261-n 18 53 mathematician
+10307234-n 18 35 member fellow_member
+10309896-n 18 65 merchant merchandiser
+10340312-n 18 96 musician instrumentalist player
+10391653-n 18 145 painter
+10415638-n 18 61 performer performing_artist
+10423589-n 18 108 philosopher
+10428004-n 18 151 physicist
+10439851-n 18 59 player participant
+10453533-n 18 46 pope Catholic_Pope Roman_Catholic_Pope pontiff Holy_Father Vicar_of_Christ Bishop_of_Rome
+10467395-n 18 37 President_of_the_United_States United_States_President President Chief_Executive
+10515194-n 18 55 reformer reformist crusader social_reformer meliorist
+10522035-n 18 25 representative
+10557854-n 18 55 scholar scholarly_person bookman student
+10566072-n 18 28 sculptor sculpturer carver statue_maker
+10595647-n 18 47 sick_person diseased_person sufferer
+10599806-n 18 94 singer vocalist vocalizer vocaliser
+10622053-n 18 63 soldier
+10630188-n 18 49 speaker talker utterer verbalizer verbaliser
+10650162-n 18 86 statesman solon national_leader
+10665698-n 18 32 student pupil educatee
+10676877-n 18 25 supervisor
+10705615-n 18 44 theologian theologist theologizer theologiser
+10787470-n 18 131 woman adult_female
+10794014-n 18 610 writer author
+11410625-n 19 31 consequence effect outcome result event issue upshot
+11417672-n 19 22 geological_phenomenon
+11418750-n 19 46 organic_phenomenon
+11419404-n 19 396 physical_phenomenon
+11450869-n 19 24 electromagnetic_radiation electromagnetic_wave nonparticulate_radiation
+11473954-n 19 38 light visible_light visible_radiation
+11525955-n 19 57 wind air_current current_of_air
+11534677-n 20 73 plant_order
+11545714-n 20 176 fern
+11554175-n 20 63 gymnosperm_genus
+11556857-n 20 307 monocot_genus liliopsid_genus
+11562747-n 20 195 dicot_family magnoliopsid_family
+11567411-n 20 617 dicot_genus magnoliopsid_genus
+11579418-n 20 320 asterid_dicot_genus
+11585340-n 20 296 rosid_dicot_genus
+11590783-n 20 73 fungus_family
+11592146-n 20 138 fungus_genus
+11594676-n 20 30 fungus_order
+11669921-n 20 467 flower
+11672400-n 20 140 wildflower wild_flower
+11675842-n 20 101 reproductive_structure
+11744859-n 20 48 plant_genus
+11842204-n 20 31 cactus
+12102133-n 20 167 grass
+12205694-n 20 874 herb herbaceous_plant
+12334891-n 20 23 eucalyptus eucalypt eucalyptus_tree
+12425281-n 20 124 liliaceous_plant
+12992868-n 20 211 fungus
+12998815-n 20 97 agaric
+13085113-n 20 53 weed
+13086908-n 20 110 plant_part plant_structure
+13100677-n 20 217 vine
+13104059-n 20 832 tree
+13108841-n 20 157 conifer coniferous_tree
+13112664-n 20 782 shrub bush
+13121544-n 20 116 aquatic_plant water_plant hydrophyte hydrophytic_plant
+13125117-n 20 22 root
+13129165-n 20 52 stalk stem
+13134947-n 20 98 fruit
+13152742-n 20 69 leaf leafage foliage
+13166338-n 20 35 fern_family
+13167078-n 20 113 fern_genus
+13244109-n 21 73 property belongings holding
+13252973-n 21 53 transferred_property transferred_possession
+13255145-n 21 52 income
+13265011-n 21 60 gift
+13275847-n 21 43 cost
+13278375-n 21 98 payment
+13282550-n 21 22 compensation
+13306870-n 21 50 charge
+13308999-n 21 45 tax taxation revenue_enhancement
+13320168-n 21 25 fee
+13329641-n 21 191 assets
+13344804-n 21 20 insurance
+13388245-n 21 41 coin
+13518963-n 22 303 natural_process natural_action action activity
+13524925-n 22 29 operation
+13526110-n 22 419 organic_process biological_process
+13576355-n 23 120 indefinite_quantity
+13582013-n 23 153 number
+13583724-n 23 321 unit_of_measurement unit
+13601596-n 23 40 computer_memory_unit
+13603305-n 23 74 linear_unit linear_measure
+13604718-n 23 389 monetary_unit
+13732295-n 23 28 common_fraction simple_fraction
+13741022-n 23 22 digit figure
+13745420-n 23 53 large_integer
+13756125-n 23 58 containerful
+13783816-n 24 41 function mathematical_function single-valued_function map mapping
+13796779-n 24 43 grammatical_relation
+13819207-n 24 63 ratio
+13830305-n 24 33 compass_point point
+13864965-n 25 41 concave_shape concavity incurvation incurvature
+13866144-n 25 36 polygon polygonal_shape
+13867641-n 25 58 curve curved_shape
+13883885-n 25 27 polyhedron
+13887509-n 25 45 angle
+13920835-n 26 1016 condition status
+14061805-n 26 43 illness unwellness malady sickness
+14070360-n 26 383 disease
+14081375-n 26 32 attack
+14085708-n 26 37 brain_disorder encephalopathy brain_disease
+14127211-n 26 61 infectious_disease
+14174549-n 26 56 infection
+14176895-n 26 21 fungal_infection mycosis
+14189204-n 26 64 blood_disease blood_disorder
+14204950-n 26 150 pathology
+14235200-n 26 98 tumor tumour neoplasm
+14253124-n 26 69 animal_disease
+14285662-n 26 81 injury hurt harm trauma
+14299637-n 26 285 symptom
+14336539-n 26 168 inflammation redness rubor
+14382238-n 26 28 simple_phobia
+14411243-n 26 24 situation
+14429985-n 26 55 rank
+14452616-n 26 20 infestation
+14465048-n 26 38 birth_defect congenital_anomaly congenital_defect congenital_disorder congenital_abnormality
+14501726-n 26 91 abnormality abnormalcy
+14548343-n 26 39 disability disablement handicap impairment
+14552802-n 26 35 visual_impairment visual_defect vision_defect visual_disorder
+14580897-n 27 627 material stuff
+14586258-n 27 46 mixture
+14586769-n 27 93 alloy metal
+14589223-n 27 34 solution
+14607521-n 27 138 acid
+14621446-n 27 35 group radical chemical_group
+14622893-n 27 72 chemical_element element
+14625458-n 27 126 metallic_element metal
+14662574-n 27 233 mineral
+14728724-n 27 108 protein
+14732946-n 27 69 enzyme
+14759722-n 27 29 leather
+14792703-n 27 56 carbohydrate saccharide sugar
+14818238-n 27 680 compound chemical_compound
+14844693-n 27 47 soil dirt
+14877585-n 27 50 gas
+14894481-n 27 41 natural_resin
+14898470-n 27 28 gum
+14940386-n 27 39 liquid
+14966667-n 27 74 oil
+14985383-n 27 32 dye dyestuff
+14989820-n 27 54 pigment
+15034074-n 27 29 toxin
+15098161-n 27 133 wood
+15113229-n 28 517 time_period period_of_time period
+15157225-n 28 123 day
+15184170-n 28 39 Christian_holy_day
+15228378-n 28 28 hour time_of_day
+15286249-n 28 81 rate
