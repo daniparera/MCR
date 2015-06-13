@@ -27,6 +27,9 @@ args = parserarg.parse_args()
 
 pos = args.pos
 
+if pos == 'n': name = 'noun'
+if pos == 'v': name = 'verb'
+
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
 #cur = db.cursor(MySQLdb.cursors.DictCursor) 
@@ -37,8 +40,9 @@ cur = db.cursor(pymysql.cursors.DictCursor)
 cur.execute("SELECT * FROM `wei_ili_record` WHERE `bc` = 1 AND `iliPos` = '"+pos+"' ORDER BY `iliOffset` ASC ")
 rows = cur.fetchall()
 
-input_file = open('BLCnoun.rel', "r")
-content_file = input_file.read()
+
+input_file = open('BLC'+name+'.rel', "r")
+content_file = input_file.readlines()
 
 for row in rows:
 
