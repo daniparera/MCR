@@ -1,7 +1,7 @@
-Scripts to create BLC from MCR db
+Scripts to create BLC information from MCR db
 =======
 
-This script (buildBLC.py) work as folows. From a synset given recovery the categories that relationated synset's has in mcr and from ponderated categorization formula.
+This script (buildBLC.py) work as folows. Get all information related with BLC from MCR and construct a file with the same structure than files presents in BLC zip file.
 
 Download
 -------
