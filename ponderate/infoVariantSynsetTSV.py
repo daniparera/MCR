@@ -21,13 +21,7 @@ cmd = "fgrep "+syn+" data/wei_eng-30_variant.tsv | nawk '{print $1,$2}'"
 tmp = subprocess.check_output(cmd, shell=True)
 
 variants = ''
+# join variants in a single string separated by "/". Check that query dont return empty set.
+variants = "/".join(x.split()[0] + "_" + x.split()[1] for x in tmp.splitlines() if x)
 
-for variant in tmp.splitlines()[:-1]:
-
-	aux = variant.split()
-	variants = variants + aux[0] + "_" + aux[1] + "/"
-
-variant = tmp.splitlines()[-1]
-aux = variant.split()
-
-print variants + aux[0] + "_" + aux[1]
+print variants
