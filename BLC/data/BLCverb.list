@@ -1,11 +1,6 @@
 00001740-v 29 22 breathe take_a_breath respire suspire
-00005815-v 29 2 cough
-00007739-v 29 2 blink wink nictitate nictate
-00009147-v 29 1 shed molt exuviate moult slough
-00009631-v 29 1 twitch jerk
-00010435-v 29 42 act behave do
+00010435-v 29 44 act behave do
 00014549-v 29 2 be_active move
-00014742-v 29 6 sleep kip slumber log_Z's catch_some_Z's
 00015713-v 29 1 oversleep
 00016702-v 29 1 nod
 00017282-v 29 2 fall_asleep dope_off flake_out drift_off nod_off drop_off doze_off drowse_off
@@ -13,109 +8,47 @@
 00018158-v 29 1 get_up turn_out arise uprise rise
 00020133-v 29 2 wake
 00020449-v 29 1 keep_up
-00021065-v 29 5 anesthetize anaesthetize anesthetise anaesthetise put_under put_out
-00022686-v 29 6 stimulate arouse brace energize energise perk_up
-00027268-v 29 2 stretch extend
-00028565-v 29 6 smile
-00031820-v 29 11 laugh express_joy express_mirth
-00036362-v 29 6 wash lave
-00040353-v 29 38 groom neaten
-00049900-v 29 5 undress discase uncase unclothe strip strip_down disrobe peel
+00040353-v 29 44 groom neaten
 00052374-v 29 1 wear have_on
-00056683-v 29 1 spawn
-00056930-v 29 12 give_birth deliver bear birth have
 00057410-v 29 1 lie_in
 00059559-v 29 1 carry_to_term
-00064643-v 29 4 hurt
-00066191-v 29 5 cry weep
-00067999-v 29 10 exude exudate transude ooze_out ooze
-00069879-v 29 32 injure wound
-00072012-v 29 2 make urinate piddle puddle micturate piss pee pee-pee make_water relieve_oneself take_a_leak spend_a_penny wee wee-wee pass_water
-00074038-v 29 1 stool defecate shit take_a_shit take_a_crap ca-ca crap make
-00075021-v 29 5 tire wear_upon tire_out wear weary jade wear_out outwear wear_down fag_out fag fatigue
+00069879-v 29 33 injure wound
 00077369-v 29 1 keep_down
 00077458-v 29 1 gag heave retch
-00078760-v 29 55 treat care_for
-00081725-v 29 1 bring_around cure heal
-00087736-v 29 2 contract take get
-00089750-v 29 1 infect
-00090708-v 29 1 mutilate mar
-00097029-v 29 1 draw
-00098083-v 29 2 resuscitate revive
+00078760-v 29 60 treat care_for
 00099721-v 29 7 exercise work_out
-00104868-v 29 31 exhaust discharge expel eject release
+00104868-v 29 48 exhaust discharge expel eject release
 00107943-v 29 2 fracture
-00109660-v 30 927 change
+00109660-v 30 1085 change
 00118764-v 30 1 keep_up keep_abreast follow
 00123170-v 30 31 change alter vary
-00126264-v 30 1388 change alter modify
+00126264-v 30 1541 change alter modify
 00151689-v 30 59 decrease diminish lessen fall
-00156601-v 30 107 increase
-00159880-v 30 1 acculturate
-00161225-v 30 6 change exchange commute convert
-00173338-v 30 186 remove take take_away withdraw
+00156601-v 30 113 increase
+00173338-v 30 199 remove take take_away withdraw
 00182406-v 30 33 add
-00209837-v 30 2 decompose rot molder moulder
-00214020-v 30 2 hydrate
 00224295-v 30 1 die
-00233335-v 30 16 restrict restrain trammel limit bound confine throttle
-00245457-v 30 10 grow
-00256507-v 30 5 swell swell_up intumesce tumefy tumesce
 00258109-v 30 2 leak
-00264034-v 30 2 inflate blow_up
-00269140-v 30 3 immobilize immobilise
-00291873-v 30 2 light illume illumine light_up illuminate
-00304422-v 30 2 constrict constringe narrow
 00306298-v 30 1 detonate explode blow_up
-00315330-v 30 1 depreciate
-00317888-v 30 3 prolong protract extend draw_out
-00318816-v 30 1 elongate stretch
-00319214-v 30 3 size
-00319761-v 30 1 rescale
-00327362-v 30 4 steep infuse
-00328802-v 30 4 branch ramify fork furcate separate
-00334996-v 30 6 break
-00338071-v 30 16 break_up fragment fragmentize fragmentise
 00339934-v 30 37 happen hap go_on pass_off occur pass fall_out come_about take_place
 00345761-v 30 14 get_down begin get start_out start set_about set_out commence
-00348746-v 30 10 begin lead_off start commence
-00350461-v 30 4 persevere persist hang_in hang_on hold_on
+00348746-v 30 12 begin lead_off start commence
 00360092-v 30 2 leave leave_behind
-00367685-v 30 7 unify unite merge
-00394813-v 30 10 blend flux mix conflate commingle immix fuse coalesce meld combine merge
 00413876-v 30 3 settle locate
 00415044-v 30 2 settle
 00415743-v 30 1 set_in
 00422090-v 30 30 appear
-00425071-v 30 4 appear come_along
+00425071-v 30 8 appear come_along
 00426958-v 30 11 disappear vanish go_away
 00429060-v 30 20 reduce cut_down cut_back trim trim_down trim_back cut bring_down
-00436879-v 30 1 vary variegate motley
-00438178-v 30 1 accelerate speed_up speed quicken
-00462092-v 30 13 suppress stamp_down inhibit subdue conquer curb
-00464321-v 30 7 align aline line_up adjust
-00466651-v 30 4 integrate incorporate
-00467717-v 30 1 standardize standardise
-00480969-v 30 2 systematize systematise systemize systemise
-00487748-v 30 2 load adulterate stretch dilute debase
-00489837-v 30 11 quantify measure
-00493929-v 30 1 devalue devaluate
-00502757-v 30 3 fertilize fertilise feed
-00510364-v 30 2 mottle dapple cloud
 00515154-v 30 38 process treat
-00519363-v 30 2 foam froth fizz effervesce sparkle form_bubbles
-00520357-v 30 2 interrupt disrupt
 00528990-v 30 8 issue emerge come_out come_forth go_forth egress
-00541163-v 30 2 expand
 00549771-v 30 1 turn_to
 00550117-v 30 11 switch shift change
 00554298-v 30 1 disrupt
 00560247-v 30 1 fail run_out give_out
-00561090-v 30 3 cut
 00571061-v 30 2 remove take_away
-00587522-v 30 1 reduce
-00588221-v 31 4 grok get_the_picture comprehend savvy dig grasp compass apprehend
-00588888-v 31 12 understand
+00588888-v 31 42 understand
 00591115-v 31 4 understand realize realise see
 00591755-v 31 1 click get_through dawn come_home get_across sink_in penetrate fall_into_place
 00592037-v 31 2 resonate come_across
@@ -124,603 +57,305 @@
 00594621-v 31 4 know cognize cognise
 00595505-v 31 1 ignore
 00595630-v 31 2 know
-00595935-v 31 4 know
+00595935-v 31 5 know
 00596132-v 31 2 know
-00597385-v 31 1 master control
-00597915-v 31 8 learn larn acquire
-00598954-v 31 7 learn hear get_word get_wind pick_up find_out get_a_line discover see
-00599992-v 31 4 learn study read take
-00600370-v 31 3 absorb engross engage occupy
+00597915-v 31 9 learn larn acquire
+00598954-v 31 9 learn hear get_word get_wind pick_up find_out get_a_line discover see
+00599992-v 31 7 learn study read take
 00601378-v 31 1 plunge immerse
 00601581-v 31 1 welter
-00602805-v 31 3 train prepare
-00604576-v 31 1 memorize memorise con learn
-00606600-v 31 1 inculcate instill infuse
 00607405-v 31 2 study
-00607780-v 31 5 remember retrieve recall call_back call_up recollect think
+00607780-v 31 9 remember retrieve recall call_back call_up recollect think
 00608808-v 31 1 think
 00609100-v 31 2 forget block blank_out draw_a_blank
-00609683-v 31 6 remember think_of
-00610167-v 31 3 forget bury
-00610538-v 31 4 remind
+00609683-v 31 11 remember think_of
+00610167-v 31 4 forget bury
+00610538-v 31 5 remind
 00611256-v 31 3 remember think_back
 00611481-v 31 1 commemorate remember
-00612042-v 31 1 commemorate memorialize memorialise immortalize immortalise record
-00612841-v 31 1 suppress repress
 00613393-v 31 1 abandon give_up
-00613683-v 31 3 leave
-00614057-v 31 4 abandon forsake desolate desert
+00613683-v 31 7 leave
 00614999-v 31 3 neglect pretermit omit drop miss leave_out overlook overleap
 00616153-v 31 2 neglect
 00616857-v 31 2 neglect ignore disregard
-00617748-v 31 8 err mistake slip
-00618451-v 31 4 identify
-00622384-v 31 5 perplex vex stick get puzzle mystify baffle beat pose bewilder flummox stupefy nonplus gravel amaze dumbfound
-00623151-v 31 19 interpret construe see
-00628491-v 31 218 think cogitate cerebrate
-00631737-v 31 1 think opine suppose imagine reckon guess
-00632236-v 31 3 assume presume take_for_granted
-00633443-v 31 5 speculate theorize theorise conjecture hypothesize hypothesise hypothecate suppose
-00634906-v 31 7 solve work_out figure_out puzzle_out lick work
+00617748-v 31 10 err mistake slip
+00628491-v 31 330 think cogitate cerebrate
 00636888-v 31 2 establish base ground found
 00637259-v 31 40 calculate cipher cypher compute work_out reckon figure
 00639849-v 31 1 get
 00643473-v 31 3 analyze analyse break_down dissect take_apart
-00644583-v 31 35 analyze analyse study examine canvass canvas
-00645939-v 31 1 explore
-00646271-v 31 1 explore
-00648224-v 31 5 research search explore
-00649481-v 31 3 explore
+00644583-v 31 54 analyze analyse study examine canvass canvas
 00650353-v 31 27 distinguish separate differentiate secern secernate severalize severalise tell tell_apart
 00652346-v 31 1 identify discover key key_out distinguish describe name
-00654625-v 31 15 classify class sort assort sort_out separate
-00662589-v 31 8 see check insure see_to_it ensure control ascertain assure
-00665886-v 31 18 confirm corroborate sustain substantiate support affirm
-00667424-v 31 3 disprove confute
-00671335-v 31 1 underestimate underrate
-00672017-v 31 1 overestimate overrate
+00665886-v 31 29 confirm corroborate sustain substantiate support affirm
 00674607-v 31 40 choose take select pick_out
 00679389-v 31 2 choose prefer opt
-00681429-v 31 38 measure evaluate valuate assess appraise value
+00681429-v 31 39 measure evaluate valuate assess appraise value
 00685419-v 31 1 rule_out eliminate winnow_out reject
-00687926-v 31 1 distrust mistrust suspect
-00690614-v 31 38 see consider reckon view regard
-00697589-v 31 21 decide make_up_one's_mind determine
+00690614-v 31 42 see consider reckon view regard
+00697589-v 31 22 decide make_up_one's_mind determine
 00699815-v 31 22 determine set
-00701040-v 31 14 determine shape mold influence regulate
-00705517-v 31 2 draw_a_bead_on aspire aim shoot_for
-00706975-v 31 1 conspire cabal complot conjure machinate
-00708538-v 31 7 intend mean think
-00715541-v 31 1 pin_down peg_down nail_down narrow_down narrow specify
-00716758-v 31 1 postulate posit
+00708538-v 31 9 intend mean think
 00720063-v 31 7 expect look await wait
-00721437-v 31 2 discover find
-00724492-v 31 1 mind
 00732552-v 31 1 observe keep maintain
-00733632-v 31 3 align array
-00734054-v 31 5 consider take deal look_at
 00736216-v 31 2 analyze analyse
-00740577-v 32 149 communicate intercommunicate
-00742320-v 32 10 communicate pass_on pass pass_along put_across
-00746084-v 32 3 ordain
-00746718-v 32 11 order tell enjoin say
-00747135-v 32 1 order prescribe dictate
-00749376-v 32 2 direct
-00750532-v 32 4 charge saddle burden
-00751887-v 32 2 command
-00752764-v 32 59 request bespeak call_for quest
-00753428-v 32 6 request
-00756338-v 32 8 claim
-00759269-v 32 4 beg implore pray
-00763399-v 32 4 settle square_off square_up determine
-00770437-v 32 48 induce stimulate cause have get make
-00772189-v 32 6 argue reason
-00773432-v 32 6 argue contend debate fence
-00775156-v 32 4 quarrel dispute scrap argufy altercate
-00776988-v 32 2 hex bewitch glamour witch enchant jinx
-00778275-v 32 22 interrupt disrupt break_up cut_off
+00740577-v 32 198 communicate intercommunicate
+00752764-v 32 114 request bespeak call_for quest
+00770437-v 32 56 induce stimulate cause have get make
+00778275-v 32 24 interrupt disrupt break_up cut_off
 00779601-v 32 2 rest
-00782527-v 32 8 entice lure tempt
-00785008-v 32 12 question query
-00785962-v 32 1 investigate inquire enquire
-00789448-v 32 2 call telephone call_up phone ring
-00792471-v 32 15 call send_for
-00795863-v 32 6 forbid prohibit interdict proscribe veto disallow nix
-00796976-v 32 1 reject spurn freeze_off scorn pooh-pooh disdain turn_down
 00799383-v 32 1 retreat pull_back back_out back_away crawfish crawfish_out pull_in_one's_horns withdraw
-00799798-v 32 1 revoke annul lift countermand reverse repeal overturn rescind vacate
-00800930-v 32 8 dismiss disregard brush_aside brush_off discount push_aside ignore
 00801626-v 32 1 dismiss throw_out
-00802318-v 32 44 permit allow let countenance
-00804139-v 32 1 assent accede acquiesce
+00802318-v 32 49 permit allow let countenance
 00804802-v 32 9 disagree differ dissent take_issue
-00805376-v 32 15 agree hold concur concord
-00807461-v 32 8 object
-00809654-v 32 2 hedge fudge evade put_off circumvent parry elude skirt dodge duck sidestep
-00811375-v 32 10 avoid
-00812298-v 32 2 confront face_up face
-00813978-v 32 31 hash_out discuss talk_over
-00814850-v 32 4 refute rebut
-00817311-v 32 9 admit acknowledge
-00818974-v 32 4 insist take_a_firm_stand
-00820976-v 32 8 attest certify manifest demonstrate evidence
-00826509-v 32 36 knock criticize criticise pick_apart
-00831651-v 32 145 inform
-00835903-v 32 1 falsify distort garble warp
-00836236-v 32 4 typify symbolize symbolise stand_for represent
-00838043-v 32 5 feign sham pretend affect dissemble
-00839834-v 32 4 overstate exaggerate overdraw hyperbolize hyperbolise magnify amplify
-00842989-v 32 5 accuse impeach incriminate criminate
-00843468-v 32 5 charge accuse
-00846509-v 32 3 defame slander smirch asperse denigrate calumniate smear sully besmirch
-00849939-v 32 1 spoof burlesque parody
-00850501-v 32 2 tease razz rag cod tantalize tantalise bait taunt twit rally ride
-00851239-v 32 1 incite instigate set_off stir_up
-00851933-v 32 5 ridicule roast guy blackguard laugh_at jest_at rib make_fun poke_fun
-00852922-v 32 1 deride
-00854420-v 32 5 deceive betray lead_astray
-00855933-v 32 1 deprecate depreciate vilipend
-00857923-v 32 1 exuberate exult rejoice triumph jubilate
-00858568-v 32 1 cheer
-00859325-v 32 2 cheer cheer_up jolly_along jolly_up
-00859758-v 32 1 amuse
-00864475-v 32 1 minimize belittle denigrate derogate
+00805376-v 32 39 agree hold concur concord
+00811375-v 32 12 avoid
+00813978-v 32 51 hash_out discuss talk_over
+00818974-v 32 8 insist take_a_firm_stand
+00826509-v 32 38 knock criticize criticise pick_apart
+00831651-v 32 268 inform
+00843468-v 32 13 charge accuse
+00859325-v 32 3 cheer cheer_up jolly_along jolly_up
 00868591-v 32 20 challenge
-00869596-v 32 3 contest contend repugn
-00871942-v 32 2 bode portend auspicate prognosticate omen presage betoken foreshadow augur foretell prefigure forecast predict
-00872886-v 32 15 rede advise counsel
-00883226-v 32 3 boast tout swash shoot_a_line brag gas blow bluster vaunt gasconade
-00889229-v 32 9 sign
-00890100-v 32 4 guarantee vouch
 00890590-v 32 3 guarantee ensure insure assure secure
-00891216-v 32 2 cover insure underwrite
-00892467-v 32 1 acknowledge recognize recognise
 00892923-v 32 1 apologize apologise
-00894738-v 32 3 apologize apologise excuse justify rationalize rationalise
-00896141-v 32 3 justify vindicate
-00897241-v 32 12 greet recognize recognise
-00897746-v 32 2 ask
-00903385-v 32 10 forgive
-00904046-v 32 3 acquit assoil clear discharge exonerate exculpate
 00905059-v 32 1 get_off
 00907147-v 32 14 complain kick plain sound_off quetch kvetch
-00916909-v 32 2 guess venture pretend hazard
-00917772-v 32 9 predict foretell prognosticate call forebode anticipate promise
-00918872-v 32 15 determine find find_out ascertain
+00918872-v 32 19 determine find find_out ascertain
 00920336-v 32 2 determine check find_out see ascertain watch learn
-00921738-v 32 6 mark
-00922867-v 32 5 read register show record
-00928630-v 32 17 convey
-00930806-v 32 1 suggest intimate
-00931467-v 32 14 denote refer
-00931852-v 32 2 mean intend signify stand_for
-00933821-v 32 12 unwrap disclose let_on bring_out reveal discover expose divulge break give_away let_out
+00931852-v 32 19 mean intend signify stand_for
 00935141-v 32 1 out come_out
 00935987-v 32 2 break get_out get_around
 00937619-v 32 1 keep_quiet shut_one's_mouth keep_one's_mouth_shut
-00938247-v 32 7 rede interpret
-00939857-v 32 4 clarify clear_up elucidate
-00940384-v 32 63 express verbalize verbalise utter give_tongue_to
+00940384-v 32 82 express verbalize verbalise utter give_tongue_to
 00941990-v 32 81 talk speak utter mouth verbalize verbalise
-00943837-v 32 37 express show evince
-00946105-v 32 1 enumerate recite itemize itemise
-00946755-v 32 1 number list
-00948071-v 32 4 count number enumerate numerate
+00943837-v 32 38 express show evince
 00950337-v 32 1 take_a_dare
 00950431-v 32 1 consider count weigh
-00955601-v 32 7 elaborate lucubrate expatiate exposit enlarge flesh_out expand expound dilate
-00956687-v 32 5 qualify characterize characterise
-00958334-v 32 18 repeat reiterate ingeminate iterate restate retell
-00967625-v 32 1 publish bring_out put_out issue release
-00968211-v 32 4 circulate circularize circularise distribute disseminate propagate broadcast spread diffuse disperse pass_around
-00971650-v 32 11 pronounce label judge
-00973056-v 32 6 air send broadcast beam transmit
 00973728-v 32 2 air
 00978549-v 32 27 pronounce articulate enounce sound_out enunciate say
 00983824-v 32 90 utter emit let_out let_loose
-00987071-v 32 6 describe depict draw
-00988287-v 32 1 dramatize dramatise
 00989201-v 32 5 address speak
 00989490-v 32 1 take_the_floor
-00990392-v 32 1 approach
-00990812-v 32 3 address direct
-00996102-v 32 1 revise
-01000214-v 32 50 record enter put_down
+01000214-v 32 51 record enter put_down
 01006810-v 32 2 correspond
 01009821-v 32 1 say
-01010118-v 32 65 declare
-01011725-v 32 6 affirm
-01012073-v 32 7 confirm reassert
-01016316-v 32 1 plead
-01016778-v 32 3 assert asseverate maintain
-01018928-v 32 1 stipulate qualify condition specify
+01010118-v 32 84 declare
+01011725-v 32 24 affirm
 01020731-v 32 1 complete fill_out fill_in make_out
-01024190-v 32 10 mention advert bring_up cite name refer
-01028748-v 32 9 name call
 01029368-v 32 1 go_by go_under
-01030132-v 32 11 designate denominate
-01033527-v 32 4 cover treat handle plow deal address
+01030132-v 32 23 designate denominate
 01035530-v 32 5 agree
-01038666-v 32 1 chew_the_fat shoot_the_breeze chat confabulate confab chitchat chit-chat chatter chaffer natter gossip jaw claver visit
 01041061-v 32 1 close_up clam_up dummy_up shut_up belt_up button_up be_quiet keep_mum
-01058574-v 32 3 comment notice remark point_out
 01066433-v 32 1 confront face present
 01068380-v 32 1 traverse deny
 01070777-v 32 1 begin
-01072262-v 33 9 compete vie contend
-01072949-v 33 53 play
+01072262-v 33 21 compete vie contend
+01072949-v 33 59 play
 01076615-v 33 14 move go
 01079480-v 33 6 meet encounter play take_on
 01082606-v 33 2 enter participate
 01083044-v 33 1 drop_out give_up fall_by_the_wayside drop_by_the_wayside throw_in throw_in_the_towel quit chuck_up_the_sponge
-01086103-v 33 12 race run
 01087197-v 33 3 arm build_up fortify gird
 01087835-v 33 1 disarm demilitarize demilitarise
-01088547-v 33 1 man
-01090335-v 33 74 contend fight struggle
+01090335-v 33 81 contend fight struggle
 01093786-v 33 2 campaign take_the_field
-01097192-v 33 1 enlist
 01099592-v 33 5 lose
 01100145-v 33 8 win
-01101913-v 33 41 beat beat_out crush shell trounce vanquish
+01101913-v 33 42 beat beat_out crush shell trounce vanquish
 01108148-v 33 15 get_the_better_of overcome defeat
-01110247-v 33 1 outmaneuver outmanoeuvre outsmart
-01111028-v 33 3 gain advance win pull_ahead make_headway get_ahead gain_ground
-01111816-v 33 14 score hit tally rack_up
+01111028-v 33 17 gain advance win pull_ahead make_headway get_ahead gain_ground
 01113620-v 33 1 drive_in
 01113975-v 33 2 keep_up
-01115585-v 33 3 surrender give_up
-01116447-v 33 3 yield
-01116585-v 33 7 resist hold_out withstand stand_firm
+01116447-v 33 6 yield
 01118081-v 33 2 submit
 01120069-v 33 15 assail assault set_on attack
 01128193-v 33 25 protect
-01133825-v 33 5 fire discharge
+01133825-v 33 11 fire discharge
 01134238-v 33 1 fire discharge go_off
-01134781-v 33 6 blast shoot
 01135371-v 33 1 trigger
-01140794-v 33 14 fish
 01143838-v 33 20 hunt run hunt_down track_down
-01149470-v 33 3 play
 01154175-v 33 1 retire strike_out
 01155090-v 33 1 overtake catch catch_up_with
-01155687-v 33 6 bet wager play
-01156834-v 34 55 consume ingest take_in take have
+01156834-v 34 90 consume ingest take_in take have
 01158572-v 34 10 use expend
 01158872-v 34 59 use utilize utilise apply employ
-01166351-v 34 17 eat
-01168468-v 34 18 eat
 01188342-v 34 1 be_full
 01189113-v 34 1 need
 01190948-v 34 4 delight enjoy revel
 01192992-v 34 1 go
-01194418-v 34 4 host
 01196037-v 34 7 abstain refrain desist
 01197750-v 34 1 metabolize metabolise
 01200934-v 34 1 trip trip_out turn_on get_off
-01201089-v 34 6 chew masticate manducate jaw
 01205331-v 34 1 go_down
-01205696-v 35 22 touch adjoin meet contact
-01206218-v 35 58 touch
+01205696-v 35 40 touch adjoin meet contact
+01206218-v 35 103 touch
 01207149-v 35 1 trap pin immobilize immobilise
-01207951-v 35 18 cover spread_over
 01209678-v 35 1 feel finger
 01211699-v 35 20 manipulate
 01212230-v 35 4 guide run draw pass
-01212572-v 35 25 seize prehend clutch
+01212572-v 35 46 seize prehend clutch
 01213146-v 35 1 snatch
-01214265-v 35 7 take get_hold_of
-01216670-v 35 13 hold take_hold
+01214265-v 35 10 take get_hold_of
+01216670-v 35 16 hold take_hold
 01217043-v 35 14 hold support sustain hold_up
-01223616-v 35 1 curl wave
-01224744-v 35 14 operate control
-01226215-v 35 11 caress fondle
 01228524-v 35 1 break
 01230710-v 35 5 prod incite egg_on
 01237901-v 35 3 miss
-01240514-v 35 2 graze crease rake
-01245637-v 35 4 polish smooth smoothen shine
-01248782-v 35 1 shave trim
 01249724-v 35 22 rub
-01254013-v 35 2 abrade corrade abrase rub_down rub_off
-01262936-v 35 3 skin peel pare
-01269702-v 35 1 whitewash
-01270199-v 35 1 wash rinse
-01275762-v 35 7 score nock mark
-01277974-v 35 14 fold fold_up turn_up
 01295275-v 35 24 join bring_together
-01296462-v 35 68 attach
-01298668-v 35 3 detach
-01301410-v 35 13 restrain confine hold
+01296462-v 35 69 attach
 01307896-v 35 1 degrade
-01309143-v 35 3 scratch scrape scratch_up
 01315613-v 35 23 search seek look_for
-01321002-v 35 5 snip clip crop trim lop dress prune cut_back
 01323958-v 35 49 kill
 01325536-v 35 2 kill
 01325774-v 35 2 kill
 01328012-v 35 1 catch
-01332730-v 35 188 cover
+01332730-v 35 189 cover
 01336635-v 35 2 overlay cover
 01339505-v 35 7 uncover expose
 01340439-v 35 97 fasten fix secure
 01345109-v 35 13 close shut
 01346003-v 35 12 open open_up
-01354673-v 35 45 connect link tie link_up
-01356750-v 35 2 adhere hold_fast bond bind stick stick_to
-01369346-v 35 1 break wear wear_out bust fall_apart
-01374020-v 35 2 spatter splatter plash splash splosh swash
+01354673-v 35 65 connect link tie link_up
 01375295-v 35 2 splash
-01375637-v 35 2 squirt force_out squeeze_out eject
-01376245-v 35 12 scatter sprinkle dot dust disperse
-01378556-v 35 23 spread distribute
+01378556-v 35 39 spread distribute
 01380638-v 35 25 gather garner collect pull_together
-01387786-v 35 9 compress constrict squeeze compact contract press
-01389329-v 35 1 compress compact pack_together
-01390616-v 35 2 press
-01390833-v 35 1 iron iron_out press
-01397210-v 35 12 beat beat_up work_over
+01397210-v 35 19 beat beat_up work_over
 01400044-v 35 36 hit
 01405044-v 35 58 hit
 01410223-v 35 37 strike
-01411085-v 35 7 flog welt whip lather lash slash strap trounce
-01418179-v 35 2 beat scramble
-01422886-v 35 4 plug stop_up secure
-01423285-v 35 3 close fill_up
-01424456-v 35 3 embrace hug bosom squeeze
-01426153-v 35 1 neck make_out
-01428853-v 35 16 copulate mate pair couple
-01429953-v 35 1 crossbreed cross hybridize hybridise interbreed
 01434140-v 35 1 bring
-01437888-v 35 1 mail get_off
-01438304-v 35 8 deliver
-01445932-v 35 5 bite seize_with_teeth
-01454431-v 35 1 tow
-01455866-v 35 2 heave heave_up heft heft_up
-01456771-v 35 2 pinch squeeze twinge tweet nip twitch
 01458228-v 35 2 percolate
-01468576-v 35 5 eject chuck_out exclude turf_out boot_out turn_out
 01470225-v 35 6 receive take_in invite
-01471043-v 35 1 kidnap nobble abduct snatch
-01471825-v 35 2 commandeer hijack highjack pirate
 01474550-v 35 17 let_go_of let_go release relinquish
 01475953-v 35 6 free disengage
-01476483-v 35 17 obstruct obturate impede occlude jam block close_up
 01481819-v 35 1 hang
 01481957-v 35 1 hang
 01482075-v 35 4 hang
-01487311-v 35 3 burden burthen weight weight_down
 01488847-v 35 1 overload
-01491360-v 35 1 unyoke
-01494310-v 35 198 put set place pose position lay
-01506812-v 35 1 invaginate introvert
-01512625-v 35 3 flip toss sky pitch
-01517662-v 35 6 intertwine twine entwine enlace interlace lace
-01524871-v 35 3 stuff
+01494310-v 35 210 put set place pose position lay
 01525666-v 35 6 function work operate go run
 01526483-v 35 1 idle tick_over
-01526956-v 35 1 pad fill_out
 01531124-v 35 1 entrench dig_in
-01531265-v 35 1 emboss boss stamp
-01533442-v 35 2 houseclean clean_house clean
 01539063-v 35 6 absorb suck imbibe soak_up sop_up suck_up draw take_in take_up
-01539633-v 35 2 absorb
-01542056-v 35 1 seed
 01542668-v 35 1 hang fall flow
 01542842-v 35 1 trail
 01543123-v 35 5 sit sit_down
-01546111-v 35 3 stand stand_up
-01547001-v 35 12 lie
-01548718-v 35 2 erase rub_out score_out efface wipe_off
-01549905-v 35 2 deface disfigure blemish
-01551195-v 35 2 scar mark pock pit
-01552519-v 35 96 cut
-01556572-v 35 2 cleave split rive
-01562209-v 35 3 crash
-01562733-v 35 2 collide
+01547001-v 35 18 lie
+01552519-v 35 106 cut
+01562733-v 35 5 collide
 01564144-v 35 25 destroy ruin
 01570108-v 35 1 install instal set_up establish
-01577093-v 35 3 dunk dip souse plunge douse
 01587062-v 35 29 enclose close_in inclose shut_in
-01591621-v 35 1 post
-01593937-v 35 5 squash crush squelch mash squeeze
 01601234-v 35 7 hold carry bear
-01609287-v 35 7 pull
 01610834-v 35 1 cut
 01611746-v 35 1 spread
 01615991-v 35 1 put_away put_aside
-01617192-v 36 371 make create
+01617192-v 36 492 make create
 01619231-v 36 2 unmake undo
 01619929-v 36 30 destroy destruct
-01621555-v 36 51 produce make create
-01626138-v 36 3 compose compile
-01634424-v 36 5 fabricate manufacture cook_up make_up invent
-01640855-v 36 12 carry_through accomplish execute carry_out action fulfill fulfil
+01621555-v 36 72 produce make create
 01644238-v 36 1 bring_on
-01651444-v 36 7 organize organise prepare devise get_up machinate
 01652895-v 36 1 fruit
-01653442-v 36 2 manufacture fabricate construct
-01658762-v 36 2 craft
-01659248-v 36 29 shape form work mold mould forge
+01659248-v 36 31 shape form work mold mould forge
 01664172-v 36 22 cook fix ready make prepare
-01666327-v 36 2 sew tailor tailor-make
-01668603-v 36 7 work work_on process
-01673472-v 36 2 loop intertwine
-01675245-v 36 2 forge hammer
-01684899-v 36 8 paint
-01686132-v 36 21 represent interpret
-01690294-v 36 18 draw
-01697986-v 36 1 coin
+01686132-v 36 39 represent interpret
 01698271-v 36 25 write compose pen indite
 01699896-v 36 3 spell write
-01701858-v 36 2 rhyme rime
 01712704-v 36 27 perform execute do
 01714208-v 36 29 perform
 01716882-v 36 2 play
 01717169-v 36 1 play run
 01718331-v 36 1 premier premiere
-01719302-v 36 8 act play represent
 01720660-v 36 1 enter
-01721556-v 36 2 dissemble pretend act
-01721754-v 36 2 simulate assume sham feign
-01724459-v 36 14 play spiel
-01726172-v 36 11 play
-01734502-v 36 3 duplicate reduplicate double repeat replicate
-01737141-v 36 1 reproduce
-01739814-v 36 4 grow raise farm produce
-01740608-v 36 4 till
-01740969-v 36 1 garden
-01742726-v 36 2 cultivate
-01742886-v 36 13 imitate copy simulate
-01747945-v 36 9 print impress
-01749790-v 36 2 engrave etch
-01750421-v 36 1 etch
+01721556-v 36 4 dissemble pretend act
+01742726-v 36 7 cultivate
 01753788-v 36 5 create
-01762528-v 37 4 agitate rouse turn_on charge commove excite charge_up
-01765908-v 37 3 worry vex
-01766748-v 37 1 worry care
-01766952-v 37 2 retire withdraw
 01767163-v 37 8 worry
-01767949-v 37 37 affect impress move strike
-01771535-v 37 34 feel experience
+01767949-v 37 44 affect impress move strike
+01771535-v 37 40 feel experience
 01773535-v 37 1 embitter envenom acerbate
 01773734-v 37 1 grudge
-01774136-v 37 2 hate detest
-01774799-v 37 1 contemn despise scorn disdain
-01775164-v 37 9 love
+01775164-v 37 10 love
 01776065-v 37 1 cling
-01776727-v 37 4 dislike
+01776727-v 37 7 dislike
 01776952-v 37 1 like
-01777210-v 37 5 like
-01778017-v 37 1 idolize idolise worship hero-worship revere
-01779165-v 37 13 frighten fright scare affright
-01779803-v 37 1 overawe cow
-01780202-v 37 2 fear dread
+01777210-v 37 6 like
+01780202-v 37 3 fear dread
 01780434-v 37 1 fear
-01782218-v 37 1 panic
 01787822-v 37 2 madden craze
-01787955-v 37 15 annoy rag get_to bother get_at irritate rile nark nettle gravel vex chafe devil
-01790739-v 37 4 confuse flurry disconcert put_off
 01796033-v 37 3 rage
 01796800-v 37 1 repent atone
-01797347-v 37 4 grieve sorrow
-01799794-v 37 4 humiliate mortify chagrin humble abase
-01802494-v 37 5 express_emotion express_feelings
-01806505-v 37 2 capture enamour trance catch becharm enamor captivate beguile charm fascinate bewitch entrance enchant
-01807882-v 37 3 attract appeal
-01808769-v 37 3 repel repulse
+01802494-v 37 21 express_emotion express_feelings
+01807882-v 37 5 attract appeal
 01810933-v 37 2 despair
 01813499-v 37 2 gladden joy
-01814396-v 37 1 depress deject cast_down get_down dismay dispirit demoralize demoralise
 01814815-v 37 8 comfort soothe console solace
-01815628-v 37 2 please delight
-01816431-v 37 4 satisfy gratify
-01816645-v 37 2 dissatisfy
-01817130-v 37 4 displease
+01816431-v 37 6 satisfy gratify
+01817130-v 37 24 displease
 01818116-v 37 1 rise
-01818235-v 37 11 encourage
-01819147-v 37 5 discourage
-01819554-v 37 1 intimidate restrain
+01819147-v 37 7 discourage
 01820302-v 37 3 enjoy bask relish savor savour
 01821884-v 37 1 bore tire
-01822248-v 37 1 commiserate sympathize sympathise
 01823149-v 37 1 care_a_hang give_a_hoot give_a_hang give_a_damn
 01825125-v 37 1 begrudge resent
 01825237-v 37 25 desire want
-01828736-v 37 1 love enjoy
-01831531-v 38 297 move
+01831531-v 38 329 move
 01834485-v 38 4 stand_still
 01835103-v 38 1 mire bog_down
-01835496-v 38 445 travel go move locomote
-01840238-v 38 1 fly
-01843055-v 38 10 travel trip jaunt
+01835496-v 38 486 travel go move locomote
+01843055-v 38 22 travel trip jaunt
 01844048-v 38 1 visit inspect
-01844431-v 38 1 frequent haunt
-01845720-v 38 11 travel journey
 01848058-v 38 2 fly
 01848355-v 38 2 stay_in_place
-01850315-v 38 469 move displace
+01850315-v 38 519 move displace
 01854679-v 38 1 suction
-01855606-v 38 8 move
-01856626-v 38 4 migrate transmigrate
+01855606-v 38 12 move
 01857717-v 38 6 start start_up
 01859221-v 38 14 stop
 01860795-v 38 12 stop halt
 01864230-v 38 3 start go get_going
 01868899-v 38 1 wreathe
-01875295-v 38 4 rock sway shake
-01877355-v 38 4 swing sway
-01878063-v 38 2 oscillate vibrate
 01880673-v 38 2 beat
 01899017-v 38 1 call call_off
 01900760-v 38 1 trip trip_up
-01921964-v 38 5 climb climb_up mount go_up
-01926311-v 38 13 run
-01931768-v 38 18 steer maneuver manoeuver manoeuvre direct point head guide channelize channelise
-01941093-v 38 12 fly aviate pilot
 01944252-v 38 1 levitate hover
-01945516-v 38 9 sail
-01953527-v 38 1 sublimate
-01955984-v 38 30 ride
+01955984-v 38 39 ride
 01965156-v 38 1 jump leap
-01968275-v 38 1 chute parachute jump
 01981279-v 38 1 down shoot_down land
 01983597-v 38 1 bristle uprise stand_up
 01989562-v 38 2 collapse burst
 01997512-v 38 1 back
-01999423-v 38 1 lead head
 01999798-v 38 6 lead take direct conduct guide
-02001858-v 38 5 chase chase_after trail tail tag give_chase dog go_after track
 02005948-v 38 23 arrive get come
 02009200-v 38 1 stay
-02009433-v 38 33 leave go_forth go_away
-02016523-v 38 79 enter come_in get_into get_in go_into go_in move_into
+02009433-v 38 49 leave go_forth go_away
+02016523-v 38 82 enter come_in get_into get_in go_into go_in move_into
 02020590-v 38 15 reach make attain hit arrive_at gain
-02023107-v 38 2 meet run_into encounter run_across come_across see
-02023396-v 38 2 intersect cross
-02028994-v 38 3 disperse dissipate scatter spread_out
-02031158-v 38 10 separate divide
+02023107-v 38 4 meet run_into encounter run_across come_across see
+02031158-v 38 16 separate divide
 02035315-v 38 1 overarch arch_over
-02035919-v 38 18 bend flex
-02037090-v 38 5 slope incline pitch
-02039544-v 38 1 tip
-02045043-v 38 7 revolve go_around rotate
-02046755-v 38 1 spin spin_around whirl reel gyrate
-02047263-v 38 1 centrifuge centrifugate
 02052476-v 38 9 pass make_pass
-02061495-v 38 1 dart dash scoot scud flash shoot
-02065085-v 38 3 deviate
 02067689-v 38 1 flow
-02068413-v 38 3 spurt spirt gush spout
-02072159-v 38 1 overflow overrun well_over run_over brim_over
-02074677-v 38 6 escape get_away break_loose
-02075462-v 38 9 flee fly take_flight
 02078591-v 38 4 bring_in introduce
 02081578-v 38 2 leave_behind
-02082690-v 38 4 spread scatter spread_out
-02084380-v 38 1 march
 02086805-v 38 1 stampede
 02087472-v 38 1 port
 02098964-v 38 1 interpose
 02105657-v 38 1 ascend climb_up
 02105810-v 39 1 record register
-02106506-v 39 46 perceive comprehend
-02108026-v 39 8 experience receive have get
+02106506-v 39 52 perceive comprehend
 02108654-v 39 1 get receive
 02108791-v 39 1 hit strike come_to
-02110220-v 39 12 experience see go_through
-02115778-v 39 3 sensitize sensitise
-02116118-v 39 10 stimulate excite stir
+02115778-v 39 13 sensitize sensitise
 02118476-v 39 2 notice mark note
 02118933-v 39 1 note take_note observe
 02119241-v 39 2 ignore
 02121423-v 39 1 itch
-02122164-v 39 12 ache smart hurt
-02123672-v 39 3 smell
-02123903-v 39 7 cause_to_be_perceived
+02123903-v 39 32 cause_to_be_perceived
 02124632-v 39 1 reach_one's_nostrils
 02125460-v 39 1 sniff_out scent_out smell_out nose_out
-02125641-v 39 3 odorize odourise scent
 02127853-v 39 2 miss lose
 02128066-v 39 2 discover
 02128653-v 39 2 watch look_on
@@ -730,126 +365,77 @@
 02131963-v 39 1 watch
 02135048-v 39 6 sound
 02136271-v 39 3 reflect reverberate
-02137132-v 39 35 show
-02143539-v 39 1 excavate unearth
+02137132-v 39 36 show
 02144835-v 39 20 hide conceal
 02145814-v 39 7 hide hide_out
 02146790-v 39 2 conceal hold_back hold_in
-02150510-v 39 6 watch
-02150948-v 39 4 watch view see catch take_in
+02150510-v 39 16 watch
 02151966-v 39 4 watch look_out watch_out
-02154508-v 39 5 detect observe find discover notice
 02157100-v 39 2 produce bring_on bring_out
 02158034-v 39 1 film_over glaze_over blur
-02159890-v 39 1 flash blink wink twinkle winkle
-02160552-v 39 5 radiate
-02161160-v 39 1 fluoresce
-02161922-v 39 1 focus
 02166761-v 39 1 bethink
 02168555-v 39 4 blind
-02169352-v 39 6 observe
-02170427-v 39 1 attend hang advert pay_heed give_ear
 02176268-v 39 89 sound go
-02179518-v 39 12 sound
+02179518-v 39 23 sound
 02190077-v 39 1 deafen
 02191766-v 39 9 season flavor flavour
 02193194-v 39 3 spot recognize recognise distinguish discern pick_out make_out tell_apart
 02194286-v 39 2 taste savor savour
-02195470-v 39 4 sweeten dulcify edulcorate dulcorate
 02197091-v 39 1 lose
 02197505-v 39 1 greet
 02198602-v 39 1 surveil follow survey
-02199590-v 40 110 give
+02199590-v 40 122 give
 02200686-v 40 25 give gift present
 02201138-v 40 1 take
-02202384-v 40 18 keep hold_on
-02203362-v 40 15 have have_got hold
+02203362-v 40 80 have have_got hold
 02204692-v 40 2 own have possess
 02205098-v 40 2 have
 02205272-v 40 33 take
-02206619-v 40 12 take
+02206619-v 40 38 take
 02209936-v 40 2 take accept
-02210855-v 40 125 get acquire
-02213690-v 40 7 withhold keep_back
-02215506-v 40 3 fund
-02220461-v 40 24 transfer
-02224055-v 40 46 get_rid_of remove
-02227487-v 40 1 foreswear renounce quit relinquish
-02227741-v 40 2 abandon give_up
+02210855-v 40 126 get acquire
+02220461-v 40 28 transfer
+02224055-v 40 47 get_rid_of remove
+02227741-v 40 3 abandon give_up
 02230772-v 40 22 pass hand reach pass_on turn_over give
-02234087-v 40 5 allocate apportion
-02237024-v 40 1 fuel
 02237338-v 40 3 refuse reject pass_up turn_down decline
-02241107-v 40 1 extort squeeze rack gouge wring
 02242464-v 40 23 sell
-02244956-v 40 6 deal sell trade
 02247390-v 40 1 fetch bring_in bring
 02248465-v 40 1 find happen chance bump encounter
 02251743-v 40 67 pay
 02252755-v 40 1 tithe
-02252931-v 40 3 pay_up ante_up pay
 02254155-v 40 2 owe
-02254258-v 40 7 settle
-02259547-v 40 1 haggle higgle chaffer huckster
 02260362-v 40 11 trade merchandise
-02262278-v 40 1 award grant
-02263346-v 40 3 confer bestow
-02265231-v 40 22 account calculate
+02265231-v 40 26 account calculate
 02265979-v 40 2 save lay_aside save_up
 02266920-v 40 2 save
-02269143-v 40 1 conserve husband economize economise
-02274482-v 40 7 assume usurp seize take_over arrogate
-02277448-v 40 1 hold_up stick_up
 02280018-v 40 1 break_even
-02280132-v 40 4 conserve preserve maintain keep_up
-02282506-v 40 11 store
 02287618-v 40 2 lose
 02287789-v 40 3 lose
 02288155-v 40 1 lose
 02288828-v 40 1 lose turn_a_loss
 02289134-v 40 1 clear
 02298632-v 40 7 offer bid tender
-02303331-v 40 1 forfeit give_up throw_overboard waive forgo forego
-02304982-v 40 12 roll_up collect accumulate pile_up amass compile hoard
-02307547-v 40 4 tax
-02313250-v 40 12 deprive
 02315938-v 40 1 inherit
-02316868-v 40 5 give
+02316868-v 40 7 give
 02317094-v 40 1 grant give
 02318403-v 40 1 fail
-02319428-v 40 2 discount
-02320078-v 40 1 mark_down
-02321757-v 40 17 steal
-02325558-v 40 1 sacrifice
-02327200-v 40 150 supply provide render furnish
-02344568-v 40 1 plunder despoil loot reave strip rifle ransack pillage foray
+02327200-v 40 158 supply provide render furnish
 02350175-v 40 8 rid free disembarrass
-02351737-v 40 1 mortgage
 02358034-v 40 1 afford open give
 02358655-v 40 1 fall
 02358922-v 40 1 fall
 02363742-v 40 1 check_out
-02367363-v 41 294 act move
+02367363-v 41 392 act move
 02371352-v 41 1 keep_to_oneself
 02378330-v 41 1 lie_dormant
-02379528-v 41 2 start take_up
-02382087-v 41 2 officiate
-02382367-v 41 7 leave_office quit step_down resign
-02383842-v 41 2 take_office
-02384041-v 41 3 install instal
+02379528-v 41 4 start take_up
+02384041-v 41 7 install instal
 02386266-v 41 1 take_orders
-02386388-v 41 4 invest vest enthrone
-02387034-v 41 3 prepare groom train
-02391803-v 41 32 delegate designate depute assign
-02393726-v 41 1 alternate
-02396205-v 41 2 appoint name nominate constitute
-02402409-v 41 1 overthrow subvert overturn bring_down
-02402825-v 41 8 displace fire give_notice can dismiss give_the_axe send_away sack force_out give_the_sack terminate
-02404224-v 41 12 remove
+02391803-v 41 33 delegate designate depute assign
+02404224-v 41 21 remove
 02404904-v 41 4 take_out move_out remove
-02405390-v 41 5 supplant replace supersede supervene_upon supercede
-02406585-v 41 4 succeed come_after follow
-02406916-v 41 4 tug labor labour push drive
+02406585-v 41 9 succeed come_after follow
 02407766-v 41 1 precede come_before
 02409412-v 41 9 hire engage employ
 02410855-v 41 27 work do_work
@@ -857,102 +443,59 @@
 02413480-v 41 34 work
 02417504-v 41 6 idle laze slug stagnate
 02418421-v 41 1 play recreate
-02418686-v 41 4 play
-02419073-v 41 4 act
+02419073-v 41 8 act
 02421374-v 41 7 free liberate release unloose unloosen loose
-02422026-v 41 11 free discharge
-02422663-v 41 9 restrain keep keep_back hold_back
+02422026-v 41 14 free discharge
 02423183-v 41 2 let allow permit
 02423650-v 41 1 give_up allow
-02423762-v 41 3 inhibit bottle_up suppress
+02423762-v 41 60 inhibit bottle_up suppress
 02424652-v 41 2 oppress suppress crush
-02425462-v 41 2 open
 02426171-v 41 2 open open_up
 02426395-v 41 3 close_up close fold shut_down close_down
 02427334-v 41 3 abolish get_rid_of
-02427916-v 41 2 ordain enact
 02431320-v 41 8 separate part split_up split break break_up
 02434859-v 41 1 fall_in
-02434976-v 41 9 join fall_in get_together
+02434976-v 41 27 join fall_in get_together
 02436140-v 41 1 disorganize disorganise
-02441022-v 41 67 control command
-02443049-v 41 1 oversee supervise superintend manage
-02443849-v 41 4 operate run
-02444662-v 41 3 license licence certify
+02441022-v 41 94 control command
 02445100-v 41 1 decertify derecognize derecognise
 02445925-v 41 3 be follow
-02450505-v 41 23 prevent keep
-02452885-v 41 8 prevent forestall foreclose preclude forbid
-02454312-v 41 1 poll canvass canvas
-02455407-v 41 7 watch observe follow watch_over keep_an_eye_on
-02459173-v 41 5 house put_up domiciliate
-02462580-v 41 1 vote
-02463510-v 41 2 avoid
-02463704-v 41 3 fiddle shirk shrink_from goldbrick
-02465658-v 41 1 ostracize ostracise
-02469835-v 41 17 unite unify
-02473431-v 41 1 veto blackball negative
+02450505-v 41 41 prevent keep
+02452885-v 41 23 prevent forestall foreclose preclude forbid
+02463510-v 41 5 avoid
 02473890-v 41 1 vote
-02474239-v 41 1 endow indue gift empower invest endue
 02475922-v 41 10 appoint charge
 02477755-v 41 1 cancel call_off scratch scrub
-02478059-v 41 2 invalidate annul quash void avoid nullify
-02479323-v 41 4 issue supply
 02481900-v 41 1 desegregate integrate mix
-02485844-v 41 1 date
-02486932-v 41 6 meet get_together
-02487573-v 41 3 visit call_in call
+02486932-v 41 15 meet get_together
 02488168-v 41 1 send_in
-02490877-v 41 6 celebrate fete
 02495038-v 41 10 confine detain
-02497062-v 41 3 liberate set_free
 02497992-v 41 1 arraign
-02498716-v 41 1 ticket fine
 02499629-v 41 11 punish penalize penalise
 02500397-v 41 1 get_it
 02500489-v 41 1 catch_it
 02502916-v 41 1 reject turn_down turn_away refuse
-02504562-v 41 8 coerce hale squeeze pressure force
-02510337-v 41 18 control hold_in hold contain check curb moderate
 02511276-v 41 2 indulge
-02521410-v 41 7 protest resist dissent
 02522319-v 41 1 fail
 02523221-v 41 1 do manage
 02523521-v 41 1 fail flunk bomb flush_it
-02524171-v 41 14 succeed win come_through bring_home_the_bacon deliver_the_goods
-02526085-v 41 9 achieve accomplish attain reach
+02524171-v 41 23 succeed win come_through bring_home_the_bacon deliver_the_goods
 02528380-v 41 9 fail go_wrong miscarry
-02529284-v 41 10 fail neglect
+02529284-v 41 11 fail neglect
 02532886-v 41 1 experiment try_out
 02534062-v 41 2 waive relinquish forgo forego foreswear dispense_with
 02534936-v 41 1 woo court
 02535360-v 41 1 take_the_stage take_stage
 02539788-v 41 4 rear raise bring_up nurture parent
-02542280-v 41 3 comply follow abide_by
-02543181-v 41 4 disobey
-02543874-v 41 1 counteract countervail neutralize counterbalance
-02546075-v 41 4 honor honour reward
 02547225-v 41 2 dishonor disgrace dishonour attaint shame
-02547586-v 41 18 help assist aid
-02549847-v 41 2 tend
-02551144-v 41 2 rescue deliver
 02551602-v 41 1 deliver redeem save
-02551832-v 41 2 save carry_through pull_through bring_through
-02554922-v 41 7 promote advance boost further encourage
-02556126-v 41 7 support back_up
-02557199-v 41 5 obstruct blockade block hinder stymie stymy embarrass
-02558172-v 41 10 thwart queer spoil scotch foil cross frustrate baffle bilk
-02560585-v 41 2 make do
+02551832-v 41 4 save carry_through pull_through bring_through
+02556126-v 41 35 support back_up
+02560585-v 41 5 make do
 02561332-v 41 2 practice apply use
 02564146-v 41 6 exempt relieve free
 02566092-v 41 2 fall
-02566528-v 41 7 transgress offend infract violate go_against breach break
 02568672-v 41 2 practice practise exercise do
-02568999-v 41 3 overdo exaggerate
-02573275-v 41 10 cheat rip_off chisel
-02574205-v 41 2 victimize victimise
-02575082-v 41 19 deceive lead_on delude cozen
-02576921-v 41 1 fudge manipulate fake falsify cook wangle misrepresent
 02578510-v 41 4 observe celebrate keep
 02578872-v 41 2 observe keep
 02581477-v 41 1 prosecute
@@ -969,12 +512,10 @@
 02598765-v 41 1 join
 02599528-v 41 1 fail
 02600779-v 41 1 take_to
-02603699-v 42 14 exist be
-02604760-v 42 230 be
+02603699-v 42 18 exist be
+02604760-v 42 252 be
 02608347-v 42 7 begin start
 02609764-v 42 24 end stop finish terminate cease
-02612368-v 42 4 occur
-02613860-v 42 1 cut skip
 02614181-v 42 1 be live
 02614387-v 42 13 live
 02614970-v 42 1 live
@@ -987,85 +528,56 @@
 02620587-v 42 11 constitute represent make_up comprise be
 02621853-v 42 1 separate divide
 02622234-v 42 6 connect link link_up join unite
-02623529-v 42 8 become
-02624263-v 42 6 originate arise rise develop uprise spring_up grow
-02626604-v 42 5 become turn
+02623529-v 42 14 become
 02627666-v 42 2 originate_in
 02627934-v 42 7 necessitate ask postulate need require take involve call_for demand
 02629256-v 42 2 obviate rid_of eliminate
-02630189-v 42 23 have feature
-02631856-v 42 1 exhibit
+02630189-v 42 24 have feature
 02632353-v 42 3 miss lack
 02632838-v 42 1 miss
-02632940-v 42 8 include
-02634265-v 42 4 result ensue
-02635659-v 42 4 leave result lead
-02637202-v 42 2 bide abide stay
+02632940-v 42 18 include
 02637938-v 42 4 wait
 02640440-v 42 7 hesitate waver waffle
-02641035-v 42 2 hesitate pause
-02641957-v 42 3 delay
-02642238-v 42 1 procrastinate stall drag_one's_feet drag_one's_heels shillyshally dilly-dally dillydally
-02642814-v 42 5 postpone prorogue hold_over put_over table shelve set_back defer remit put_off
 02644234-v 42 4 predominate dominate rule reign prevail
-02647497-v 42 2 prevail persist die_hard run endure
-02649830-v 42 18 populate dwell live inhabit
-02651424-v 42 3 lodge accommodate
-02652158-v 42 1 herd
 02653862-v 42 1 go
-02655135-v 42 44 be
-02657219-v 42 35 match fit correspond check jibe gibe tally agree
+02655135-v 42 63 be
+02657219-v 42 45 match fit correspond check jibe gibe tally agree
 02658283-v 42 1 check check_out
-02659763-v 42 2 fit go
-02660442-v 42 2 coincide co-occur cooccur
-02661252-v 42 3 deviate vary diverge depart
-02662297-v 42 2 vary
 02662979-v 42 2 conform
-02663643-v 42 1 repose_on rest_on build_on build_upon
 02663848-v 42 1 depend_on rely_on
 02664017-v 42 1 depend_on depend_upon rely_on rely_upon
 02664769-v 42 5 equal be
 02664992-v 42 2 amount
-02666239-v 42 9 differ
+02666239-v 42 14 differ
 02668523-v 42 2 violate go_against break
 02669477-v 42 2 exceed transcend surpass
-02669789-v 42 7 suffice do answer serve
 02671761-v 42 1 fall_short_of
-02671880-v 42 2 satisfy fulfill fulfil live_up_to
-02673134-v 42 8 balance equilibrate equilibrize equilibrise
 02673630-v 42 1 unbalance
 02673965-v 42 4 excel stand_out surpass
-02676054-v 42 7 refer pertain relate concern come_to bear_on touch touch_on have-to_doe_with
+02676054-v 42 8 refer pertain relate concern come_to bear_on touch touch_on have-to_doe_with
 02678438-v 42 1 concern interest occupy worry
-02678839-v 42 1 intrigue fascinate
 02679227-v 42 1 begin
 02680814-v 42 12 discontinue stop cease give_up quit lay_off
 02681639-v 42 1 break
-02681795-v 42 15 keep maintain hold
+02681795-v 42 19 keep maintain hold
 02687251-v 42 1 roll undulate
 02687385-v 42 1 lead top
 02690708-v 42 26 lie
 02700666-v 42 1 go
 02700772-v 42 1 go
-02700867-v 42 2 hold bear carry contain
 02703289-v 42 2 yield relent soften
-02703952-v 42 1 border_on approach
 02705832-v 42 1 straddle
 02707429-v 42 1 lend_oneself apply
 02708420-v 42 12 spend pass
 02709906-v 42 3 diverge
 02710402-v 42 2 converge meet
-02710673-v 42 3 bound border
-02711114-v 42 5 enclose hold_in confine
-02711987-v 42 2 depend_on devolve_on depend_upon ride turn_on hinge_on hinge_upon
+02711987-v 42 3 depend_on devolve_on depend_upon ride turn_on hinge_on hinge_upon
 02712443-v 42 1 predate precede forego forgo antecede antedate
 02712772-v 42 1 postdate follow
 02713372-v 42 7 stick_out protrude jut_out jut project
 02714057-v 42 1 thrust
 02714731-v 42 1 protuberate
-02714974-v 42 1 teem pullulate swarm
 02716165-v 42 4 attach_to accompany come_with go_with
-02718309-v 42 2 share
 02719016-v 42 2 sulk pout brood
 02719930-v 42 3 belong_to belong
 02720697-v 42 1 follow
@@ -1086,16 +598,14 @@
 02742232-v 42 1 drive ride
 02742482-v 42 1 mean
 02743921-v 42 1 issue_forth come
-02744061-v 42 1 brood hover loom bulk_large
 02744451-v 42 1 afford
 02744651-v 42 1 open
 02745486-v 42 1 admit allow
 02749904-v 42 1 be
 02756821-v 43 12 precipitate come_down fall
 02758826-v 43 1 freeze
-02759614-v 43 7 ignite light
 02761897-v 43 4 snuff_out blow_out extinguish quench
-02762468-v 43 5 burn combust
+02762468-v 43 12 burn combust
 02763283-v 43 1 shine
 02763740-v 43 13 shine beam
 02765464-v 43 2 absorb take_in
