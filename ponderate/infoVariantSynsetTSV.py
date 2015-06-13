@@ -17,7 +17,7 @@ parserarg.add_argument('--synset', dest='synset', required=True, default='', typ
 args = parserarg.parse_args()
 syn = args.synset
 
-cmd = "fgrep "+syn+" wei_eng-30_variant.tsv | nawk '{print $1,$2}'"
+cmd = "fgrep "+syn+" data/wei_eng-30_variant.tsv | nawk '{print $1,$2}'"
 tmp = subprocess.check_output(cmd, shell=True)
 
 variants = ''
