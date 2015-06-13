@@ -4,6 +4,14 @@ Ponderate Synset Relations
 
 This script (ponderateSynsetRelationsDB.py) work as folows. From a synset given recovery the categories that relationated synset's has in mcr and from ponderated categorization formula.
 
+Download
+-------
+
+To download the code execute this command
+```
+svn export https://github.com/daniparera/MCR/trunk/ponderate
+```
+
 Requirements
 -------
 
