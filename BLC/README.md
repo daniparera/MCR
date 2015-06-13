@@ -34,10 +34,20 @@ python buildBLC.py --host adimen.si.ehu.es --db mcr9 --user guest --pwd guest --
 
 To compare list execute command...
 ```
-comm data/BLCnounSript.list data/BLCnoun.list -{123}
+comm data/BLCnounSript.list data/BLCnoun.list -3
 ```
 for verbs...
 ```
-comm data/BLCverbSript.list data/BLCverb.list -{123}
+comm data/BLCverbSript.list data/BLCverb.list -3
+```
+
+```
+  comm -12 FILE1 FILE2    show lines present in both files.
+  comm -3  FILE1 FILE2    show lines from FILE1 that are not present in FILE2 (and vice versa).
+```
+
+or with diff
+```
+diff data/BLCverbSript.list data/BLCverb.list
 ```
 
