@@ -32,12 +32,13 @@ weka = not(bool(args.weka))
 variant = not(bool(args.variant))
 relinfo = not(bool(args.relinfo))
 
-wek, var, rli, deb = ["", "", "", ""]
+wek, var, rli, deb, dbvars = ["", "", "", ""]
 
 if weka: wek_str="--weka"	
 if variant: var="--variant"	
 if relinfo: rli="--relinfo"
-if debug and not weka: bdeb="--debug"		
+if debug and not weka: bdeb="--debug"	
+dbvars = " --host "+args.host_db+" --user "+args.user_db+" --pwd "+args.pwd_db+" --db "+args.db_db
 
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
@@ -77,7 +78,7 @@ for syn in content:
 
 		if variant: 
 
-			cmd = "python infoVariantSynset.py --synset "+syn
+			cmd = "python infoVariantSynsetDB.py --synset "+syn+" "+dbvars
 			result_var = subprocess.check_output(cmd, shell=True).strip()
 
 			print "Variants: "+result_var
