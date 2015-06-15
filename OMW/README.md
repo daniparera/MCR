@@ -16,9 +16,5 @@ Requirements
 
 Datasets are from
 ```
-http://www.ethnologue.com/show_language.asp?code=cat
-http://www.ethnologue.com/show_language.asp?code=eng
-http://www.ethnologue.com/show_language.asp?code=eus
-http://www.ethnologue.com/show_language.asp?code=glg
-http://www.ethnologue.com/show_language.asp?code=spa
+http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgz
 ```
