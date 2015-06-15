@@ -8,12 +8,12 @@ import pymysql
 #import MySQLdb
 
 parserarg = argparse.ArgumentParser(
-     prog='infoVariantSynset',
+     prog='buildBLC.py',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         get variant info for specific synset
+         build a PLC file from data stored in MCR and datasets
          --------------------------------
-             example of use $python3 %(prog)s --synset synset [[--debug]]
+             example of use $python3 %(prog)s --host host --db database --user user --pwd password --pos n/v
          '''))
 
 parserarg.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
@@ -21,14 +21,18 @@ parserarg.add_argument('--user', dest='user_db', required=True, type=str , help=
 parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
 parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
-parserarg.add_argument('--pos', dest='pos', required=False, default='n', type=str , help='pos (default noun)')
+parserarg.add_argument('--pos', dest='pos', required=True, default='n', type=str , help='pos (required)')
 
 args = parserarg.parse_args()
 
 pos = args.pos
 
 if pos == 'n': name = 'noun'
-if pos == 'v': name = 'verb'
+elif pos == 'v': name = 'verb'
+else:
+	print("POS parameter must be 'n' or 'v'")
+	exit(1)
+
 
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
