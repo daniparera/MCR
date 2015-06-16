@@ -63,10 +63,10 @@ for lang in languages:
 
 		lng = lang.split("-")[0]
 		print("OPEN FILES FOR LANGUAGE "+lng)
-
-		input_file = open('data/wn-wikt-'+lng+'.tab', "r")
-		output_file_upd = open('out/updateCS-'+lng+'.tab', "w")
-		output_file_sql = open('out/updateCS-'+lng+'.sql', "w")
+		
+		input_file = open('data/wn-'+t+'-'+lng+'.tab', "r")
+		output_file_upd = open('out/updateCS-'+t+'-'+lng+'.tab', "w")
+		output_file_sql = open('out/updateCS-'+t+'-'+lng+'.sql', "w")
 
 		for idx,line in enumerate(input_file.readlines()):
 
