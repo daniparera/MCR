@@ -1,0 +1,28 @@
+Scripts to check MCR with OMW datasets
+=======
+
+This script (checkOMW.py) work as folows. Get all information in OMW file related with synsets and word from MCR.
+This script (buildUpdateOMW.py) work as folows. Construct a sql file to update CS in MCR.
+
+Download
+-------
+
+Download code executing...
+```
+svn export https://github.com/daniparera/MCR/trunk/OMW
+```
+
+Requirements
+-------
+
+Datasets are from
+```
+http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgz
+```
+
+More Information
+-------
+
+```
+http://compling.hss.ntu.edu.sg/omw/index.html
+```

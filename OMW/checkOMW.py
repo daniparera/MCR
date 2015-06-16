@@ -21,11 +21,15 @@ parserarg.add_argument('--user', dest='user_db', required=True, type=str , help=
 parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
 parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
-parserarg.add_argument('--cs', dest='cs', required=True, default='50', type=int , help='cs (required)')
+parserarg.add_argument('--t', dest='t', required=False, default='wikt', type=str , help='file type (cldr/wikt)')
 
 args = parserarg.parse_args()
 
-cs = args.cs
+t = args.t
+
+if not t == 'cldr' and not t == 'wikt':
+	print("t parameter must be 'wikt' or 'cldr'")
+	exit(1)
 
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
@@ -47,10 +51,10 @@ for lang in languages:
 	lng = lang.split("-")[0]
 	print("OPEN FILES FOR LANGUAGE "+lng)
 
-	input_file = open('data/wn-wikt-'+lng+'.tab', "r")
-	output_file_c = open('out/correct-'+lng+'.tab', "w")
-	output_file_m = open('out/missing-'+lng+'.tab', "w")
-	output_file_a = open('out/alternatives-'+lng+'.tab', "w")
+	input_file = open('data/wn-'+t+'-'+lng+'.tab', "r")
+	output_file_c = open('out/correct-'+t+'-'+lng+'.tab', "w")
+	output_file_m = open('out/missing-'+t+'-'+lng+'.tab', "w")
+	output_file_a = open('out/alternatives-'+t+'-'+lng+'.tab', "w")
 
 	for idx,line in enumerate(input_file.readlines()):
 
@@ -63,16 +67,18 @@ for lang in languages:
 
 				p = "SYN:"+syn+"\tW:"+word
 
-				w = word.replace("'","\\'")
+				w = word.replace("'","\\'") # get information from OMW file and make a sql with it (synset,word)
 				cur.execute("SELECT * FROM `wei_"+lang+"_variant` WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+w+"'")
 				rows = cur.fetchall()
 
+				# only one result for word and synset in MCR 
 				if len(rows) == 1:
 
 					for row in rows:
 
 						output_file_c.write(p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
 
+				# more than one result for word and synset in MCR
 				elif len(rows) > 1:
 
 						print rows
@@ -80,9 +86,10 @@ for lang in languages:
 						print "ERROR SYNSET:"+syn
 						exit(1)
 
+				# no results for word and synset in MCR
 				else:
 
-					w = word.replace("'","\\'")
+					w = word.replace("'","\\'") # all alternatives, diferents synsets, for specific word in OMW
 					cur.execute("SELECT * FROM `wei_"+lang+"_variant` WHERE `word` LIKE '"+w+"'")
 					rows_w = cur.fetchall()
 
@@ -91,6 +98,8 @@ for lang in languages:
 					for row_w in rows_w:
 
 							alt = alt + "\n\tSYN:"+row_w['offset']+"\tSTS:"+str(row_w['status'])+"\tCS: "+str(row_w['csco'])+"\tW:"+row_w['word']
+
+					# if we have alternatives print in alternative file else we write in missing files
 					if not alt=="":
 						output_file_a.write(p+alt+"\n")
 					else:
