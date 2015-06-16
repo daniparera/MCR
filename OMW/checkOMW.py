@@ -46,6 +46,9 @@ languages = []
 for row in rows: languages.append(row["code"])
 print languages
 
+if not os.path.exists('out'):
+	os.makedirs('out')
+
 for lang in languages:
 
 	lng = lang.split("-")[0]
