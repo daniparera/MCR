@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import subprocess, time
+import os
 import textwrap, argparse
 import pymysql
 
