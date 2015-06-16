@@ -54,6 +54,9 @@ if not l in languages:
 	print("language must be present in MCR, options:"+str(languages))
 	exit(1)
 
+if not os.path.exists('out'):
+	os.makedirs('out')
+
 for lang in languages:
 
 	if lang == l:
