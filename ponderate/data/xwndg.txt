@@ -141,8 +141,7 @@ sexuality.ppv 313
 skating.ppv 28
 skiing.ppv 34
 soccer.ppv 16
-social.ppv 13
-social_science.ppv 1
+social_science.ppv 14
 sociology.ppv 856
 sport.ppv 791
 statistics.ppv 19
