@@ -1,0 +1,6 @@
+applied_science.ppv 14913
+factotum.ppv 46306
+free_time.ppv 3350
+humanities.ppv 12830
+pure_science.ppv 47981
+social_science.ppv 21714
