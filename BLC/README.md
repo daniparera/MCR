@@ -1,7 +1,7 @@
 Scripts to create BLC information from MCR db
 =======
 
-This script (buildBLC.py) work as folows. Get all information related with BLC from MCR and construct a file with the same structure than files presents in BLC zip file.
+Tools to work with BLC datasets and MCR database.
 
 Download
 -------
@@ -14,13 +14,15 @@ svn export https://github.com/daniparera/MCR/trunk/BLC
 Requirements
 -------
 
-Datasets are from
+Datasets in data folder are from '/Wordnet-3.0/freqmin20/all/', freq 20 all.
 ```
 http://adimen.si.ehu.es/web/files/BLC/Wordnet-3.0.tar.gz
 ```
 
-Run
+Run buildBLC.py
 -------
+
+This script (buildBLC.py) work as folows. Get all information related with BLC from MCR and construct a file with the same structure than files presents in BLC zip file.
 
 To get nouns BLC list execute script...
 ```
@@ -51,3 +53,12 @@ or with diff
 diff data/BLCverbSript.list data/BLCverb.list
 ```
 
+Run sqlBLC.py
+-------
+
+To generate sql data from BLC datasets that would be stored in sql folder...
+```
+python sqlBLC.py
+```
+
+Get information from files 'data/BLCnoun.rel' and 'data/BLCverb.rel' and stored output information in 'sql/data.tsv'. in file 'sql/structure.sql' are the structure of new table ili_to_blc. Recomended to use mysql terminal to load data.

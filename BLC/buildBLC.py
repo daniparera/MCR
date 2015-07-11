@@ -11,7 +11,7 @@ parserarg = argparse.ArgumentParser(
      prog='buildBLC.py',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         build a PLC file from data stored in MCR and datasets
+         build a BLC file from data stored in MCR and datasets to compare with BLC information
          --------------------------------
              example of use $python3 %(prog)s --host host --db database --user user --pwd password --pos n/v
          '''))
@@ -50,12 +50,13 @@ content_file = input_file.readlines()
 
 for row in rows:
 
+	# to obtain the synset without 'ili' string
 	syn = "-".join(row['iliOffset'].split('-')[2:])
 
 	occ_w = 0 
 	for line in content_file:
-		if '\t'+syn in line:
-			occ_w += 1
+		if '\t'+syn in line:	# it's in right position?? in that case it is a BLC
+			occ_w += 1			# in that case add 1 to occurence counter 
 
 	cur.execute("SELECT * FROM `wei_eng-30_variant` WHERE `offset` LIKE 'eng-30-"+syn+"'")
 	rows_v = cur.fetchall()
