@@ -29,6 +29,11 @@ buildUpdateOMW.py construct a sql file to update CS in MCR. The cases presents i
 3) Assigned synset-variant to MCR with csco<99 and csco>49 and also in XOMW => modify in MCR csco=94 (csco in XOMW)
 4) Not present in MCR, new assigned synset-variant in XOMW => add new variant-synset with csco=94 (el csco del XOMW) and put correct sense (sense greater (+1) than last sense)
 
+To load the sql datasets... Where "database" is the target database
+```
+mysql database -u root -p < updateCS-wikt-eng.sql
+```
+
 Others scripts...
 
 checkOMW.py get all information in OMW file related with synsets and word from MCR.
