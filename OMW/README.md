@@ -1,8 +1,7 @@
 Scripts to check MCR with OMW datasets
 =======
 
-This script (checkOMW.py) work as folows. Get all information in OMW file related with synsets and word from MCR.
-This script (buildUpdateOMW.py) work as folows. Construct a sql file to update CS in MCR.
+Scripts to work with OMW datasets
 
 Download
 -------
@@ -22,6 +21,18 @@ http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgz
 
 Execution
 -------
+
+buildUpdateOMW.py construct a sql file to update CS in MCR. The cases presents in app are:
+
+1) Assigned synset-variant to MCR with csco=99 and also in XOMW => nothing to do in MCR
+2) Assigned synset-variant to MCR with csco=49 and also in XOMW => modify in MCR csco=99
+3) Assigned synset-variant to MCR with csco<99 and csco>49 and also in XOMW => modify in MCR csco=94 (csco in XOMW)
+4) Not present in MCR, new assigned synset-variant in XOMW => add new variant-synset with csco=94 (el csco del XOMW) and put correct sense (sense greater (+1) than last sense)
+
+Others scripts...
+
+checkOMW.py get all information in OMW file related with synsets and word from MCR.
+buildUpdateOMW.py construct a sql file to update CS in MCR.
 
 To run checkOMW.py, a posible command can be:
 
