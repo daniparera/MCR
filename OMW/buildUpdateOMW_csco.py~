@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-import time
-import os, subprocess
+import os
 import textwrap, argparse
 import pymysql
 
@@ -84,17 +83,17 @@ for lang in languages:
 					#ws = wtmp.replace(" ","\_") # scape underscore, in like SQL sentence underscore is wildcard (any caracter)
 
 					sql_ili = "SELECT * FROM `wei_"+lang+"_to_ili` WHERE `offset` LIKE '"+lang+"-"+syn+"'"
-					sql_var = "SELECT * FROM `wei_"+lang+"_variant` WHERE `offset` LIKE '"+lang+"-"+syn+"'"
-					sql_w = sql_var+" AND `word` = '"+w+"'"
+					sql_lng = "SELECT * FROM `wei_"+lang+"_variant` WHERE `offset` LIKE '"+lang+"-"+syn+"'"
+					sql_w = sql_lng+" AND `word` = '"+w+"'"
 					cur.execute(sql_w+" AND `csco` = 99")
 					rows_99 = cur.fetchall()
 					cur.execute(sql_w+" AND `csco` < 99 AND `csco` > 49")
-					rows_49to99 = cur.fetchall()
-					cur.execute(sql_w+" AND `csco` <= 49")
+					rows_49_99 = cur.fetchall()
+					cur.execute(sql_w+" AND `csco` = 49")
 					rows_49 = cur.fetchall()
 
-					cur.execute(sql_var)
-					rows_var = cur.fetchall()
+					cur.execute(sql_lng)
+					rows_lng = cur.fetchall()
 					cur.execute(sql_ili)
 					rows_ili = cur.fetchall()
 
@@ -114,24 +113,22 @@ for lang in languages:
 							print "ERROR SYNSET 99:"+syn
 							exit(1)
 
-					elif len(rows_49to99) == 1:
+					elif len(rows_49_99) == 1:
 
-						for row in rows_49to99:
+						for row in rows_99:
 
 							#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
-							output_file_upd.write("49to99 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
+							output_file_upd.write("49_99 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
 							output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+w+"';\n")
 
-					elif len(rows_49to99) > 1:
+					elif len(rows_49_99) > 1:
 
-							print rows_49to99
+							print rows_49_99
 
 							print "ERROR SYNSET 49 to 99:"+syn
 							exit(1)
 
 					elif len(rows_49) == 1:
-
-						for row in rows_49:
 
 							#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
 							output_file_upd.write("49 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
@@ -148,13 +145,13 @@ for lang in languages:
 
 						pos = syn.split('-')[1]
 
-						# get maximum sense value, if exist (same synset, diferent variant/word) add 1 to last sense. 
+						# get maximum sense value, if exist add 1 to last sense. 
 						if syn in sense:
 							sense[syn] += 1
 						else:
 							sense[syn] = 0
 
-							for row in rows_var:
+							for row in rows_lng:
 								#print "s:"+str(sense)
 								#print "r:"+str(row['sense'])
 								if row['sense'] > sense[syn]: sense[syn] = row['sense']
@@ -163,41 +160,14 @@ for lang in languages:
 
 						#print "S:"+str(sense)
 						#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
-						output_file_upd.write("NEW \t"+syn + "\t99.0\t"+w+"\n")
+						output_file_upd.write("NEW \t"+syn + "\t99\t"+w+"\n")
 						output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+w+"',"+str(sense[syn])+",'"+lang+"-"+syn+"',"+pos+",99);\n")
 					else:
 							print rows_ili
 
-							print "ERROR, not only one result or no result. SYNSET ILI:"+syn
+							print "ERROR, no results SYNSET ILI:"+syn
 							#exit(1)
 
-		print "\nStart: "+time.strftime("%H:%M:%S %d/%m/%y \n")
-
-		cmd_o = "gawk 'BEGIN{FS=\"\t\"}{print $2,$4}' out/updateCS-"+t+"-"+lng+".tab | tr _ ' ' | tr \"\'\" \"'\" | sort > tmp1.txt"
-
-		print "Execute: "+cmd_o
-
-		os.system(cmd_o)
-
-		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
-
-		cmd_d = "gawk 'BEGIN{FS=\"\t\"}{print $1,$3}' data/wn-"+t+"-"+lng+".tab | sort > tmp2.txt"
-
-		print "Execute: "+cmd_d
-
-		os.system(cmd_d)
-
-		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
-
-		cmd_c = 'comm tmp1.txt tmp2.txt -3'
-
-		print "Execute: "+cmd_c
-
-		os.system(cmd_c)
-
-		print subprocess.check_output(cmd_c, shell=True)
-
-		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
 
 		input_file.close()
 		output_file_upd.close()
