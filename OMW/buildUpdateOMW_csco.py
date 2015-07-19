@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import time
-import os, subprocess
+import subprocess, os
 import textwrap, argparse
 import pymysql
 
@@ -27,11 +27,11 @@ parserarg.add_argument('--l', dest='l', action='append', required=False, type=st
 
 args = parserarg.parse_args()
 
-l = args.l
+languages_user = args.l
 t = args.t
 
 # if not define language, explore all by default.
-if not l: l = ['eus-30', 'eng-30', 'spa-30', 'glg-30', 'cat-30']
+if not languages_user: languages_user = ['cat-30','eus-30', 'eng-30', 'spa-30', 'glg-30']
 
 if not t == 'cldr' and not t == 'wikt':
 	print("t parameter must be 'wikt' or 'cldr'")
@@ -48,16 +48,18 @@ cur.execute("select * FROM wei_languages")
 rows = cur.fetchall()
 
 # we build lists of file_outputs.
-languages = []
-for row in rows: languages.append(row["code"])
-print "LANGUAGES: "+str(languages)
+languages_mcr = []
+for row in rows: languages_mcr.append(row["code"])
+
+print "LANGUAGES MCR: "+str(languages_mcr)
+print "LANGUAGES USER: "+str(languages_user)
 
 if not os.path.exists('out'):
 	os.makedirs('out')
 
-for lang in languages:
+for lang in languages_user:
 
-	if lang in l:
+	if lang in languages_mcr:
 
 		sense = {}
 
@@ -104,7 +106,7 @@ for lang in languages:
 						for row in rows_99:
 
 							#print "NOTHING TO DO IN MCR"
-							output_file_upd.write("99 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
+							output_file_upd.write("99\t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
 
 					# more than one result for word and synset in MCR
 					elif len(rows_99) > 1:
@@ -119,7 +121,7 @@ for lang in languages:
 						for row in rows_49to99:
 
 							#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
-							output_file_upd.write("49to99 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
+							output_file_upd.write("74\t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
 							output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+w+"';\n")
 
 					elif len(rows_49to99) > 1:
@@ -134,7 +136,7 @@ for lang in languages:
 						for row in rows_49:
 
 							#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
-							output_file_upd.write("49 \t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
+							output_file_upd.write("49\t"+syn + "\t"+str(row['csco'])+"\t"+w+"\n")
 							output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=94 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+w+"';\n")
 
 					elif len(rows_49) > 1:
@@ -163,8 +165,8 @@ for lang in languages:
 
 						#print "S:"+str(sense)
 						#print (p + "\tCS: "+str(row['csco'])+"\tSTS:"+str(row['status'])+"\tW:"+row['word']+"\n")
-						output_file_upd.write("NEW \t"+syn + "\t99.0\t"+w+"\n")
-						output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+w+"',"+str(sense[syn])+",'"+lang+"-"+syn+"',"+pos+",99);\n")
+						output_file_upd.write("NW\t"+syn + "\t94.0\t"+w+"\n")
+						output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+w+"',"+str(sense[syn])+",'"+lang+"-"+syn+"',"+pos+",94);\n")
 					else:
 							print rows_ili
 
@@ -173,28 +175,29 @@ for lang in languages:
 
 		print "\nStart: "+time.strftime("%H:%M:%S %d/%m/%y \n")
 
-		cmd_o = "gawk 'BEGIN{FS=\"\t\"}{print $2,$4}' out/updateCS-"+t+"-"+lng+".tab | tr _ ' ' | tr \"\'\" \"'\" | sort > tmp1.txt"
+		cmd_o = "gawk 'BEGIN{FS=\"\\t\"}{print $2,$4}' out/updateCS-"+t+"-"+lng+".tab | tr _ ' ' | sed \"s/\\\\\\'/'/g\" > out/o_"+t+"-"+lng+".cmp"
+
+		cmd_o_sort = "gawk 'BEGIN{FS=\"\\t\"}{print $2,$4}' out/updateCS-"+t+"-"+lng+".tab | tr _ ' ' | sed \"s/\\\\\\'/'/g\" | sort > out/o_"+t+"-"+lng+"_sort.cmp"
 
 		print "Execute: "+cmd_o
+		subprocess.call(cmd_o, shell=True)
 
-		os.system(cmd_o)
+		print "Execute: "+cmd_o_sort
+		subprocess.call(cmd_o_sort, shell=True)
 
-		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
+		cmd_d = "gawk 'BEGIN{FS=\"\\t\"}{print $1,$3}' data/wn-"+t+"-"+lng+".tab > out/d_"+t+"-"+lng+".cmp"
 
-		cmd_d = "gawk 'BEGIN{FS=\"\t\"}{print $1,$3}' data/wn-"+t+"-"+lng+".tab | sort > tmp2.txt"
+		cmd_d_sort = "gawk 'BEGIN{FS=\"\\t\"}{print $1,$3}' data/wn-"+t+"-"+lng+".tab | sort > out/d_"+t+"-"+lng+"_sort.cmp"
 
 		print "Execute: "+cmd_d
+		subprocess.call(cmd_d, shell=True)
 
-		os.system(cmd_d)
+		print "Execute: "+cmd_d_sort
+		subprocess.call(cmd_d_sort, shell=True)
 
-		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
-
-		cmd_c = 'comm tmp1.txt tmp2.txt -3'
+		cmd_c = 'comm out/d_'+t+'-'+lng+'_sort.cmp out/o_'+t+'-'+lng+'_sort.cmp -3'
 
 		print "Execute: "+cmd_c
-
-		os.system(cmd_c)
-
 		print subprocess.check_output(cmd_c, shell=True)
 
 		print "Finish: "+time.strftime("%H:%M:%S %d/%m/%y \n")
