@@ -9,24 +9,27 @@ import pymysql
 #import MySQLdb
 
 parserarg = argparse.ArgumentParser(
-     prog='ponderateSynsetDB',
+     prog='synsetRelationsDB',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         calculate ponderated vectors for synset in mcr database
+         calculate ponderated vectors of relations for specific synset, relations are extracted from MCR database
          --------------------------------
              example of use $python3 %(prog)s --synset synset --host host --user user --pwd password --db database [[--debug --variant --relinfo]]
          '''))
 
+# DB parameters
 parserarg.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
 parserarg.add_argument('--user', dest='user_db', required=True, type=str , help='user\'s database (required)')
 parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
 parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
+# information parameters
 parserarg.add_argument('--debug', action='store_false', default='TRUE', help='to show debug information')
 parserarg.add_argument('--weka', action='store_false', default='TRUE', help='to store in weka format')
 parserarg.add_argument('--variant', action='store_false', default='TRUE', help='to show variant information')
 parserarg.add_argument('--relinfo', action='store_false', default='TRUE', help='to show additional relation information')
 
+# Required parameters
 parserarg.add_argument('--synset', dest='synset', required=True, default='', type=str , help='input synsets (required)')
 
 args = parserarg.parse_args()
@@ -63,6 +66,14 @@ def select_rel(n):
 	if (n == 70): return '<'
 	return str(n)
 
+if not os.path.exists('data/xwnd-30g'):
+	print("Download and descompres xwnd-30g file in data directory")
+	exit()
+
+# To resolve issue in python 3, renamed raw_input
+try: input = raw_input
+except NameError: pass
+
 #choose one of them
 #db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
 #cur = db.cursor(MySQLdb.cursors.DictCursor) 
@@ -76,13 +87,21 @@ rows = cur.fetchall()
 # we build lists of file_outputs.
 languages = []
 for row in rows: languages.append(row["code"])
-if debug: print languages
-if debug: print languages[1]
+if debug: print(languages)
+if debug: print(languages[1])
 
-cmd = "python infoVariantSynset.py --synset "+syn
-result_var = subprocess.check_output(cmd, shell=True).strip()
+#print("Synset: "+syn)
+#
+#cmd = "python ponderateSynset.py --synset "+syn
+#result_pond = subprocess.check_output(cmd, shell=True).strip().decode('utf-8')
+#
+#print("PonderaciO: "+result_pond)
 
-if variant: print "Variants: "+result_var
+cmd = "python infoVariantSynsetDB.py --host "+args.host_db+" --user "+args.user_db+" --pwd "+args.pwd_db+" --db "+args.db_db+" --synset "+syn
+#cmd = "python infoVariantSynsetTSV.py --synset "+syn
+result_var = subprocess.check_output(cmd, shell=True).strip().decode('utf-8')
+
+if variant: print("Variants: "+result_var)
 
 acc_delete = ''
 acc_names = ''
@@ -91,7 +110,7 @@ if weka:
 
 	categories_pond = {}
 	categories_mcr = {}
-	with open("xwndg.txt", "r") as cat_file:
+	with open("data/xwndg.txt", "r") as cat_file:
 		for line in cat_file:
 			categories_pond[line.split('.')[0]] = 0
 			categories_mcr[line.split('.')[0]] = 0
@@ -101,7 +120,6 @@ languages = [languages[1]] ## Only second language, english, comment this line t
 for lang in languages:
 
 	synsets = []
-
 
 	cur.execute("SELECT * FROM `wei_"+lang+"_relation` WHERE `sourceSynset` LIKE '"+lang+"-"+syn+"'")
 	rows = cur.fetchall()
@@ -138,14 +156,17 @@ for lang in languages:
 
 		synsets.append([dom,rlsyn,rl,"t"])
 
+	print("Synsets: "+str(synsets))
+
 	# to walk around all the constructed list in step before
 	for synset in synsets:
 
 		cmd = "python ponderateSynset.py --synset "+synset[1]+" "+deb
-		result_pond = subprocess.check_output(cmd, shell=True).strip()
+		result_pond = subprocess.check_output(cmd, shell=True).strip().decode('utf-8')
 
-		cmd = "python infoVariantSynset.py --synset "+synset[1]
-		result_var = subprocess.check_output(cmd, shell=True).strip()
+		cmd = "python infoVariantSynsetDB.py --host "+args.host_db+" --user "+args.user_db+" --pwd "+args.pwd_db+" --db "+args.db_db+" --synset "+synset[1]
+		#cmd = "python infoVariantSynsetTSV.py --synset "+synset[1]
+		result_var = subprocess.check_output(cmd, shell=True).strip().decode('utf-8')
 
 		if weka:
 
@@ -162,22 +183,90 @@ for lang in languages:
 				categories_pond[cat_pond] = categories_pond[cat_pond] + 1
 			
 		else:
-			print "++++++++++++++++++++++"
+			print("++++++++++++++++++++++")
 
-			print synset[0]+"$"+result_pond
+			print(synset[0]+"$"+result_pond)
 
-			if relinfo: print synset[1]+"$"+str(synset[2])+"$"+synset[3]
+			if relinfo: print(synset[1]+"$"+str(synset[2])+"$"+synset[3])
 
-			if variant: print "Variants: "+result_var
+			if variant: print("Variants: "+result_var)
 
 if weka:
 	# order dictionaries by key
-	categories_mcr_ord = OrderedDict(sorted(categories_mcr.items(), key=lambda t: t[0], reverse=False))
-	categories_pond_ord = OrderedDict(sorted(categories_pond.items(), key=lambda t: t[0], reverse=False))
+	cat_mcr_ord = OrderedDict(sorted(categories_mcr.items(), key=lambda t: t[0], reverse=False))
+	cat_pond_ord = OrderedDict(sorted(categories_pond.items(), key=lambda t: t[0], reverse=False))
+
+	# genera new dictiobaries with index in last position
+
+	index = 1
+	cat_mcr_ord_key = dict()
+	cat_mcr_ord_idx = dict()
+
+	for k,v in cat_mcr_ord.items(): 		
+		cat_mcr_ord_key[k] = (v,index)
+		cat_mcr_ord_idx[k] = index
+		index = index + 1
+
+	index = 1
+	cat_pond_ord_key = dict()
+	cat_pond_ord_idx = dict()
+
+	for k,v in cat_pond_ord.items(): 		
+		cat_pond_ord_key[k] = (v,index)
+		cat_pond_ord_idx[k] = index
+		index = index + 1
+
+	# order dictionaries by value, number of occurences
+	cat_mcr_ord_val = OrderedDict(sorted(cat_mcr_ord_key.items(), key=lambda t: t[1][0], reverse=True))
+	cat_pond_ord_val = OrderedDict(sorted(cat_pond_ord_key.items(), key=lambda t: t[1][0], reverse=True))
+
+	for k,v in cat_mcr_ord_val.items(): 
+		if v[0] == 0: 
+			del cat_mcr_ord_val[k] 	# if no ocurrences of category, delete element
+			del cat_mcr_ord_idx[k]
+
+	for k,v in cat_pond_ord_val.items(): 
+		if v[0] == 0: 
+			del cat_pond_ord_val[k] 	# if no ocurrences of category, delete element
+			del cat_pond_ord_idx[k]
 
 	# convert dictionaries in string
-	categories_mcr_strVal = "#".join(map(str, categories_mcr_ord.values()))
-	categories_pond_strVal = "#".join(map(str, categories_pond_ord.values()))
+	categories_mcr_strVal = "#".join(map(str, cat_mcr_ord.values()))
+	categories_pond_strVal = "#".join(map(str, cat_pond_ord.values()))
 
-	print categories_mcr_strVal
-	print "$"+categories_pond_strVal
+	print("CAT MCR: "+str(categories_mcr_strVal)+"\n$\nCAT POND: "+str(categories_pond_strVal))
+
+	######################################################### #################################################################
+																###
+	choice = input("MCR:\n"+str(cat_mcr_ord_val.items())+"\nPOND:\n"+str(cat_pond_ord_val.items())+"\nANSWER: ")		###
+																###
+	# answer must be a single integer											###
+	if choice.strip() == "": choice = -1											###
+	elif len(choice) != 1 and len(choice) != 2 and len(choice) != 3: choice = -2						###
+	elif not choice.isdigit(): choice = -2											###
+																###
+	######################################################### #################################################################
+
+	# while answer is not correct, repeat it ##################################################################################
+	while not int(choice) in cat_mcr_ord_idx.values() and not int(choice) in cat_pond_ord_idx.values():			###
+
+		print("CHOICE"+ str(choice))
+		if choice == -1:												###
+			print("\n\nPlease. Select some option!! \n")								###
+		else:														###
+			print("\n\nPlease. Select one correct option!! \n")							###
+																###
+		choice = input("MCR:\n"+str(cat_mcr_ord_val.items())+"\nPOND:\n"+str(cat_pond_ord_val.items())+"\nANSWER: ")	###
+																###
+		# answer must be a single integer										###
+		if choice.strip() == "": choice = -1										###
+		elif len(choice) != 1 and len(choice) != 2 and len(choice) != 3: choice = -2					###
+		elif not choice.isdigit(): choice = -2										###
+
+
+	for k,v in cat_mcr_ord_val.items(): 
+		if v[1] == int(choice): print("\nSelect: "+k+" ! \n")
+
+	for k,v in cat_pond_ord_val.items(): 
+		if v[1] == int(choice): print("\nSelect: "+k+" ! \n")
+

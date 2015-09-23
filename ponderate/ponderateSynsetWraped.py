@@ -25,8 +25,8 @@ syn = args.synset
 
 cmd = "python ponderateSynset.py --synset "+syn+" "+deb
 
-result = subprocess.check_output(cmd, shell=True).strip()
+result = subprocess.check_output(cmd, shell=True).strip().decode('utf-8')
 
-print "++++++++++++++++++++++"
+print("++++++++++++++++++++++")
 
-print result
+print(result)

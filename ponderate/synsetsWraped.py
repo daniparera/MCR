@@ -5,10 +5,10 @@ import textwrap, argparse
 
 
 parserarg = argparse.ArgumentParser(
-     prog='synsetWraped',
+     prog='synsetsWraped',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         calculate ponderated vectors for specific synset
+         calculate ponderated vectors for specific synset, relation information paremeter
          --------------------------------
              example of use $python3 %(prog)s --synset synset [[--debug]]
          '''))
@@ -21,7 +21,7 @@ parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='dat
 parserarg.add_argument('--debug', action='store_false', default='TRUE', help='to show debug information')
 parserarg.add_argument('--weka', action='store_false', default='TRUE', help='to store in weka format')
 parserarg.add_argument('--variant', action='store_false', default='TRUE', help='to show variant information')
-parserarg.add_argument('--relinfo', action='store_false', default='TRUE', help='to show additional relation information')
+parserarg.add_argument('--relinfo', action='store_false', default='TRUE', help='to extract additional relations information')
 
 parserarg.add_argument('--file', dest='input_file', required=True, default='', type=str , help='input synsets file (required)')
 
@@ -67,22 +67,44 @@ for syn in content:
 	dom_syn = ''
 	dom_syn = "#".join(x['domain'] for x in rows_dom if x)
 
-	cmd = "python synsetRelationsDB.py --synset "+syn+" "+deb+" --host "+args.host_db+" --user "+args.user_db+" --pwd "+args.pwd_db+" --db "+args.db_db
-	result_rl = subprocess.check_output(cmd, shell=True).strip()
+	if relinfo:
 
-	if weka:
+		cmd = "python synsetRelationsDB.py --synset "+syn+" "+deb+" --host "+args.host_db+" --user "+args.user_db+" --pwd "+args.pwd_db+" --db "+args.db_db
+		result_rl = subprocess.check_output(cmd, shell=True).strip()
 
-		print syn+result_syn+result_rl+dom_syn+result_rl
+		if weka:
+
+			print syn+result_syn+result_rl+dom_syn+result_rl
+
+		else:
+
+			if variant: 
+
+				cmd = "python infoVariantSynsetDB.py --synset "+syn+" "+dbvars
+				result_var = subprocess.check_output(cmd, shell=True).strip()
+
+				print "Variants: "+result_var
+
+			print "++++++++++++++++++++++"
+
+			print "Syn: "+syn+" Pond: "+result_syn+" Dom: "+dom_syn+" Rl: "+result_rl
 
 	else:
 
-		if variant: 
+		if weka:
 
-			cmd = "python infoVariantSynsetDB.py --synset "+syn+" "+dbvars
-			result_var = subprocess.check_output(cmd, shell=True).strip()
+			print syn+result_syn+result_rl+dom_syn
 
-			print "Variants: "+result_var
+		else:
 
-		print "++++++++++++++++++++++"
+			if variant: 
 
-		print "Syn: "+syn+" Pond: "+result_syn+" Dom: "+dom_syn+" Rl: "+result_rl
+				cmd = "python infoVariantSynsetDB.py --synset "+syn+" "+dbvars
+				result_var = subprocess.check_output(cmd, shell=True).strip()
+
+				print "Variants: "+result_var
+
+			print "++++++++++++++++++++++"
+
+			print "Syn: "+syn+" Pond: "+result_syn+" Dom: "+dom_syn
+
