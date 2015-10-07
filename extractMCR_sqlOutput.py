@@ -7,10 +7,10 @@ import pymysql
 #import MySQLdb
 
 parserarg = argparse.ArgumentParser(
-     prog='buildUpdateOMW.py',
+     prog='extractMCR_sqlOutput.py',
      formatter_class=argparse.RawDescriptionHelpFormatter,
      description=textwrap.dedent('''\
-         check MCR with OMW datasets
+         Extract data from specific table in MCR, output is like insert sql format.
          --------------------------------
              example of use $python3 %(prog)s --host host --db database --user user --pwd password
          '''))
