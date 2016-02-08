@@ -3,8 +3,8 @@ Scripts to check MCR with diferents datasets
 
 This scripts are used to add synset-variant datasets in MCR.
 
-createMatrix.py: Extract synset-variant-csco from MCR and put it in matrix format.
-updateMatrix.py: Update matrix information, for each dataset add a column with confidence level.
+createMatrix.py: Extract synset-variant-csco from MCR and put it in matrix format. <br />
+updateMatrix.py: Update matrix information, for each dataset add a column with confidence level. <br />
 exportMCR.py     Construct SQL sentences to update MCR.
 
 Download
@@ -27,7 +27,7 @@ http://resources.mpi-inf.mpg.de/yago-naga/uwn/uwn_tsv.zip
 
 To execute properly the updateMatrix.py script is necessary that datasets contain data structuret in certain format.
 
-The format is synset in the first column, word in second column and in the third and last column the confidence score. The word format is without space. 
+The format is synset in the first column, word in second column and in the third and last column the confidence score. The word format is without blank space between elements. 
 
 Behaviour
 -------
