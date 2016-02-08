@@ -1,4 +1,4 @@
-Scripts to check MCR with OMW datasets
+Scripts to check MCR with diferents datasets
 =======
 
 This scripts are used to add synset-variant datasets in MCR.
