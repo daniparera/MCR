@@ -43,6 +43,7 @@ extract information from lexicon and put in new column in the synset-word matrix
 * if find it, store in the new column the confidence score, if csco for this case is a negative value (case not find in other lexicon and created new row) decrease value in -1. 
 
 exportMCR.py <br />
+
 construct a sql file to update CS in MCR. The cases presents in app are:
 
 * Assigned synset-variant to MCR with csco=99 and also in some dataset => nothing to do in MCR
