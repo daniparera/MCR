@@ -3,9 +3,9 @@ Scripts to check MCR with diferents datasets
 
 This scripts are used to add synset-variant datasets in MCR.
 
-createMatrix.py: Extract synset-variant-csco from MCR and put it in matrix format. <br />
-updateMatrix.py: Update matrix information, for each dataset add a column with confidence level. <br />
-exportMCR.py     Construct SQL sentences to update MCR.
+* createMatrix.py: Extract synset-variant-csco tuple from MCR and put it in matrix format.
+* updateMatrix.py: Update matrix information, for each dataset add a column with confidence level.
+* exportMCR.py   : Construct SQL sentences to update MCR from matrix information.
 
 Download
 -------
@@ -27,10 +27,18 @@ http://resources.mpi-inf.mpg.de/yago-naga/uwn/uwn_tsv.zip
 
 To execute properly the updateMatrix.py script is necessary that datasets contain data structuret in certain format.
 
-The format is synset in the first column, word in second column and in the third and last column the confidence score. The word format is without blank space between elements. 
+The format is a space separated file with tree values: 
+* Synset in the first column
+* Word in second column. The word format is without space, underscore replace blanck spaces.
+* Confidence score in the third and last column. 
 
 Behaviour
 -------
+
+updateMatrix.py extract information from lexicon and put in new column in the synset-word matrix. For each synset-word tuple present in original matrix search in lexicon: 
+
+* if not find it, create a new row with csco equal to -1. 
+* if find it, store in the new column the confidence score, if csco for this case is a negative value (case not find in other lexicon and created new row) decrease value in -1. 
 
 exportMCR.py construct a sql file to update CS in MCR. The cases presents in app are:
 
@@ -50,42 +58,7 @@ exportMCR.py construct a sql file to update CS in MCR. The cases presents in app
 Execution
 -------
 
-Some posible execution are....
-
-```
-python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9
-
-python updateMatrix.py --file_matrix out/matrix-eus-30_0.tab --file_lexicon data/wn-cldr-eus.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-eus-30_1.tab --file_lexicon data/wn-wikt-eus.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-eus-30_2.tab --file_lexicon data/uwn-eus.txt --new_field_name UWN
-python updateMatrix.py --file_matrix out/matrix-eus-30_2.tab --file_lexicon data/VariantsFromPM_eus.txt --new_field_name PM
-
-python updateMatrix.py --file_matrix out/matrix-eng-30_0.tab --file_lexicon data/wn-cldr-eng.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-eng-30_1.tab --file_lexicon data/wn-wikt-eng.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-eng-30_2.tab --file_lexicon data/uwn-eng.txt --new_field_name UWN
-python updateMatrix.py --file_matrix out/matrix-eng-30_2.tab --file_lexicon data/VariantsFromPM_eng.txt --new_field_name PM
-
-
-python updateMatrix.py --file_matrix out/matrix-spa-30_0.tab --file_lexicon data/wn-cldr-spa.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-spa-30_1.tab --file_lexicon data/wn-wikt-spa.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-spa-30_2.tab --file_lexicon data/uwn-spa.txt --new_field_name UWN
-python updateMatrix.py --file_matrix out/matrix-spa-30_2.tab --file_lexicon data/VariantsFromPM_spa.txt --new_field_name PM
-
-python updateMatrix.py --file_matrix out/matrix-cat-30_0.tab --file_lexicon data/wn-cldr-cat.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-cat-30_1.tab --file_lexicon data/wn-wikt-cat.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-cat-30_2.tab --file_lexicon data/uwn-cat.txt --new_field_name UWN
-python updateMatrix.py --file_matrix out/matrix-cat-30_2.tab --file_lexicon data/VariantsFromPM_cat.txt --new_field_name PM
-
-python updateMatrix.py --file_matrix out/matrix-glg-30_0.tab --file_lexicon data/wn-cldr-glg.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-glg-30_1.tab --file_lexicon data/wn-wikt-glg.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-glg-30_2.tab --file_lexicon data/uwn-glg.txt --new_field_name UWN
-python updateMatrix.py --file_matrix out/matrix-glg-30_2.tab --file_lexicon data/VariantsFromPM_glg.txt --new_field_name PM
-
-python updateMatrix.py --file_matrix out/matrix-por-30_0.tab --file_lexicon data/wn-cldr-por.tab --new_field_name cldr
-python updateMatrix.py --file_matrix out/matrix-por-30_1.tab --file_lexicon data/wn-wikt-por.tab --new_field_name wikt
-python updateMatrix.py --file_matrix out/matrix-por-30_2.tab --file_lexicon data/uwn-por.txt --new_field_name UWN
-
-```
+Posible execution are store in calculateMatrix_DB.sh and calculateMatrix_noDB.sh files.
 
 Load in MCR
 -------
