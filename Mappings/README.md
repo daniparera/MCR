@@ -20,7 +20,7 @@ Requirements and Formats
 
 Datasets are from
 ```
-http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgzç
+http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgz
 http://resources.mpi-inf.mpg.de/yago-naga/uwn/uwn_tsv.zip
 
 ```
