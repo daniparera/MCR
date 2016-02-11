@@ -35,12 +35,15 @@ The format is a space separated file with tree values:
 Behaviour
 -------
 
-updateMatrix.py extract information from lexicon and put in new column in the synset-word matrix. For each synset-word tuple present in original matrix search in lexicon: 
+updateMatrix.py <br />
+
+extract information from lexicon and put in new column in the synset-word matrix. For each synset-word tuple present in original matrix search in lexicon: 
 
 * if not find it, create a new row with csco equal to -1. 
 * if find it, store in the new column the confidence score, if csco for this case is a negative value (case not find in other lexicon and created new row) decrease value in -1. 
 
-exportMCR.py construct a sql file to update CS in MCR. The cases presents in app are:
+exportMCR.py <br />
+construct a sql file to update CS in MCR. The cases presents in app are:
 
 * Assigned synset-variant to MCR with csco=99 and also in some dataset => nothing to do in MCR
 * Assigned synset-variant to MCR with csco<99 and csco>49 and also in some dataset => modify in MCR with csco equal to most relevant dataset, confidence level greater
@@ -48,11 +51,12 @@ exportMCR.py construct a sql file to update CS in MCR. The cases presents in app
 * Not present in MCR, new assigned synset-variant in more than one dataset => add new variant-synset with csco=94 (csco in XOMW) and put correct sense (sense greater (+1) than last sense)
 * Not present in MCR, new assigned synset-variant in only one dataset => add new variant-synset with csco=XX (the correspondence between dataset and csco is explained in table below) and put correct sense (sense greater (+1) than last sense)
 
-41 : EOWN-cldr
-42 : EOWN-wikt
-43 : UWN
-44 : PM
-45 : torevise
+41 : EOWN-cldr<br />
+42 : EOWN-wikt<br />
+43 : UWN<br />
+44 : PM<br />
+45 : torevise<br />
+46 : babelnet
 
 
 Execution
