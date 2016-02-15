@@ -4,7 +4,6 @@
 # BLC0, BLC5, BLC10, BLC20 and BLC50
 # all-relations, all-relations+gloss-relations (WN3.0) and frequency (addition for each variant in index.sense file)
 
-
 echo Calculate Sons
 python calc_sons_wordnet.py --file dict/wn31/data.noun --outfile dict/wn31/sons_n.txt
 python calc_sons_wordnet.py --file dict/wn31/data.verb --outfile dict/wn31/sons_v.txt
@@ -284,14 +283,4 @@ python get-blc_lists.py --datafile dict/wn16/data.verb --outfile out/wn16/freqmi
 python get-blc_lists.py --datafile dict/wn16/data.noun --outfile out/wn16/freqmin50/freq/BLCnoun --sonsfile dict/wn16/sons_n.txt --minfreq 50 --relation freq --sensefile dict/wn16/index.sense
 python get-blc_lists.py --datafile dict/wn16/data.verb --outfile out/wn16/freqmin50/freq/BLCverb --sonsfile dict/wn16/sons_v.txt --minfreq 50 --relation freq --sensefile dict/wn16/index.sense
 
-
-#Zip
-echo Zipping....
-
-cd out
-for dir in */
-do
-  base=$(basename "$dir")
-  tar -czf "${base}.tar.gz" "$dir"
-done
 
