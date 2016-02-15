@@ -52,12 +52,12 @@ def exploreHypoTree(synset):
 if __name__ == '__main__':
 
 	argument_parser = argparse.ArgumentParser(
-	     prog='get-blc.py',
+	     prog='stats-wn-blcs.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 build blc's files
+		 Extract blcs statistical information from MCR
 		 --------------------------------
-		     python get-blc.py --infile dict/data.verb --outfile data/BLCverb --sonsfile sons_all.txt --minfreq 20 --relation_opt all --occurrence_opt no-occ [[--sensefile index-file]]
+		     python stats-wn-blcs.py --infile dict/wn30/data.noun --outfile data/wn.stats --sonsfile dict/wn30/sons_n.txt [--log]
 		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
 		 '''))
 
