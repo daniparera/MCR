@@ -1,17 +1,9 @@
 #!/usr/bin/python
 
-import os
 import textwrap, argparse
 
 from collections import OrderedDict
 from collections import defaultdict
-
-#import sys  
-#reload(sys)  
-#sys.setdefaultencoding('iso-8859-1')
-
-#can use this also
-#import MySQLdb
 
 class AutoVivification(dict):
     """Implementation of perl's autovivification feature."""
