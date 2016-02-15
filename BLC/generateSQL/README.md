@@ -1,23 +1,21 @@
 Scripts to create BLC information from MCR db
 =======
 
-Tools to work with BLC datasets and MCR database.
+Tools to generate SQL sentence with BLC datasets and MCR database.
 
 Download
 -------
 
 Download code executing...
 ```
-svn export https://github.com/daniparera/MCR/trunk/BLC
+svn export https://github.com/daniparera/MCR/trunk/BLC/generateSQL/
 ```
 
 Requirements
 -------
 
-Datasets in data folder are from '/Wordnet-3.0/freqmin20/all/', freq 20 all.
-```
-http://adimen.si.ehu.es/web/files/BLC/Wordnet-3.0.tar.gz
-```
+Datasets in data folder are from 'out/wn30/freqmin20/all/', freq 20 all.
+
 
 Run buildBLC.py
 -------
