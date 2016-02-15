@@ -28,7 +28,7 @@ if __name__ == '__main__':
 	     prog='updateMatrix.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 check MCR with OMW datasets
+		 update synset-variant-csco matrix with new lexicon
 		 --------------------------------
 		     example of use $python3 %(prog)s --file_matrix matrix.txt --file_lexicon lexicon.txt --new_field_name field_name
 		     python updateMatrix.py --file_matrix out/matrix_eng-30.tab --file_lexicon data/wn-cldr-eng_clean.tab --new_field_name cldr
@@ -41,6 +41,13 @@ if __name__ == '__main__':
 
 	args = parserarg.parse_args()
 	cl = not(bool(args.cl))
+	
+	if "_" in args.nfn:
+		print "invalid name for new field. It can't contain '_' (underscore)"
+		exit()
+	else:
+		if cl:
+			args.nfn = args.nfn + "_cl"  
 
 	### Read and Create lexicon ################################################
 
