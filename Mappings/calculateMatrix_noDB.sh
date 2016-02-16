@@ -22,7 +22,8 @@ python updateMatrix.py --file_matrix out/matrix-spa-30_1.tab --file_lexicon data
 python updateMatrix.py --file_matrix out/matrix-spa-30_2.tab --file_lexicon data/uwn-spa.txt --new_field_name UWN
 python updateMatrix.py --file_matrix out/matrix-spa-30_3.tab --file_lexicon data/VariantsFromPM_spa.txt --new_field_name PM
 python updateMatrix.py --file_matrix out/matrix-spa-30_4.tab --file_lexicon data/wn-torevise-spa.txt --new_field_name torevise
-python updateMatrix.py --file_matrix out/matrix-spa-30_5.tab --file_lexicon data/babelnet.spa --new_field_name babelnet
+python updateMatrix.py --file_matrix out/matrix-spa-30_5.tab --file_lexicon data/ancora.spa --new_field_name ancora
+python updateMatrix.py --file_matrix out/matrix-spa-30_6.tab --file_lexicon data/babelnet.spa --new_field_name babelnet
 
 echo Update Catalan Matrix with lexicon resources
 mv out/matrix-cat-30DB.tab out/matrix-cat-30_0.tab
@@ -50,45 +51,46 @@ python updateMatrix.py --file_matrix out/matrix-por-30_2.tab --file_lexicon data
 
 echo Update Euskera Matrix with other languages
 python updateMatrix.py --file_matrix out/matrix-eus-30_5.tab --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-eus-30_6.tab --file_lexicon out/matrix-spa-30_6.tab --new_field_name spa --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-eus-30_6.tab --file_lexicon out/matrix-spa-30_7.tab --new_field_name spa --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eus-30_7.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eus-30_8.tab --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eus-30_9.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
 
 echo Update English Matrix with other languages
 python updateMatrix.py --file_matrix out/matrix-eng-30_4.tab --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-eng-30_5.tab --file_lexicon out/matrix-spa-30_6.tab --new_field_name spa --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-eng-30_5.tab --file_lexicon out/matrix-spa-30_7.tab --new_field_name spa --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eng-30_6.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eng-30_7.tab --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-eng-30_8.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
 
 echo Update Spanish Matrix with other languages
-python updateMatrix.py --file_matrix out/matrix-spa-30_6.tab --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-spa-30_7.tab --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-spa-30_8.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-spa-30_9.tab --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-spa-30_10.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-spa-30_7.tab --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-spa-30_8.tab --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-spa-30_9.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-spa-30_10.tab --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-spa-30_11.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
 
 echo Update Catalan Matrix with other languages
 python updateMatrix.py --file_matrix out/matrix-cat-30_7.tab  --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-cat-30_8.tab  --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-cat-30_9.tab  --file_lexicon out/matrix-spa-30_6.tab --new_field_name spa --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-cat-30_9.tab  --file_lexicon out/matrix-spa-30_7.tab --new_field_name spa --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-cat-30_10.tab  --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-cat-30_11.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
 
 echo Update Galician Matrix with other languages
 python updateMatrix.py --file_matrix out/matrix-glg-30_4.tab --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-glg-30_5.tab --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-glg-30_6.tab --file_lexicon out/matrix-spa-30_6.tab --new_field_name spa --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-glg-30_6.tab --file_lexicon out/matrix-spa-30_7.tab --new_field_name spa --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-glg-30_7.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-glg-30_8.tab --file_lexicon out/matrix-por-30_3.tab --new_field_name por --cross_lingual
 
 echo Update Portuguese Matrix with other languages
 python updateMatrix.py --file_matrix out/matrix-por-30_3.tab --file_lexicon out/matrix-eus-30_5.tab --new_field_name eus --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-por-30_4.tab --file_lexicon out/matrix-eng-30_4.tab --new_field_name eng --cross_lingual
-python updateMatrix.py --file_matrix out/matrix-por-30_5.tab --file_lexicon out/matrix-spa-30_6.tab --new_field_name spa --cross_lingual
+python updateMatrix.py --file_matrix out/matrix-por-30_5.tab --file_lexicon out/matrix-spa-30_7.tab --new_field_name spa --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-por-30_6.tab --file_lexicon out/matrix-cat-30_7.tab --new_field_name cat --cross_lingual
 python updateMatrix.py --file_matrix out/matrix-por-30_7.tab --file_lexicon out/matrix-glg-30_4.tab --new_field_name glg --cross_lingual
+
 
 echo Clean and Move
 mv out/matrix-eus-30_10.tab out/matrix-eus-30.tab
@@ -99,7 +101,7 @@ mv out/matrix-eng-30_9.tab out/matrix-eng-30.tab
 mv out/matrix-eng-30_0.tab out/matrix-eng-30DB.tab
 rm out/matrix-eng-30_*.tab
 
-mv out/matrix-spa-30_11.tab out/matrix-spa-30.tab
+mv out/matrix-spa-30_12.tab out/matrix-spa-30.tab
 mv out/matrix-spa-30_0.tab out/matrix-spa-30DB.tab
 rm out/matrix-spa-30_*.tab
 
@@ -116,3 +118,7 @@ mv out/matrix-por-30_0.tab out/matrix-por-30DB.tab
 rm out/matrix-por-30_*.tab
 
 ls -lrt out
+
+python exportMCR.py --file_matrix out/matrix-eus-30.tab
+python exportMCR.py --file_matrix out/matrix-spa-30.tab
+python exportMCR.py --file_matrix out/matrix-cat-30.tab

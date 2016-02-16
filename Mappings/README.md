@@ -3,9 +3,9 @@ Scripts to check MCR with diferents datasets
 
 This scripts are used to add synset-variant datasets in MCR.
 
-* createMatrix.py: Extract synset-variant-csco tuple from MCR and put it in matrix format.
+* createMatrix.py: Extract synset-variant-CSCO tuple from MCR and put it in matrix format.
 * updateMatrix.py: Update matrix information, for each dataset add a column with confidence level.
-* exportMCR.py   : Construct SQL sentences to update MCR from matrix information.
+* extractMatrixtoMCR.py : Construct SQL sentences to update MCR from matrix information.
 
 Download
 -------
@@ -39,18 +39,18 @@ updateMatrix.py <br />
 
 Extract information from lexicon and put in new column in the synset-word matrix. For each synset-word tuple present in original matrix search in lexicon: 
 
-* if not find it, create a new row with csco equal to -1. 
-* if find it, store in the new column the confidence score, if csco for this case is a negative value (case not find in other lexicon and created new row) decrease value in -1. 
+* if not find it, create a new row with CSCO equal to -1. 
+* if find it, store in the new column the confidence score, if CSCO for this case is a negative value (case not find in other lexicon and created new row) decrease value in -1. 
 
-exportMCR.py <br />
+extractMatrixtoMCR.py <br />
 
-Construct a sql file to update CS in MCR. The cases presents in app are:
+In the next part present a posible behaviour to export data from previously created matrix, depending on the requeriments can change this behaviour to adapt at your own system. The result of this final step is construct a sql file to update CSCO in MCR. The cases presents in app are this:
 
-* Assigned synset-variant to MCR with csco=99 and also in some dataset => nothing to do in MCR
-* Assigned synset-variant to MCR with csco<99 and csco>49 and also in some dataset => modify in MCR with csco equal to most relevant dataset, confidence level greater
-* Assigned synset-variant to MCR with csco=49 and also in some dataset => modify in MCR csco=99
-* Not present in MCR, new assigned synset-variant in more than one dataset => add new variant-synset with csco=94 (csco in XOMW) and put correct sense (sense greater (+1) than last sense)
-* Not present in MCR, new assigned synset-variant in only one dataset => add new variant-synset with csco=XX (the correspondence between dataset and csco is explained in table below) and put correct sense (sense greater (+1) than last sense)
+* Assigned synset-variant to MCR with CSCO=99 => nothing to do.
+* Assigned synset-variant to MCR with CSCO<99 and CSCO>49 and also in some dataset or language => modify in MCR with CSCO=99. Else, nothing to do.
+* Assigned synset-variant to MCR with CSCO<49 and CSCO>0 and also in some dataset or language => modify in MCR CSCO=99. Otherwise, nothing to do.
+* Not present in MCR, new assigned synset-variant in more than one dataset => add new variant-synset with CSCO=99 and put correct sense (sense greater (+1) than last sense)
+* Not present in MCR, new assigned synset-variant in only one dataset => add new variant-synset with CSCO=XX (a posible codification, the correspondence between dataset and CSCO is explained in table below) and put correct sense (sense greater (+1) than last sense). This assignation of CSCO can be optional and we can't introduce this synset-variant tuple in MCR.
 
 41 : EOWN-cldr<br />
 42 : EOWN-wikt<br />

@@ -19,7 +19,7 @@ if __name__ == '__main__':
 	     prog='createMatrix.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 extract variants from MCR
+		 extract synset-variants-csco tuples from MCR
 		 --------------------------------
 		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
 		     python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 [[--language spa-30]] [[--language cat-30]] [[...]]

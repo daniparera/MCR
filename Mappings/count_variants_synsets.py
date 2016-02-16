@@ -11,7 +11,7 @@ from collections import defaultdict
 if __name__ == '__main__':
 
 	parserarg = argparse.ArgumentParser(
-	     prog='countSynVar.py',
+	     prog='count_variants_synsets.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
 		 count number of variants for each synset from MCR, and a mean :)
