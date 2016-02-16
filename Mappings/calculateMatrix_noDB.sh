@@ -119,6 +119,6 @@ rm out/matrix-por-30_*.tab
 
 ls -lrt out
 
-python exportMCR.py --file_matrix out/matrix-eus-30.tab
-python exportMCR.py --file_matrix out/matrix-spa-30.tab
-python exportMCR.py --file_matrix out/matrix-cat-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-eus-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-spa-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-cat-30.tab
