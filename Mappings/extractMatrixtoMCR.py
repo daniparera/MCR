@@ -145,7 +145,7 @@ if __name__ == '__main__':
 	lang = ('-').join(out_name.split("-")[-2:])
 
 	# list to check selectec synset... update sql list and insert sql list
-	list_upd = ['up00_ok','up49_ok']
+	list_upd = ['up00_ok','up49_ok','49_ok']
 	list_ins = ['n1_ok','n_oth','rev']
 
 	# output classification...
@@ -171,6 +171,7 @@ if __name__ == '__main__':
 		if sel in list_upd or sel in list_ins:
 			output_file_sql.close()
 
+
 	print "\nSTATS:\n"
 	print "\t99:\t\t"+str(cnt_99)+"\n"
 	print "\tREV => 99\t"+str(cnt_rev)+"\n"
@@ -183,3 +184,6 @@ if __name__ == '__main__':
 	print "\t -1 => 99\t"+str(cnt_n1_ok)+"\n"
 	print "\t -1 => -1\t"+str(cnt_n1_ko)+"\n"
 	print "\t<-1 => 99\t"+str(cnt_n_oth)+"\n"
+	print "TOTAL UP CSCO\n"
+	print "\t XX => 99\t"+str(cnt_n_oth+cnt_n1_ok+cnt_up00_ok+cnt_49_ok+cnt_up49_ok+cnt_rev)+"\n"
+
