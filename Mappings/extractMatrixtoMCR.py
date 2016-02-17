@@ -131,30 +131,35 @@ if __name__ == '__main__':
 
 	input_file_matrix.close()
 	out_name,ext = args.file_matrix.split(".")
-	lang = out_name.split("-")[:2]
+	lang = ('-').join(out_name.split("-")[-2:])
 
-	list_sel = ['n1_ok','n_oth','up00_ok','up49_ok','rev']
+	list_upd = ['up00_ok','up49_ok','rev']
+	list_ins = ['n1_ok','n_oth']
 
 	for sel,values in mat.items():
 
 		output_file = open(out_name+'_'+sel+'.'+ext, "w")
 
-		if sel in list_sel:
+		if sel in list_upd or sel in list_ins:
 			output_file_sql = open(out_name+'_'+sel+'.sql', "w")
 
 		for syn,words in values.items():
 			for word in words:
 				output_file.write(syn+"\t"+word+"\n")
 
-				if sel in list_sel:
+				if sel in list_upd:
 					output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+word+"';\n")
+				if sel in list_ins:
+					pos = syn.split("-")[-1]
+					output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+word+"',-1,'"+lang+"-"+syn+"','"+pos+"',99);\n")
 
 		output_file.close()
 
-		if sel in list_sel:
+		if sel in list_upd or sel in list_ins:
 			output_file_sql.close()
 
-	print "\nCNT 99:\t\t"+str(cnt_99)+"\n"
+	print "\nSTATS:\n"
+	print "CNT 99:\t\t"+str(cnt_99)+"\n"
 	print "CNT REV:\t"+str(cnt_rev)+"\n"
 	print "CNT >49 OK:\t"+str(cnt_up49_ok)+"\n"
 	print "CNT >49 KO:\t"+str(cnt_up49_ko)+"\n"
@@ -163,4 +168,3 @@ if __name__ == '__main__':
 	print "CNT  -1 OK:\t"+str(cnt_n1_ok)+"\n"
 	print "CNT  -1 KO:\t"+str(cnt_n1_ko)+"\n"
 	print "CNT < -1:\t"+str(cnt_n_oth)+"\n"
-
