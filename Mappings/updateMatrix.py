@@ -16,7 +16,7 @@ class AutoVivification(dict):
 
 if __name__ == '__main__':
 
-	parserarg = argparse.ArgumentParser(
+	argument_parser = argparse.ArgumentParser(
 	     prog='updateMatrix.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
@@ -26,12 +26,12 @@ if __name__ == '__main__':
 		     python updateMatrix.py --file_matrix out/matrix_eng-30.tab --file_lexicon data/wn-cldr-eng_clean.tab --new_field_name cldr
 		 '''))
 
-	parserarg.add_argument('--file_matrix', dest='file_matrix', required=True, type=str , help='matrix\'s file (required)')
-	parserarg.add_argument('--file_lexicon', dest='file_lexicon', required=True, type=str , help='resource lexicon\'s file (required)')
-	parserarg.add_argument('--new_field_name', dest='nfn', required=True, type=str , help='new field name (required)')
-	parserarg.add_argument('--cross_lingual', dest='cl', action='store_false', default='TRUE', help='to append only coincidence')
+	argument_parser.add_argument('--file_matrix', dest='file_matrix', required=True, type=str , help='matrix\'s file (required)')
+	argument_parser.add_argument('--file_lexicon', dest='file_lexicon', required=True, type=str , help='resource lexicon\'s file (required)')
+	argument_parser.add_argument('--new_field_name', dest='nfn', required=True, type=str , help='new field name (required)')
+	argument_parser.add_argument('--cross_lingual', dest='cl', action='store_false', default='TRUE', help='to append only coincidence')
 
-	args = parserarg.parse_args()
+	args = argument_parser.parse_args()
 	cl = not(bool(args.cl))
 	
 	if "_" in args.nfn:
