@@ -133,8 +133,8 @@ if __name__ == '__main__':
 	out_name,ext = args.file_matrix.split(".")
 	lang = ('-').join(out_name.split("-")[-2:])
 
-	list_upd = ['up00_ok','up49_ok','rev']
-	list_ins = ['n1_ok','n_oth']
+	list_upd = ['up00_ok','up49_ok']
+	list_ins = ['n1_ok','n_oth','rev']
 
 	for sel,values in mat.items():
 
