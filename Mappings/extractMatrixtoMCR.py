@@ -61,7 +61,7 @@ if __name__ == '__main__':
 			select = '99'
 			cnt_99 = cnt_99 + 1
 
-		# Review: Catalan option, "Revisats" (cat: 12042) 
+		# Review: Catalan option, "Revisats"
 		elif ok_rev == 1:
 
 			select = 'rev'
@@ -102,7 +102,7 @@ if __name__ == '__main__':
 					select = 'up00_ok'
 					cnt_up00_ok = cnt_up00_ok + 1
 
-		# csco==-1: Present in some "language" in MCR OR in some "language" in resorces and in "resource" (not babelnet) resorce THEN csco up to 99 (?)
+		# csco==-1: Present in some "language" in MCR OR in some "language" in resources and "resource" (not babelnet) THEN csco up to 99
 		elif csco == -1:
 
 			ok = 0
@@ -127,7 +127,7 @@ if __name__ == '__main__':
 				select = 'n1_ko'
 				cnt_n1_ko = cnt_n1_ko + 1
 
-		# Case 3: IF csco<-1 THEN csco up to 99 (spa: 11866 // cat: 3056 // eus:1575)
+		# csco < -1: THEN csco up to 99
 		elif csco < -1:
 				select = 'n_oth'
 				cnt_n_oth = cnt_n_oth + 1
@@ -141,8 +141,9 @@ if __name__ == '__main__':
 				mat[select].setdefault(syn,[]).append(word)
 
 			if args.vt >= 0:
-				print "\n"+line
+				print line
 				print select
+				print "-----------------------------------------------------------------------------"
 				time.sleep(args.vt)
 
 		except KeyError:
