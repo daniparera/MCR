@@ -19,8 +19,6 @@ if __name__ == '__main__':
 
 	args = parserarg.parse_args()
 
-	### Read and Create matrix ################################################
-
 	input_file_matrix = open(args.file_matrix, "r")
 	line = input_file_matrix.readline()
 
@@ -39,18 +37,20 @@ if __name__ == '__main__':
 
 	mat = defaultdict(dict)
 
+	# for each line in input matrix, classify follow some rules...
 	for line in input_file_matrix.readlines():
 
 		# recovery first three values, synset, variant and csco
 		syn,word,csco_tmp = line.split()[:3]
 		csco = float(csco_tmp)
 
+		# check if exist non negative value in revisats column
 		ok_rev = 0
 		for idx,elem in enumerate(line.split()[3:]):
-			if elem != '0' and lex_names[idx] == 'revisats':
+			if lex_names[idx] == 'revisats' and elem != '0':
 				ok_rev = 1
 
-		# Case 0a: IF csco>=99 only count it
+		# Case 0a: IF csco>=99 only count it, nothing to do
 		if csco >= 99:
 
 			select = '99'
@@ -133,9 +133,11 @@ if __name__ == '__main__':
 	out_name,ext = args.file_matrix.split(".")
 	lang = ('-').join(out_name.split("-")[-2:])
 
+	# list to check selectec synset... update sql list and insert sql list
 	list_upd = ['up00_ok','up49_ok']
 	list_ins = ['n1_ok','n_oth','rev']
 
+	# output classification...
 	for sel,values in mat.items():
 
 		output_file = open(out_name+'_'+sel+'.'+ext, "w")
