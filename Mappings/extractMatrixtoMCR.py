@@ -29,6 +29,8 @@ if __name__ == '__main__':
 	cnt_rev = 0
 	cnt_up49_ok = 0
 	cnt_up49_ko = 0
+	cnt_49_ok = 0
+	cnt_49_ko = 0
 	cnt_up00_ok = 0
 	cnt_up00_ko = 0
 	cnt_n1_ok = 0
@@ -50,63 +52,72 @@ if __name__ == '__main__':
 			if lex_names[idx] == 'revisats' and elem != '0':
 				ok_rev = 1
 
-		# Case 0a: IF csco>=99 only count it, nothing to do
+		# csco >= 99: Only count it, nothing to do
 		if csco >= 99:
 
 			select = '99'
 			cnt_99 = cnt_99 + 1
 
-		# Case 0b: Catalan, "Revisats" (cat: 12042) 
+		# Review: Catalan option, "Revisats" (cat: 12042) 
 		elif ok_rev == 1:
 
 			select = 'rev'
 			cnt_rev = cnt_rev + 1
 
-		# Case 0c: IF csco>49 and not present in other "resource" or "language" THEN csco not change (spa: 72546 // cat:71706 // eus:50039)
-		elif csco > 49 :
-
-			ko = 1
-			# recovery other data present in the file, and check that some not is 0's
-			for elem in line.split()[3:]:
-				if elem != '0':
-					ko = 0
-			if ko == 1:
-				select = 'up49_ko'
-				cnt_up49_ko = cnt_up49_ko + 1
-			else:
-				select = 'up49_ok'
-				cnt_up49_ok = cnt_up49_ok + 1
-
-		# Case 1: IF csco>=0 and it's present in other "resource" or "language" THEN csco up to 99 (spa: 17534 // cat: 149)
-		elif csco >= 0 :
+		# csco > 0: IF it's present in other "resource" or "language" THEN csco up to 99 ELSE csco not change
+		elif csco > 0 :
 
 			ko = 1
 			# recovery other data present in the file, and check that all are 0's
 			for elem in line.split()[3:]:
 				if elem != '0':
 					ko = 0
-			if ko == 1:
-				select = 'up00_ko'
-				cnt_up00_ko = cnt_up00_ko + 1
-			else:
-				select = 'up00_ok'
-				cnt_up00_ok = cnt_up00_ok + 1
+			if csco > 49 :
 
-		# Case 2: IF csco==-1 and it's present in any "resource" (not babelnet) and in some "language" THEN csco up to 99 (?)
+				if ko:
+					select = 'up49_ko'
+					cnt_up49_ko = cnt_up49_ko + 1
+				else:
+					select = 'up49_ok'
+					cnt_up49_ok = cnt_up49_ok + 1
+
+			elif csco == 49 :
+
+				if ko:
+					select = '49_ko'
+					cnt_49_ko = cnt_49_ko + 1
+				else:
+					select = '49_ok'
+					cnt_49_ok = cnt_49_ok + 1
+
+			elif csco >= 0 :
+
+				if ko:
+					select = 'up00_ko'
+					cnt_up00_ko = cnt_up00_ko + 1
+				else:
+					select = 'up00_ok'
+					cnt_up00_ok = cnt_up00_ok + 1
+
+		# csco==-1: Present in some "language" in MCR OR in some "language" in resorces and in "resource" (not babelnet) resorce THEN csco up to 99 (?)
 		elif csco == -1:
 
+			ok = 0
 			ok_lng = 0
 			ok_rcs = 0
-			babelnet = 0
-			# recovery other data present in the file, and check that all are 0's
+			# recovery other data present in the file, and check some conditions...
 			for idx,elem in enumerate(line.split()[3:]):
-				if elem != '0':
-					if "_cl" in lex_names[idx]:
-						ok_lng = 1
-					elif lex_names[idx] != 'babelnet':
-						ok_rcs = 1
+				# if in other language is present in MCR, change csco 
+				if "_cl" in lex_names[idx] and float(elem) > 0:
+					ok = 1
+				# if in other language is present in resource and... 
+				elif "_cl" in lex_names[idx] and float(elem) < 0:
+					ok_lng = 1
+				# ... also is not in babelnet
+				elif lex_names[idx] != 'babelnet' and elem != '0':
+					ok_rcs = 1
 
-			if ok_lng and ok_rcs:
+			if ok or (ok_lng and ok_rcs):
 				select = 'n1_ok'
 				cnt_n1_ok = cnt_n1_ok + 1
 			else:
@@ -161,12 +172,14 @@ if __name__ == '__main__':
 			output_file_sql.close()
 
 	print "\nSTATS:\n"
-	print "CNT 99:\t\t"+str(cnt_99)+"\n"
-	print "CNT REV:\t"+str(cnt_rev)+"\n"
-	print "CNT >49 OK:\t"+str(cnt_up49_ok)+"\n"
-	print "CNT >49 KO:\t"+str(cnt_up49_ko)+"\n"
-	print "CNT >00 OK:\t"+str(cnt_up00_ok)+"\n"
-	print "CNT >00 KO:\t"+str(cnt_up00_ko)+"\n"
-	print "CNT  -1 OK:\t"+str(cnt_n1_ok)+"\n"
-	print "CNT  -1 KO:\t"+str(cnt_n1_ko)+"\n"
-	print "CNT < -1:\t"+str(cnt_n_oth)+"\n"
+	print "\t99:\t\t"+str(cnt_99)+"\n"
+	print "\tREV => 99\t"+str(cnt_rev)+"\n"
+	print "\t>49 => 99\t"+str(cnt_up49_ok)+"\n"
+	print "\t>49 => >49\t"+str(cnt_up49_ko)+"\n"
+	print "\t 49 => 99\t"+str(cnt_49_ok)+"\n"
+	print "\t 49 => 49\t"+str(cnt_49_ko)+"\n"
+	print "\t>00 => 99\t"+str(cnt_up00_ok)+"\n"
+	print "\t>00 => >00\t"+str(cnt_up00_ko)+"\n"
+	print "\t -1 => 99\t"+str(cnt_n1_ok)+"\n"
+	print "\t -1 => -1\t"+str(cnt_n1_ko)+"\n"
+	print "\t<-1 => 99\t"+str(cnt_n_oth)+"\n"
