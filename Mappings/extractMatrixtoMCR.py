@@ -1,23 +1,26 @@
 #!/usr/bin/python
 
-import textwrap, argparse
+import textwrap, argparse, time
 
 from collections import defaultdict
 
 if __name__ == '__main__':
 
-	parserarg = argparse.ArgumentParser(
+	argument_parser = argparse.ArgumentParser(
 	     prog='extractMatrixtoMCR.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 Extract data from Matrix to export data to MCR, change csco from the selected synset-variants
+		 Extract data from Matrix to export data to MCR, Create SQL to change csco from the selected synset-variants
 		 --------------------------------
-		     example of use $python3 %(prog)s --file_matrix matrix.tab
+		     example of use $python3 %(prog)s --file_matrix matrix.tab [[--log_files]]
 		 '''))
 
-	parserarg.add_argument('--file_matrix', dest='file_matrix', required=True, type=str , help='matrix\'s file (required)')
+	argument_parser.add_argument('--file_matrix', dest='file_matrix', required=True, type=str , help='matrix\'s file (required)')
 
-	args = parserarg.parse_args()
+	argument_parser.add_argument('--verbose_time', dest='vt', required=False, type=float, default=-1 , help='to show verbose information (optional)')
+	argument_parser.add_argument('--log_files', dest='log_files', action='store_true', help='create log files (optional)')
+
+	args = argument_parser.parse_args()
 
 	input_file_matrix = open(args.file_matrix, "r")
 	line = input_file_matrix.readline()
@@ -137,6 +140,11 @@ if __name__ == '__main__':
 			if word not in mat[select][syn]:
 				mat[select].setdefault(syn,[]).append(word)
 
+			if args.vt >= 0:
+				print "\n"+line
+				print select
+				time.sleep(args.vt)
+
 		except KeyError:
 			mat[select].setdefault(syn,[]).append(word)
 
@@ -151,14 +159,17 @@ if __name__ == '__main__':
 	# output classification...
 	for sel,values in mat.items():
 
-		output_file = open(out_name+'_'+sel+'.'+ext, "w")
+		if args.log_files:
+			output_file = open(out_name+'_'+sel+'.'+ext, "w")
 
 		if sel in list_upd or sel in list_ins:
 			output_file_sql = open(out_name+'_'+sel+'.sql', "w")
 
 		for syn,words in values.items():
 			for word in words:
-				output_file.write(syn+"\t"+word+"\n")
+
+				if args.log_files:
+					output_file.write(syn+"\t"+word+"\n")
 
 				if sel in list_upd:
 					output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+word+"';\n")
@@ -166,11 +177,11 @@ if __name__ == '__main__':
 					pos = syn.split("-")[-1]
 					output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+word+"',-1,'"+lang+"-"+syn+"','"+pos+"',99);\n")
 
-		output_file.close()
+		if args.log_files:
+			output_file.close()
 
 		if sel in list_upd or sel in list_ins:
 			output_file_sql.close()
-
 
 	print "\nSTATS:\n"
 	print "\t99:\t\t"+str(cnt_99)+"\n"
@@ -186,4 +197,3 @@ if __name__ == '__main__':
 	print "\t<-1 => 99\t"+str(cnt_n_oth)+"\n"
 	print "TOTAL UP CSCO\n"
 	print "\t XX => 99\t"+str(cnt_n_oth+cnt_n1_ok+cnt_up00_ok+cnt_49_ok+cnt_up49_ok+cnt_rev)+"\n"
-
