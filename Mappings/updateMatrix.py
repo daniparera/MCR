@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	cl = not(bool(args.cl))
 	
 	if "_" in args.nfn:
-		print "invalid name for new field. It can't contain '_' (underscore)"
+		print("invalid name for new field. It can't contain '_' (underscore)")
 		exit()
 	else:
 		if cl:
@@ -70,6 +70,10 @@ if __name__ == '__main__':
 		syn,word = line.split()[:2]
 		csco = float(line.split()[2])
 
+		pos = syn.split("-")[1]
+		if pos == 's':
+			syn = syn.split("-")[0]+"-a"
+
 		# recovery other data present in the file, and store in matrix's data structure
 		for idx,elem in enumerate(line.split()[3:]):
 			matrix[syn][word][lex_names[idx]] = elem
@@ -89,7 +93,7 @@ if __name__ == '__main__':
 	#new_dict = {k:v for k,v in original_dict.items() if v}
 
 	# delete empty lists
-	for k in lexicon_dict.keys():
+	for k in list(lexicon_dict):
 		if not lexicon_dict[k]:
 			del lexicon_dict[k]
 
