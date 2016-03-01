@@ -268,12 +268,12 @@ if __name__ == '__main__':
 
 		# open output files ########################################################################################################
 		if args.log_files:
-			output_file = open(out_name+'_log_'+sel+'.'+ext, "w")
+			output_file = open(out_path+'_log_'+sel+'.'+ext, "w")
 
 		if sel in list_upd:
-			output_file_sql = open(out_name+'_update.sql', "a")
+			output_file_sql = open(out_path+'_update.sql', "a")
 		if sel in list_ins:
-			output_file_sql = open(out_name+'_insert.sql', "a")
+			output_file_sql = open(out_path+'_insert.sql', "a")
 
 		############################################################################################################################
 

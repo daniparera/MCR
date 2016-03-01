@@ -103,7 +103,7 @@ mv out/matrix-eng-30_9.tab out/matrix-eng-30.tab
 mv out/matrix-eng-30_0.tab out/matrix-eng-30DB.tab
 rm out/matrix-eng-30_*.tab
 
-mv out/matrix-spa-30_11.tab out/matrix-spa-30.tab
+mv out/matrix-spa-30_12.tab out/matrix-spa-30.tab
 mv out/matrix-spa-30_0.tab out/matrix-spa-30DB.tab
 rm out/matrix-spa-30_*.tab
 
@@ -121,6 +121,9 @@ rm out/matrix-por-30_*.tab
 
 ls -lrt out
 
-python exportMCR.py --file_matrix out/matrix-eus-30.tab
-python exportMCR.py --file_matrix out/matrix-spa-30.tab
-python exportMCR.py --file_matrix out/matrix-cat-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-eus-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-spa-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-cat-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-glg-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-por-30.tab
+python extractMatrixtoMCR.py --file_matrix out/matrix-spa-30.tab
