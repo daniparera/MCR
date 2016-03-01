@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os
+import os,sys
 import textwrap, argparse
 import pymysql
 
@@ -69,14 +69,21 @@ if __name__ == '__main__':
 
 		matrix_dict = defaultdict(dict)
 
-		cur.execute("SELECT * FROM `wei_"+lang+"_variant`")
+		output_file = open('out/matrix-'+lang+'_0.tab', "w")
+
+		cur.execute("SELECT offset,word,csco FROM `wei_"+lang+"_variant`")
+
 		rows = cur.fetchall()
 
 		# for each row in SQL result extract synset-variant-csco tuple and put in a matrix
 		for row in rows:
 
-			syn = "-".join(row['offset'].split("-")[-2:]).decode('iso-8859-1').encode('utf-8')
-			word = row['word'].decode('iso-8859-1').encode('utf-8')
+			if sys.version_info[0] < 3:
+				syn = "-".join(row['offset'].split("-")[-2:]).decode('iso-8859-1').encode('utf-8')
+				word = row['word'].decode('iso-8859-1').encode('utf-8')
+			else:
+				syn = "-".join(row['offset'].split("-")[-2:])
+				word = row['word']
 
 			matrix_dict[syn][word] = row['csco']
 
