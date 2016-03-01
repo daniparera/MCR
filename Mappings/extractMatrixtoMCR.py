@@ -242,15 +242,23 @@ if __name__ == '__main__':
 		###########################################################################
 
 	input_file_matrix.close()
-	out_name,ext = args.file_matrix.split(".")
-	lang = ('-').join(out_name.split("-")[-2:])
 
-	output_file_sql = open(out_name+'_update.sql', "w")
+	out_dir = '/'.join(args.file_matrix.split("/")[:-1])
+	out_file = args.file_matrix.split("/")[-1]
+
+	out_name = out_file.split(".")[0]
+	out_path = out_dir+"/"+out_name
+
+	ext = out_file.split(".")[1]
+
+	lang = '-'.join(out_name.split("-")[-2:])
+
+	output_file_sql = open(out_path+'_update.sql', "w")
 	output_file_sql.seek(0)
 	output_file_sql.truncate()
 	output_file_sql.close()
 
-	output_file_sql = open(out_name+'_insert.sql', "w")
+	output_file_sql = open(out_path+'_insert.sql', "w")
 	output_file_sql.seek(0)
 	output_file_sql.truncate()
 	output_file_sql.close()
