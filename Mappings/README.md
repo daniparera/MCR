@@ -18,6 +18,8 @@ svn export https://github.com/daniparera/MCR/trunk/Mappings
 Requirements and Formats
 -------
 
+Recommended Python version 3. Codification issues... 
+
 Datasets are from
 ```
 http://compling.hss.ntu.edu.sg/omw/wn-wikt.tgz
