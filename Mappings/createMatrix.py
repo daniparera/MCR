@@ -63,13 +63,13 @@ if __name__ == '__main__':
 	if not os.path.exists('out'):
 		os.makedirs('out')
 
+	cur.execute("SET NAMES utf8")
+
 	for lang in languages:
 
 		print("Extract language "+lang+" from MCR in file 'out/matrix-"+lang+".tab'\n")
 
 		matrix_dict = defaultdict(dict)
-
-		output_file = open('out/matrix-'+lang+'_0.tab', "w")
 
 		cur.execute("SELECT offset,word,csco FROM `wei_"+lang+"_variant`")
 

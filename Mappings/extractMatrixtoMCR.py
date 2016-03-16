@@ -21,6 +21,7 @@ if __name__ == '__main__':
 	argument_parser.add_argument('--log_files', dest='log_files', action='store_true', help='create log files (optional)')
 	argument_parser.add_argument('--stats_info', dest='stats_info', action='store_true', help='show statistical information (optional)')
 	argument_parser.add_argument('--check_mcr', dest='check_mcr', action='store_true', help='check synset\' existence with MCR batabase (optional)')
+	argument_parser.add_argument('--valid_list', dest='valid_list', action='append', type=str, default=[], help='valid field to insert directly in MCR (optional, multiple values)')
 
 	argument_parser.add_argument('--host', dest='host_db', required=False, type=str , help='host url\'s database (required if check_mcr option is set)')
 	argument_parser.add_argument('--user', dest='user_db', required=False, type=str , help='user\'s database (required if check_mcr option is set)')
@@ -29,7 +30,7 @@ if __name__ == '__main__':
 
 	args = argument_parser.parse_args()
 
-	# CHECK MCR ##############################################################################################################################3
+	# START, CHECK MCR ##############################################################################################################################3
 
 	if args.check_mcr:
 
@@ -40,7 +41,7 @@ if __name__ == '__main__':
 		import pymysql,sys
 
 		#can use this also
-		#import MySQLdb
+		#import MySQLdb,sys
 
 		#choose one of them
 		#db = MySQLdb.connect(host=args.host_db, user=args.user_db, passwd=args.pwd_db, db=args.db_db) 
@@ -65,7 +66,9 @@ if __name__ == '__main__':
 
 			synsets_mcr[syn] = 1
 
-	##########################################################################################################################################3
+	# FINISH, CHECK MCR #############################################################################################################################3
+
+	# START, CLASSIFICATION #########################################################################################################################3
 
 	input_file_matrix = open(args.file_matrix, "r")
 	line = input_file_matrix.readline()
@@ -74,20 +77,27 @@ if __name__ == '__main__':
 	lex_names = line.split()[3:]
 
 	# Initialize counters
-	cnt,c,c['n'],c['v'],c['a'],c['r'] = [{},{},{},{},{},{}]
-	cnt['99'],cnt['rev_in'],cnt['rev_out'],cnt['up49_ok'],cnt['up49_ko'],cnt['49_ok'],cnt['49_ko'],cnt['up00_ok'],cnt['up00_ko'],cnt['n1_ok'],cnt['n1_ko'],cnt['n_oth'] = [0,0,0,0,0,0,0,0,0,0,0,0]
-	c['n']['99'],c['n']['rev_in'],c['n']['rev_out'],c['n']['up49_ok'],c['n']['up49_ko'],c['n']['49_ok'],c['n']['49_ko'],c['n']['up00_ok'],c['n']['up00_ko'],c['n']['n1_ok'] = [0,0,0,0,0,0,0,0,0,0]
-	c['v']['99'],c['v']['rev_in'],c['v']['rev_out'],c['v']['up49_ok'],c['v']['up49_ko'],c['v']['49_ok'],c['v']['49_ko'],c['v']['up00_ok'],c['v']['up00_ko'],c['v']['n1_ok'] = [0,0,0,0,0,0,0,0,0,0]
-	c['a']['99'],c['a']['rev_in'],c['a']['rev_out'],c['a']['up49_ok'],c['a']['up49_ko'],c['a']['49_ok'],c['a']['49_ko'],c['a']['up00_ok'],c['a']['up00_ko'],c['a']['n1_ok'] = [0,0,0,0,0,0,0,0,0,0]
-	c['r']['99'],c['r']['rev_in'],c['r']['rev_out'],c['r']['up49_ok'],c['r']['up49_ko'],c['r']['49_ok'],c['r']['49_ko'],c['r']['up00_ok'],c['r']['up00_ko'],c['r']['n1_ok'] = [0,0,0,0,0,0,0,0,0,0]
-	c['n']['n1_ko'],c['n']['n_oth'],c['v']['n1_ko'],c['v']['n_oth'],c['a']['n1_ko'],c['a']['n_oth'],c['r']['n1_ko'],c['r']['n_oth'] = [0,0,0,0,0,0,0,0]
+	cnt = {}
+	cnt['99'],cnt['rv_vis'],cnt['rv_hide'],cnt['rv_out'],cnt['up49_ok'],cnt['up49_ko'],cnt['49_ok'],cnt['49_ko'],cnt['up00_ok'],cnt['up00_ko'],cnt['n1_ok'],cnt['n1_ko'],cnt['n_oth'] = [0] * 13
+
+	c = {}
+	c['n'] = {}
+	c['v'] = {}
+	c['a'] = {}
+	c['r'] = {}
+
+	c['n']['99'],c['n']['rv_vis'],c['n']['rv_hide'],c['n']['rv_out'],c['n']['up49_ok'],c['n']['up49_ko'],c['n']['49_ok'],c['n']['49_ko'],c['n']['up00_ok'],c['n']['up00_ko'],c['n']['n1_ko'] = [0] * 11
+	c['v']['99'],c['v']['rv_vis'],c['v']['rv_hide'],c['v']['rv_out'],c['v']['up49_ok'],c['v']['up49_ko'],c['v']['49_ok'],c['v']['49_ko'],c['v']['up00_ok'],c['v']['up00_ko'],c['v']['n1_ko'] = [0] * 11
+	c['a']['99'],c['a']['rv_vis'],c['a']['rv_hide'],c['a']['rv_out'],c['a']['up49_ok'],c['a']['up49_ko'],c['a']['49_ok'],c['a']['49_ko'],c['a']['up00_ok'],c['a']['up00_ko'],c['a']['n1_ko'] = [0] * 11
+	c['r']['99'],c['r']['rv_vis'],c['r']['rv_hide'],c['r']['rv_out'],c['r']['up49_ok'],c['r']['up49_ko'],c['r']['49_ok'],c['r']['49_ko'],c['r']['up00_ok'],c['r']['up00_ko'],c['r']['n1_ko'] = [0] * 11
+	c['n']['n1_ok'],c['n']['n_oth'],c['v']['n_oth'],c['v']['n1_ok'],c['a']['n_oth'],c['a']['n1_ok'],c['r']['n_oth'],c['r']['n1_ok'] = [0] * 8
 
 	synsets_some_up49_before,synsets_some_up49_after,synsets_some_all_before = [{},{},{}]
 	syn_s_b,syn_s_a,syn_s_b['n'],syn_s_a['n'],syn_s_b['v'],syn_s_a['v'],syn_s_b['a'],syn_s_a['a'],syn_s_b['r'],syn_s_a['r'] = [{},{},{},{},{},{},{},{},{},{}]
 
 	# list to check selected synset... update sql list and insert sql list
-	list_upd = ['up00_ok','up49_ok','49_ok','rev_in']
-	list_ins = ['n1_ok','n_oth','rev_out']
+	list_upd = ['up00_ok','up49_ok','49_ok','rv_vis','rv_hide']
+	list_ins = ['n1_ok','n_oth','rv_out']
 
 	classification = defaultdict(dict)
 
@@ -110,23 +120,23 @@ if __name__ == '__main__':
 			syn = syn.split("-")[0]+"-a"
 			pos = "a"
 
-		# check if exist non negative value in revisats column
+		# check if exist non negative value in some validate column
 		ok_rev = 0
 		for idx,elem in enumerate(line.split()[3:]):
-			if lex_names[idx] == 'revisats' and elem != '0':
+			if lex_names[idx] in args.valid_list and elem != '0':
 				ok_rev = 1
 
 		# Review not hide:
 		if ok_rev == 1 and csco > 49:
-			select = 'rev_visible'
+			select = 'rv_vis'
 
 		# Review hide:
 		elif ok_rev == 1 and csco > 0:
-			select = 'rev_hide'
+			select = 'rv_hide'
 
 		# Review not in MCR:
 		elif ok_rev == 1 and csco < 0:
-			select = 'rev_out'
+			select = 'rv_out'
 
 		# csco >= 99: Only count it, nothing to do
 		elif csco >= 99:
@@ -207,6 +217,7 @@ if __name__ == '__main__':
 			print(line)
 			print(select)
 			print(cnt[select])
+			print(c[pos][select])
 			print("-----------------------------------------------------------------------------")
 			time.sleep(args.vt)
 
@@ -243,6 +254,11 @@ if __name__ == '__main__':
 
 	input_file_matrix.close()
 
+	# FINISH, CLASSIFICATION ########################################################################################################################3
+
+	# START, WRITE TO FILES ##########################################################################################################################
+
+	# names and paths for output files
 	out_dir = '/'.join(args.file_matrix.split("/")[:-1])
 	out_file = args.file_matrix.split("/")[-1]
 
@@ -251,62 +267,68 @@ if __name__ == '__main__':
 
 	ext = out_file.split(".")[1]
 
+	# extract language from input filename
 	lang = '-'.join(out_name.split("-")[-2:])
 
-	output_file_sql = open(out_path+'_update.sql', "w")
-	output_file_sql.seek(0)
-	output_file_sql.truncate()
-	output_file_sql.close()
+	out_file_sql = open(out_path+'_update.sql', "w")
+	out_file_sql.seek(0)
+	out_file_sql.truncate()
+	out_file_sql.write("SET NAMES utf8;\n")
+	out_file_sql.close()
 
-	output_file_sql = open(out_path+'_insert.sql', "w")
-	output_file_sql.seek(0)
-	output_file_sql.truncate()
-	output_file_sql.close()
+	out_file_sql = open(out_path+'_insert.sql', "w")
+	out_file_sql.seek(0)
+	out_file_sql.truncate()
+	out_file_sql.write("SET NAMES utf8;\n")
+	out_file_sql.close()
+
 
 	# output classification... #########################################################################################################
 	for sel,values in classification.items():
 
 		# open output files ########################################################################################################
 		if args.log_files:
-			output_file = open(out_path+'_log_'+sel+'.'+ext, "w")
+			out_file = open(out_path+'_log_'+sel+'.'+ext, "w")
 
 		if sel in list_upd:
-			output_file_sql = open(out_path+'_update.sql', "a")
+			out_file_sql = open(out_path+'_update.sql', "a")
 		if sel in list_ins:
-			output_file_sql = open(out_path+'_insert.sql', "a")
+			out_file_sql = open(out_path+'_insert.sql', "a")
 
 		############################################################################################################################
 
 		for syn,words in values.items():
 			for word in words:
 
-				word_r = word.replace("'", "\\'")
+				word_rep = word.replace("'", "\\'")
 
 				if args.log_files:
-					output_file.write(syn+"\t"+word+"\n")
+					out_file.write(syn+"\t"+word+"\n")
 
 				if sel in list_upd:
-					output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+word_r+"';\n")
+					out_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `csco`=99 WHERE `offset` LIKE '"+lang+"-"+syn+"' AND `word` LIKE '"+word_rep+"';\n")
 				if sel in list_ins:
 					pos = syn.split("-")[-1]
-					output_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+word_r+"',-1,'"+lang+"-"+syn+"','"+pos+"',99);\n")
+					out_file_sql.write("INSERT INTO `wei_"+lang+"_variant` (`word`,`sense`,`offset`,`pos`,`csco`) VALUES ('"+word_rep+"',-1,'"+lang+"-"+syn+"','"+pos+"',99);\n")
 
 		# close output files #######################################################################################################
 		if args.log_files:
-			output_file.close()
+			out_file.close()
 
 		if sel in list_upd or sel in list_ins:
-			output_file_sql.close()
+			out_file_sql.close()
 		############################################################################################################################
 
-	# Statistical Infromation ##########################################################################################################
+	# FINISH, WRITE TO FILES #########################################################################################################################
+
+	# Output Statistical Infromation ##########################################################################################################
 	if args.stats_info:
 
 		print("\nSTATS:")
 		print("\t99:\t\t"+str(cnt['99']))
-		print("\tREV_49 => 99\t"+str(cnt['rev_visible']))
-		print("\tREV_00 => 99\t"+str(cnt['rev_hide']))
-		print("\tREV_-1 => 99\t"+str(cnt['rev_out']))
+		print("\trv_49 => 99\t"+str(cnt['rv_vis']))
+		print("\trv_00 => 99\t"+str(cnt['rv_hide']))
+		print("\trv_-1 => 99\t"+str(cnt['rv_out']))
 		print("\t >49  =>  99\t"+str(cnt['up49_ok']))
 		print("\t >49  =>  >49\t"+str(cnt['up49_ko']))
 		print("\t  49  =>  99\t"+str(cnt['49_ok']))
@@ -317,14 +339,14 @@ if __name__ == '__main__':
 		print("\t  -1  =>  -1\t"+str(cnt['n1_ko']))
 		print("\t <-1  =>  99\t"+str(cnt['n_oth'])+"\n")
 		print("CHANGES IN MCR:")
-		print("\t NEW VARIANTS\t"+str(cnt['n_oth']+cnt['n1_ok']+cnt['rev_hide']+cnt['rev_out']+cnt['49_ok']+cnt['up00_ok']))
-		print("\t UPD VARIANTS\t"+str(cnt['up49_ok']+cnt['rev_visible'])+"\n")
+		print("\t NEW VARIANTS\t"+str(cnt['n_oth']+cnt['n1_ok']+cnt['rv_hide']+cnt['rv_out']+cnt['49_ok']+cnt['up00_ok']))
+		print("\t UPD VARIANTS\t"+str(cnt['up49_ok']+cnt['rv_vis'])+"\n")
 		print("SQL INFO:")
-		print("\t INSERT\t"+str(cnt['n_oth']+cnt['n1_ok']+cnt['rev_out']))
-		print("\t UPDATE\t"+str(cnt['49_ok']+cnt['up00_ok']+cnt['up49_ok']+cnt['rev_hide']+cnt['rev_visible'])+"\n")
+		print("\t INSERT\t"+str(cnt['n_oth']+cnt['n1_ok']+cnt['rv_out']))
+		print("\t UPDATE\t"+str(cnt['49_ok']+cnt['up00_ok']+cnt['up49_ok']+cnt['rv_hide']+cnt['rv_vis'])+"\n")
 
-		total_variants_before = cnt['99']+cnt['up49_ok']+cnt['up49_ko']+cnt['rev_in']
-		total_variants_after = cnt['99']+cnt['up49_ok']+cnt['up49_ko']+cnt['49_ok']+cnt['up00_ok']+cnt['rev_in']+cnt['rev_out']+cnt['n1_ok']+cnt['n_oth']
+		total_variants_before = cnt['99']+cnt['up49_ok']+cnt['up49_ko']+cnt['rv_vis']
+		total_variants_after = cnt['99']+cnt['up49_ok']+cnt['up49_ko']+cnt['49_ok']+cnt['up00_ok']+cnt['rv_vis']+cnt['rv_hide']+cnt['rv_out']+cnt['n1_ok']+cnt['n_oth']
 
 		print("STATS")
 		print("\t TOTAL VARIANTS MCR BEFORE UPGRADE\t"+str(total_variants_before))

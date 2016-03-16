@@ -10,7 +10,7 @@ import time
 
 if __name__ == '__main__':
 
-	parserarg = argparse.ArgumentParser(
+	argument_parser = argparse.ArgumentParser(
 	     prog='statsSynsetsVarariants.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
@@ -20,14 +20,14 @@ if __name__ == '__main__':
 		     python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 [[--language spa-30]] [[--language cat-30]] [[...]]
 		 '''))
 
-	parserarg.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
-	parserarg.add_argument('--user', dest='user_db', required=True, type=str , help='user\'s database (required)')
-	parserarg.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
-	parserarg.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
+	argument_parser.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
+	argument_parser.add_argument('--user', dest='user_db', required=True, type=str , help='user\'s database (required)')
+	argument_parser.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
+	argument_parser.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
-	parserarg.add_argument('--language', dest='lng', action='append', required=False, type=str , help='language (default all, optional)')
+	argument_parser.add_argument('--language', dest='lng', action='append', required=False, type=str , help='language (default all, optional)')
 
-	args = parserarg.parse_args()
+	args = argument_parser.parse_args()
 
 	lng = args.lng
 

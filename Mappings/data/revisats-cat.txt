@@ -10619,7 +10619,7 @@
 13132156-n pedicel 1
 13132486-n raïm 1
 13143626-n Paliurus 1
-¿13144511-n Vinya 1
+13144511-n Vinya 1
 13145444-n vitis_vinifera 1
 13148019-n Parthenocissus 1
 13149970-n bètel 1
