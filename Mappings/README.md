@@ -7,6 +7,10 @@ This scripts are used to add synset-variant datasets in MCR.
 * updateMatrix.py: Update matrix information, for each dataset add a column with confidence level.
 * extractMatrixtoMCR.py : Construct SQL sentences to update MCR from matrix information.
 
+Additional scripts for another tasks.
+
+* statsSynsetsVariants.py : extract information from MCR about Synsets and Glosses and some useful stats.
+
 Download
 -------
 
