@@ -88,6 +88,13 @@ if __name__ == '__main__':
 		synsets_some_up49_a = cur.execute("SELECT DISTINCT offset FROM `wei_"+lang+"_variant` WHERE csco > 49 AND pos='a'")
 		synsets_some_up49_r = cur.execute("SELECT DISTINCT offset FROM `wei_"+lang+"_variant` WHERE csco > 49 AND pos='r'")
 
+		total_gloss = cur.execute("SELECT offset FROM `wei_"+lang+"_synset` WHERE `gloss` != ''")
+
+		total_gloss_n = cur.execute("SELECT offset FROM `wei_"+lang+"_synset` WHERE pos='n' AND `gloss` != ''")
+		total_gloss_v = cur.execute("SELECT offset FROM `wei_"+lang+"_synset` WHERE pos='v' AND `gloss` != ''")
+		total_gloss_a = cur.execute("SELECT offset FROM `wei_"+lang+"_synset` WHERE pos='a' AND `gloss` != ''")
+		total_gloss_r = cur.execute("SELECT offset FROM `wei_"+lang+"_synset` WHERE pos='r' AND `gloss` != ''")
+
 		print("Write stats to file out/stats-"+lang+".tab'\n")
 		output_file = open('out/stats-'+lang+'.tab', "w")
 
@@ -100,34 +107,51 @@ if __name__ == '__main__':
 		output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49/synsets_some_up49)+'\n\n')
 
 		output_file.write('NOUNS, CONDITION, CSCO > 49:\n')
+		output_file.write('TOTAL SYNSETS NOUNS:\t'+str(total_synsets_n)+'\n')
 		output_file.write('SYNSETS NOUNS WITH SOME VARIANTS:\t'+str(synsets_some_up49_n)+'\n')
 		output_file.write('COVERAGE:\t'+str(round(((1.0*synsets_some_up49_n)/total_synsets_n)*100,2))+'%\n')
 		output_file.write('TOTAL NOUNS VARIANTS:\t\t'+str(total_variants_up49_n)+'\n')
 		output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_n/synsets_some_up49_n)+'\n\n')
 
 		output_file.write('VERBS, CONDITION, CSCO > 49:\n')
+		output_file.write('TOTAL SYNSETS VERBS:\t'+str(total_synsets_v)+'\n')
 		output_file.write('SYNSETS VERBS WITH SOME VARIANTS:\t'+str(synsets_some_up49_v)+'\n')
 		output_file.write('COVERAGE:\t'+str(round(((1.0*synsets_some_up49_v)/total_synsets_v)*100,2))+'%\n')
 		output_file.write('TOTAL VERBS VARIANTS:\t\t'+str(total_variants_up49_v)+'\n')
 		output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_v/synsets_some_up49_v)+'\n\n')
 
 		output_file.write('ADJECTIVES, CONDITION, CSCO > 49:\n')
+		output_file.write('TOTAL SYNSETS ADJ.:\t'+str(total_synsets_a)+'\n')
 		output_file.write('SYNSETS ADJECTIVES WITH SOME VARIANTS:\t'+str(synsets_some_up49_a)+'\n')
 		output_file.write('COVERAGE:\t'+str(round(((1.0*synsets_some_up49_a)/total_synsets_a)*100,2))+'%\n')
 		output_file.write('TOTAL ADJECTIVES VARIANTS:\t\t'+str(total_variants_up49_a)+'\n')
-		output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_a/synsets_some_up49_a)+'\n\n')
+		if synsets_some_up49_a == 0:
+			output_file.write('MEAN:\t\t0\n\n')
+		else:
+			output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_a/synsets_some_up49_a)+'\n\n')
 
 		output_file.write('ADVERBS, CONDITION, CSCO > 49:\n')
+		output_file.write('TOTAL SYNSETS ADV.:\t'+str(total_synsets_r)+'\n')
 		output_file.write('SYNSETS ADVERBS WITH SOME VARIANTS:\t'+str(synsets_some_up49_r)+'\n')
 		output_file.write('COVERAGE:\t'+str(round(((1.0*synsets_some_up49_r)/total_synsets_r)*100,2))+'%\n')
 		output_file.write('TOTAL ADVERBS VARIANTS:\t\t'+str(total_variants_up49_r)+'\n')
-		output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_r/synsets_some_up49_r)+'\n\n')
+		if synsets_some_up49_r == 0:
+			output_file.write('MEAN:\t\t0\n\n')
+		else:
+			output_file.write('MEAN:\t\t'+str(1.0*total_variants_up49_r/synsets_some_up49_r)+'\n\n')
 
 		output_file.write('ALL, NO CONDITIONS:\n')
 		output_file.write('SYNSETS WITH SOME VARIANTS:\t'+str(synsets_some_all)+'\n')
 		output_file.write('COVERAGE:\t'+str(round(((1.0*synsets_some_all)/total_synsets)*100,2))+'%\n')
 		output_file.write('TOTAL VARIANTS:\t\t'+str(total_variants_all)+'\n')
-		output_file.write('MEAN:\t\t'+str(1.0*total_variants_all/synsets_some_all)+'\n')
+		output_file.write('MEAN:\t\t'+str(1.0*total_variants_all/synsets_some_all)+'\n\n')
+
+		output_file.write('SUMMARY:\n')
+		output_file.write('\tNouns\tVerbs\tAdjectives\tAdverbs\tTotal\n')
+		output_file.write('\t'+str(total_variants_up49_n)+'\t'+str(total_variants_up49_v)+'\t'+str(total_variants_up49_a)+'\t\t'+str(total_variants_up49_r)+'\t'+str(synsets_some_up49)+'\n')
+
+		output_file.write('GLOSS:\n')
+		output_file.write('\tNouns\tVerbs\tAdjectives\tAdverbs\tTotal\n')
+		output_file.write('\t'+str(total_gloss_n)+'\t'+str(total_gloss_v)+'\t'+str(total_gloss_a)+'\t\t'+str(total_gloss_r)+'\t'+str(total_gloss)+'\n')
 
 		output_file.close()
-
