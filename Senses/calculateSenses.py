@@ -242,6 +242,9 @@ if __name__ == '__main__':
 
 		# create descriptor and write header to output file
 		output_file_sql = open('out/senses-'+relation_opt+'-'+lang+'.sql', "w")
+		output_file_sql.write("SET NAMES utf8;\n")
+
+		
 		if args.log_files != 'no':
 			output_file_log = open('out/senses-'+relation_opt+'-'+lang+'.tab', "w")
 			#output_file_log.write('word\tsynset\tsense\n')
