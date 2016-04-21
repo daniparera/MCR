@@ -10,7 +10,7 @@ import pymysql
 if __name__ == '__main__':
 
 	argument_parser = argparse.ArgumentParser(
-	     prog='createMatrix.py',
+	     prog='duplicateVariants.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
 		 check duplicate variant from MCR
