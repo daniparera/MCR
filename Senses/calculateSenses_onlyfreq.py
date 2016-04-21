@@ -142,6 +142,8 @@ if __name__ == '__main__':
 
 		# create descriptor and write header to output file
 		output_file_sql = open('out/senses-'+lang+'.sql', "w")
+		output_file_sql.write("SET NAMES utf8;\n")
+
 		if args.log_files:
 			output_file = open('out/senses-'+lang+'.tab', "w")
 			output_file.write('synset\tword\tsense\n')
