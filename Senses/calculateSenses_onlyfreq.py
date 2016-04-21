@@ -27,7 +27,7 @@ def translation_ss_type(ss):
 if __name__ == '__main__':
 
 	argument_parser = argparse.ArgumentParser(
-	     prog='createMatrix.py',
+	     prog='calculateSenses_onlyfreq.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
 		 extract synset-variants-csco tuples from MCR
