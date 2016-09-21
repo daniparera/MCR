@@ -7,12 +7,14 @@ import re, os
 if __name__ == '__main__':
 
 	argument_parser = argparse.ArgumentParser(
-	     prog='calc_sons_visited_sets.py',
+	     prog='calc_sons_visited.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
 		 calculate sons of all synsets from WordNet, version with visited list and without variable sons
 		 --------------------------------
-		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
+		     example of use: $ python3 %(prog)s --outfile data/wn.stats --file dict/wn30/sons.txt [--log]
+		                     $ python3 %(prog)s --outfile data/wn.stats --file dict/wn30/sons_n.txt [--log]
+		                     $ python3 %(prog)s --outfile data/wn.stats --file dict/wn30/sons_v.txt [--log]
 		 '''))
 
 	argument_parser.add_argument('--file', dest='infile', required=True, type=str , help='wordnet file (required)')
@@ -25,7 +27,7 @@ if __name__ == '__main__':
 
 	def calcul_sons_rec(synset,visited):
 
-		if synset == '02422663-v': return set()
+		if synset == '02422663-v': return set() # problematic synset...
 
 		list_sons = synsets[synset]
 

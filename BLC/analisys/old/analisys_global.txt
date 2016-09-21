@@ -1,0 +1,501 @@
+	 R_Nouns = 15727 31352 1.99351
+	 R_Verbs = 5242 12006 2.29035
+	 R_Dom_n = 2.28797
+	 Cls = 169
+	 Result=169/2.28797
+	 Result=73.8646
+ 
+	 R_Dom_v = 2.63224
+	 Cls = 117
+	 Result=117/2.63224
+	 Result=44.4488
+ 
+	 R_Sumo_n = 2.61117
+	 Cls = 687
+	 Result=687/2.61117
+	 Result=263.1004
+ 
+	 R_Sumo_v = 3.17721
+	 Cls = 277
+	 Result=277/3.17721
+	 Result=87.1834
+ 
+Noun analisys
+BLC0all:
+	 R = 2.69583
+	 Cls = 2567
+	 Result=2567/2.69583
+	 Result=952.2114
+ 
+BLC0all+gloss:
+	 R = 2.70226
+	 Cls = 3347
+	 Result=3347/2.70226
+	 Result=1238.5929
+ 
+BLC0freq:
+	 R = 2.63719
+	 Cls = 1598
+	 Result=1598/2.63719
+	 Result=605.9480
+ 
+ 
+BLC5all:
+	 R = 2.69358
+	 Cls = 1754
+	 Result=1754/2.69358
+	 Result=651.1780
+ 
+BLC5all+gloss:
+	 R = 2.69858
+	 Cls = 1908
+	 Result=1908/2.69858
+	 Result=707.0385
+ 
+BLC5freq:
+	 R = 2.6324
+	 Cls = 1223
+	 Result=1223/2.6324
+	 Result=464.5950
+ 
+ 
+BLC10all:
+	 R = 2.68613
+	 Cls = 1250
+	 Result=1250/2.68613
+	 Result=465.3535
+ 
+BLC10all+gloss:
+	 R = 2.69124
+	 Cls = 1307
+	 Result=1307/2.69124
+	 Result=485.6497
+ 
+BLC10freq:
+	 R = 2.62344
+	 Cls = 900
+	 Result=900/2.62344
+	 Result=343.0610
+ 
+ 
+BLC20all:
+	 R = 2.67419
+	 Cls = 800
+	 Result=800/2.67419
+	 Result=299.1560
+ 
+BLC20all+gloss:
+	 R = 2.67667
+	 Cls = 814
+	 Result=814/2.67667
+	 Result=304.1092
+ 
+BLC20freq:
+	 R = 2.60567
+	 Cls = 590
+	 Result=590/2.60567
+	 Result=226.4293
+ 
+ 
+BLC30all:
+	 R = 2.66473
+	 Cls = 628
+	 Result=628/2.66473
+	 Result=235.6712
+ 
+BLC30all+gloss:
+	 R = 2.66538
+	 Cls = 622
+	 Result=622/2.66538
+	 Result=233.3626
+ 
+BLC30freq:
+	 R = 2.59567
+	 Cls = 446
+	 Result=446/2.59567
+	 Result=171.8246
+ 
+ 
+BLC35all:
+	 R = 2.66039
+	 Cls = 555
+	 Result=555/2.66039
+	 Result=208.6160
+ 
+BLC35all+gloss:
+	 R = 2.66064
+	 Cls = 556
+	 Result=556/2.66064
+	 Result=208.9723
+ 
+ 
+BLC40all:
+	 R = 2.65728
+	 Cls = 509
+	 Result=509/2.65728
+	 Result=191.5493
+ 
+BLC40all+gloss:
+	 R = 2.65689
+	 Cls = 502
+	 Result=502/2.65689
+	 Result=188.9427
+ 
+BLC40freq:
+	 R = 2.58601
+	 Cls = 363
+	 Result=363/2.58601
+	 Result=140.3707
+ 
+ 
+BLC50all:
+	 R = 2.65382
+	 Cls = 430
+	 Result=430/2.65382
+	 Result=162.0306
+ 
+BLC50all+gloss:
+	 R = 2.65081
+	 Cls = 431
+	 Result=431/2.65081
+	 Result=162.5918
+ 
+BLC50freq:
+	 R = 2.57596
+	 Cls = 315
+	 Result=315/2.57596
+	 Result=122.2845
+ 
+BLC60all:
+	 R = 2.65127
+	 Cls = 384
+	 Result=384/2.65127
+	 Result=144.8362
+ 
+BLC60all+gloss:
+	 R = 2.64655
+	 Cls = 392
+	 Result=392/2.64655
+	 Result=148.1174
+ 
+BLC60freq:
+	 R = 2.56855
+	 Cls = 281
+	 Result=281/2.56855
+	 Result=109.4002
+ 
+ 
+BLC70all:
+	 R = 2.64944
+	 Cls = 341
+	 Result=341/2.64944
+	 Result=128.7064
+ 
+BLC70all+gloss:
+	 R = 2.64119
+	 Cls = 347
+	 Result=347/2.64119
+	 Result=131.3802
+ 
+BLC70freq:
+	 R = 2.56173
+	 Cls = 249
+	 Result=249/2.56173
+	 Result=97.1999
+ 
+ 
+BLC80all:
+	 R = 2.64544
+	 Cls = 307
+	 Result=307/2.64544
+	 Result=116.0487
+ 
+BLC80all+gloss:
+	 R = 2.63456
+	 Cls = 315
+	 Result=315/2.63456
+	 Result=119.5646
+ 
+BLC80freq:
+	 R = 2.55567
+	 Cls = 222
+	 Result=222/2.55567
+	 Result=86.8657
+ 
+ 
+BLC100all:
+	 R = 2.63889
+	 Cls = 264
+	 Result=264/2.63889
+	 Result=100.0421
+ 
+BLC100all+gloss:
+	 R = 2.62625
+	 Cls = 267
+	 Result=267/2.62625
+	 Result=101.6659
+ 
+BLC100freq:
+	 R = 2.54663
+	 Cls = 191
+	 Result=191/2.54663
+	 Result=75.0011
+ 
+ 
+d All All All All+Gloss All+Gloss All+Gloss Freq Freq Freq Gloss Gloss Gloss Gloss+Freq Gloss+Freq Gloss+Freq All+Freq All+Freq All+Freq All+Gloss+Freq All+Gloss+Freq All+Gloss+Freq
+0 2567 2.69583 952.2114 3347 2.70226 1238.5929 1598 2.63719 605.9480
+5 1754 2.69358 651.1780 1908 2.69858 707.0385 1223 2.6324 464.5950
+10 1250 2.68613 465.3535 1307 2.69124 485.6497 900 2.62344 343.0610
+15
+20 800 2.67419 299.1560 814 2.67667 304.1092 590 2.60567 226.4293
+25
+30 628 2.66473 235.6712 622 2.66538 233.3626 446 2.59567 171.8246
+35 555 2.66039 208.6160 556 2.66064 208.9723
+40 509 2.65728 191.5493 502 2.65689 188.9427 363 2.58601 140.3707
+45
+50 430 2.65382 162.0306 431 2.65081 162.5918 315 2.57596 122.2845
+55
+60 384 2.65127 144.8362 392 2.64655 148.1174 281 2.56855 109.4002
+65
+70 341 2.64944 128.7064 347 2.64119 131.3802 249 2.56173 97.1999
+75
+80 307 2.64544 116.0487 315 2.63456 119.5646 222 2.55567 86.8657
+85
+90
+95
+100 264 2.63889 100.0421 267 2.62625 101.6659 191 2.54663 75.0011
+ 
+ 
+ 
+Verb analisys
+BLC0all:
+	 R = 3.22829
+	 Cls = 1019
+	 Result=1019/3.22829
+	 Result=952.2114
+ 
+BLC0all+gloss:
+	 R = 3.25171
+	 Cls = 1155
+	 Result=1155/3.25171
+	 Result=355.1977
+ 
+BLC0freq:
+	 R = 3.2487
+	 Cls = 982
+	 Result=982/3.2487
+	 Result=302.2748
+ 
+ 
+BLC5all:
+	 R = 3.2196
+	 Cls = 784
+	 Result=982/3.2196
+	 Result=305.0068
+ 
+BLC5all+gloss:
+	 R = 3.23467
+	 Cls = 822
+	 Result=982/3.23467
+	 Result=303.5858
+ 
+BLC5freq:
+	 R = 3.23652
+	 Cls = 807
+	 Result=807/3.23652
+	 Result=303.4123
+ 
+ 
+BLC10all:
+	 R = 3.20201
+	 Cls = 693
+	 Result=693/3.20201
+	 Result=216.4266
+ 
+BLC10all+gloss:
+	 R = 3.21352
+	 Cls = 709
+	 Result=709/3.21352
+	 Result=220.6303
+ 
+BLC10freq:
+	 R = 3.22148
+	 Cls = 706
+	 Result=706/3.22148
+	 Result=219.1539
+ 
+ 
+BLC20all:
+	 R = 3.18799
+	 Cls = 627
+	 Result=627/3.18799
+	 Result=196.6756
+ 
+BLC20all+gloss:
+	 R = 3.19844
+	 Cls = 641
+	 Result=641/3.19844
+	 Result=200.4102
+ 
+BLC20freq:
+	 R = 3.20375
+	 Cls = 643
+	 Result=643/3.20375
+	 Result=200.7023
+ 
+ 
+BLC30all:
+	 R = 3.17483
+	 Cls = 609
+	 Result=609/3.17483
+	 Result=191.8213
+ 
+BLC30all+gloss:
+	 R = 3.1864
+	 Cls = 614
+	 Result=614/3.1864
+	 Result=192.6939
+ 
+BLC30freq:
+	 R = 3.18868
+	 Cls = 618
+	 Result=618/3.18868
+	 Result=193.8106
+ 
+ 
+BLC40all:
+	 R = 3.16663
+	 Cls = 592
+	 Result=592/3.16663
+	 Result=186.9495
+ 
+BLC40all+gloss:
+	 R = 3.17265
+	 Cls = 596
+	 Result=596/3.17265
+	 Result=187.8556
+ 
+BLC40freq:
+	 R = 3.17257
+	 Cls = 593
+	 Result=593/3.17257
+	 Result=186.9147
+ 
+ 
+BLC50all:
+	 R = 3.15846
+	 Cls = 582
+	 Result=582/3.15846
+	 Result=184.2670
+ 
+BLC50all+gloss:
+	 R = 3.16227
+	 Cls = 585
+	 Result=585/3.16227
+	 Result=184.9937
+ 
+BLC50freq:
+	 R = 3.16373
+	 Cls = 585
+	 Result=585/3.16373
+	 Result=184.9083
+ 
+BLC60all:
+	 R = 3.1478
+	 Cls = 577
+	 Result=577/3.1478
+	 Result=183.3026
+ 
+BLC60all+gloss:
+	 R = 3.151
+	 Cls = 577
+	 Result=577/3.151
+	 Result=183.1165
+ 
+BLC60freq:
+	 R = 3.15267
+	 Cls = 579
+	 Result=579/3.15267
+	 Result=183.6539
+ 
+ 
+BLC70all:
+	 R = 3.14732
+	 Cls = 575
+	 Result=575/3.14732
+	 Result=182.6951
+ 
+BLC70all+gloss:
+	 R = 3.14848
+	 Cls = 574
+	 Result=574/3.14848
+	 Result=182.3102
+ 
+BLC70freq:
+	 R = 3.15081
+	 Cls = 577
+	 Result=577/3.15081
+	 Result=183.1275
+ 
+ 
+BLC80all:
+	 R = 3.14732
+	 Cls = 575
+	 Result=575/3.14732
+	 Result=182.6951
+ 
+BLC80all+gloss:
+	 R = 3.14848
+	 Cls = 574
+	 Result=574/3.14848
+	 Result=182.3102
+ 
+BLC80freq:
+	 R = 3.14722
+	 Cls = 576
+	 Result=576/3.14722
+	 Result=183.0187
+ 
+ 
+BLC100all:
+	 R = 3.14509
+	 Cls = 572
+	 Result=572/3.14509
+	 Result=181.8708
+ 
+BLC100all+gloss:
+	 R = 3.14701
+	 Cls = 572
+	 Result=572/3.14701
+	 Result=181.7598
+ 
+BLC100freq:
+	 R = 3.14148
+	 Cls = 573
+	 Result=573/3.14148
+	 Result=182.3981
+ 
+ 
+ 
+d All All All All+Gloss All+Gloss All+Gloss Freq Freq Freq Gloss Gloss Gloss Gloss+Freq Gloss+Freq Gloss+Freq All+Freq All+Freq All+Freq All+Gloss+Freq All+Gloss+Freq All+Gloss+Freq
+0 1019 3.22829 952.2114 1155 3.25171 355.1977 1598 3.2487 605.9480
+5 784 3.2196 305.0068 822 3.23467 303.5858 807 3.23652 303.4123
+10 693 3.20201 216.4266 709 3.21352 220.6303 706 3.22148 219.1539
+15
+20 627 3.18799 196.6756 641 3.19844 200.4102 643 3.20375 200.7023
+25
+30 609 3.17483 191.8213 614 3.1864 192.6939 618 3.18868 193.8106
+35 555 2.66039 208.6160 556 2.66064 208.9723
+40 592 3.16663 186.9495 596 3.17265 187.8556 593 3.17257 186.9147
+45
+50 582 3.15846 184.2670 585 3.16227 184.9937 585 3.16373 184.9083
+55
+60 577 3.1478 183.3026 577 3.151 183.1165 579 3.15267 183.6539
+65
+70 575 3.14732 182.6951 574 3.14848 182.3102 577 3.15081 183.1275
+75
+80 575 3.14732 182.6951 574 3.14848 182.3102 576 3.14722 183.0187
+85
+90
+95
+100 572 3.14509 181.8708 572 3.14701 181.7598 573 3.14148 182.3981

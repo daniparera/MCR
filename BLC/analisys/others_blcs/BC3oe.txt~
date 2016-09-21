@@ -1,0 +1,34 @@
+Variant-1	Literal	SituationType	Cause	Experience	"Physical;Mental"	Existence	Condition	Quantity	Location	Purpose	Communication	Possession	Usage	Social	Manner	Time	Modal	Domain	TO3	Gloss	Hyperonym
+aim 2	04029556-n	3rdOrderEntity	Stimulating		Mental					Purpose									MentalObject	the goal intended to be hit	end 5
+aim 3	04030116-n	3rdOrderEntity	Stimulating		Mental					Purpose									MentalObject	"an anticipated outcome that guides your planned actions; ""his intent was to provide a new translation""; ""it was created to the conscious aim of answering immediate needs"""	end 5
+attitude 3	04111788-n	3rdOrderEntity		Experience	Mental														MentalState	"a complex mental orientation involving beliefs and feelings and values and dispositions to act in certain ways; he had the attitude that work was fun"""""	cognition 1
+belief 2	04008826-n	3rdOrderEntity			Mental													cognition	MentalObject	any cognitive content held as true	cognitive content 1
+category 1	03957148-n	3rdOrderEntity			Mental													cognition	MentalObject		concept 1
+cognitive content 1	03940357-n	3rdOrderEntity			Mental													cognition	MentalObject	the sum or range of what has been perceived, discovered, or learned	cognition 1
+communication 1	00018599-n	3rdOrderEntity			Mental					Purpose	Communication			Social				cognition	MentalObject	something that is communicated between people or groups	social relation 1
+concept 1	03954891-n	3rdOrderEntity			Mental													cognition	MentalObject	an abstract or general idea inferred or derived from specific instances	idea 2
+data point 1	03944568-n	3rdOrderEntity			Mental													information	MentalObject	an item of factual information derived from measurement or research	information 1
+doctrine 1	04009596-n	3rdOrderEntity			Mental														MentalObject	a belief (or system of beliefs) accepted as authoritative by some group or school	belief 2
+evidence 1	03948538-n	3rdOrderEntity			Mental													information	MentalObject	information on which to base belief	information 1
+faith 2	04011318-n	3rdOrderEntity		Experience	Mental														MentalState	belief in a supernatural power or powers that control human destiny	belief 2
+idea 2	03953834-n	3rdOrderEntity			Mental													cognition	MentalObject	"the content of cognition; the main thing you are thinking about; it was not a good idea""; ""the thought never entered my mind"""""	cognitive content 1
+info 1	04337839-n	3rdOrderEntity			Mental													information	MentalObject	a message received and understood that reduces the recipient's uncertainty	content 3
+information 1	03944302-n	3rdOrderEntity			Mental													information,cognition	MentalObject	knowledge acquired through study or experience	cognition 1
+issue 4	03943820-n	3rdOrderEntity			Mental														BCE	"some situation or event that is thought about; ""he kept drifting off the topic""; ""it is a matter for the police"""	cognitive content 1
+know-how 1	03841532-n	3rdOrderEntity		Experience	Mental													cognition	MentalObject	the knowledge and skill required to do something	ability 2
+knowledge base 1	04036935-n	3rdOrderEntity			Mental													cognition	MentalObject	the content of a particular domain or field of knowledge	cognitive content 1
+life 5	05633277-n	3rdOrderEntity	Stimulating		Mental														MentalState	"a motive for living; ""pottery was his life"""	motivation 1
+message 2	04313427-n	3rdOrderEntity			Mental						Communication		Usage					information	MentalObject	what a communication that is about something is about	communication 1
+method 2	03863261-n	3rdOrderEntity			Mental					Purpose					Manner				MentalObject	"a way of doing something, esp. a systematic one; implies an orderly logical arrangement (usually in steps)"	know-how 1
+opening 7	03930751-n	3rdOrderEntity			Mental														BCE	"a possible alternative; ""bankruptcy is always a possibility"""	alternative 1
+opinion 2	04010732-n	3rdOrderEntity			Mental														BCE	"a personal belief that is not founded on proof or certainty; ""my opinion differs from yours""; ""what are your thoughts on Haiti?"""	belief 2
+plan 3	03985547-n	3rdOrderEntity	Cause		Mental					Purpose									MentalObject	a series of steps to be carried out or goals to be accomplished	idea 2
+plan of action 1	03987224-n	3rdOrderEntity	Cause		Mental					Purpose									MentalObject	a plan for actively doing something	plan 3
+play 7	00324581-n	3rdOrderEntity	Cause		Mental					Purpose				Social				Recreation	MentalObject	"a preset plan of action in team sports; the coach drew up the plays for her team"""""	plan of action 1
+policy 3	04349399-n	3rdOrderEntity	Cause		Mental					Purpose	Communication			Social					MentalObject	a line of argument rationalizing the course of action of a government	argumentation 1
+procedure 3	00566905-n	3rdOrderEntity	Cause		Mental					Purpose									MentalObject	"a particular course of actionintended to achieve a results; the procedure of obtaining a driver's license""; ""it was a process of trial and error"""""	activity 1
+right 4	03586387-n	3rdOrderEntity			Mental									Social					SocialState	"an abstract idea of that which is due to a person or governmental body by law or tradition or nature: they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness""; ""Certain rights ca"	abstract 1
+structure 4	03898550-n	3rdOrderEntity			Mental														MentalObject	the complex composition of knowledge as elements and their combinations	cognition 1
+subject 5	04314223-n	3rdOrderEntity			Mental														BCE		content 3
+theory 3	04033925-n	3rdOrderEntity			Mental													cognition	MentalObject	"an organized system of accepted knowledge that applies in a variety of circumstances to explain a specific set of phenomena; true in fact and theory"""""	cognitive content 1
+thing 8	04389685-n	3rdOrderEntity			Mental														BCE	"a statement regarded as an object; ""to say the same thing in other terms"" or ""how can you say such a thing?"""	statement 4

@@ -1,0 +1,330 @@
+== BLCs verb Descendents 0 ==
+Rel. Files:
+	 All three have same BLC 	 = 8916
+	 Two synsets have same 		 = 3173
+	 Diferents BLC 			 = 1678
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 11227
+	 in All and Freq 		 = 10069
+	 in Freq and All+Gloss 		 = 9778
+ 
+List. Files:
+	 Blcs All 	 = 1019
+	 Blcs All+Gloss  = 1155
+	 Blcs Freq 	 = 982
+	 All vs All+Gloss
+		 in both 		 = 879
+		 only in All 		 = 140
+		 only in All+Gloss 	 = 276
+	 All vs Freq
+		 in both 		 = 740
+		 only in All 		 = 279
+		 only in Freq 		 = 242
+	 Freq vs All+Gloss
+		 in both 		 = 787
+		 only in Freq 		 = 195
+		 only in All+Gloss 	 = 368
+ 
+ 
+== BLCs verb Descendents 5 ==
+Rel. Files:
+	 All three have same BLC 	 = 9487
+	 Two synsets have same 		 = 2860
+	 Diferents BLC 			 = 1420
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 11561
+	 in All and Freq 		 = 10496
+	 in Freq and All+Gloss 		 = 10273
+ 
+List. Files:
+	 Blcs All 	 = 784
+	 Blcs All+Gloss  = 822
+	 Blcs Freq 	 = 807
+	 All vs All+Gloss
+		 in both 		 = 729
+		 only in All 		 = 55
+		 only in All+Gloss 	 = 93
+	 All vs Freq
+		 in both 		 = 695
+		 only in All 		 = 89
+		 only in Freq 		 = 112
+	 Freq vs All+Gloss
+		 in both 		 = 708
+		 only in Freq 		 = 99
+		 only in All+Gloss 	 = 114
+ 
+ 
+== BLCs verb Descendents 10 ==
+Rel. Files:
+	 All three have same BLC 	 = 9919
+	 Two synsets have same 		 = 2589
+	 Diferents BLC 			 = 1259
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 11764
+	 in All and Freq 		 = 10838
+	 in Freq and All+Gloss 		 = 10663
+ 
+List. Files:
+	 Blcs All 	 = 693
+	 Blcs All+Gloss  = 709
+	 Blcs Freq 	 = 706
+	 All vs All+Gloss
+		 in both 		 = 657
+		 only in All 		 = 36
+		 only in All+Gloss 	 = 52
+	 All vs Freq
+		 in both 		 = 643
+		 only in All 		 = 50
+		 only in Freq 		 = 63
+	 Freq vs All+Gloss
+		 in both 		 = 648
+		 only in Freq 		 = 58
+		 only in All+Gloss 	 = 61
+ 
+ 
+== BLCs verb Descendents 20 ==
+Rel. Files:
+	 All three have same BLC 	 = 10506
+	 Two synsets have same 		 = 2151
+	 Diferents BLC 			 = 1110
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 11980
+	 in All and Freq 		 = 11381
+	 in Freq and All+Gloss 		 = 11183
+ 
+List. Files:
+	 Blcs All 	 = 627
+	 Blcs All+Gloss  = 641
+	 Blcs Freq 	 = 643
+	 All vs All+Gloss
+		 in both 		 = 610
+		 only in All 		 = 17
+		 only in All+Gloss 	 = 31
+	 All vs Freq
+		 in both 		 = 608
+		 only in All 		 = 19
+		 only in Freq 		 = 35
+	 Freq vs All+Gloss
+		 in both 		 = 612
+		 only in Freq 		 = 31
+		 only in All+Gloss 	 = 29
+ 
+ 
+== BLCs verb Descendents 30 ==
+Rel. Files:
+	 All three have same BLC 	 = 10957
+	 Two synsets have same 		 = 1880
+	 Diferents BLC 			 = 930
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12171
+	 in All and Freq 		 = 11741
+	 in Freq and All+Gloss 		 = 11623
+ 
+List. Files:
+	 Blcs All 	 = 609
+	 Blcs All+Gloss  = 614
+	 Blcs Freq 	 = 618
+	 All vs All+Gloss
+		 in both 		 = 596
+		 only in All 		 = 13
+		 only in All+Gloss 	 = 18
+	 All vs Freq
+		 in both 		 = 595
+		 only in All 		 = 14
+		 only in Freq 		 = 23
+	 Freq vs All+Gloss
+		 in both 		 = 596
+		 only in Freq 		 = 22
+		 only in All+Gloss 	 = 18
+ 
+ 
+== BLCs verb Descendents 40 ==
+Rel. Files:
+	 All three have same BLC 	 = 11493
+	 Two synsets have same 		 = 1531
+	 Diferents BLC 			 = 743
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12428
+	 in All and Freq 		 = 12139
+	 in Freq and All+Gloss 		 = 12089
+ 
+List. Files:
+	 Blcs All 	 = 592
+	 Blcs All+Gloss  = 596
+	 Blcs Freq 	 = 593
+	 All vs All+Gloss
+		 in both 		 = 585
+		 only in All 		 = 7
+		 only in All+Gloss 	 = 11
+	 All vs Freq
+		 in both 		 = 583
+		 only in All 		 = 9
+		 only in Freq 		 = 10
+	 Freq vs All+Gloss
+		 in both 		 = 583
+		 only in Freq 		 = 10
+		 only in All+Gloss 	 = 13
+ 
+ 
+== BLCs verb Descendents 50 ==
+Rel. Files:
+	 All three have same BLC 	 = 11809
+	 Two synsets have same 		 = 1289
+	 Diferents BLC 			 = 669
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12624
+	 in All and Freq 		 = 12423
+	 in Freq and All+Gloss 		 = 12283
+ 
+List. Files:
+	 Blcs All 	 = 582
+	 Blcs All+Gloss  = 585
+	 Blcs Freq 	 = 585
+	 All vs All+Gloss
+		 in both 		 = 577
+		 only in All 		 = 5
+		 only in All+Gloss 	 = 8
+	 All vs Freq
+		 in both 		 = 579
+		 only in All 		 = 3
+		 only in Freq 		 = 6
+	 Freq vs All+Gloss
+		 in both 		 = 578
+		 only in Freq 		 = 7
+		 only in All+Gloss 	 = 7
+ 
+ 
+== BLCs verb Descendents 60 ==
+Rel. Files:
+	 All three have same BLC 	 = 11998
+	 Two synsets have same 		 = 1217
+	 Diferents BLC 			 = 552
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12702
+	 in All and Freq 		 = 12546
+	 in Freq and All+Gloss 		 = 12511
+ 
+List. Files:
+	 Blcs All 	 = 577
+	 Blcs All+Gloss  = 577
+	 Blcs Freq 	 = 579
+	 All vs All+Gloss
+		 in both 		 = 572
+		 only in All 		 = 5
+		 only in All+Gloss 	 = 5
+	 All vs Freq
+		 in both 		 = 574
+		 only in All 		 = 3
+		 only in Freq 		 = 5
+	 Freq vs All+Gloss
+		 in both 		 = 573
+		 only in Freq 		 = 6
+		 only in All+Gloss 	 = 4
+ 
+ 
+== BLCs verb Descendents 70 ==
+Rel. Files:
+	 All three have same BLC 	 = 12072
+	 Two synsets have same 		 = 1151
+	 Diferents BLC 			 = 544
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12765
+	 in All and Freq 		 = 12612
+	 in Freq and All+Gloss 		 = 12530
+ 
+List. Files:
+	 Blcs All 	 = 575
+	 Blcs All+Gloss  = 574
+	 Blcs Freq 	 = 577
+	 All vs All+Gloss
+		 in both 		 = 570
+		 only in All 		 = 5
+		 only in All+Gloss 	 = 4
+	 All vs Freq
+		 in both 		 = 573
+		 only in All 		 = 2
+		 only in Freq 		 = 4
+	 Freq vs All+Gloss
+		 in both 		 = 571
+		 only in Freq 		 = 6
+		 only in All+Gloss 	 = 3
+ 
+ 
+== BLCs verb Descendents 80 ==
+Rel. Files:
+	 All three have same BLC 	 = 12072
+	 Two synsets have same 		 = 1151
+	 Diferents BLC 			 = 544
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12765
+	 in All and Freq 		 = 12612
+	 in Freq and All+Gloss 		 = 12530
+ 
+List. Files:
+	 Blcs All 	 = 575
+	 Blcs All+Gloss  = 574
+	 Blcs Freq 	 = 576
+	 All vs All+Gloss
+		 in both 		 = 570
+		 only in All 		 = 5
+		 only in All+Gloss 	 = 4
+	 All vs Freq
+		 in both 		 = 573
+		 only in All 		 = 2
+		 only in Freq 		 = 3
+	 Freq vs All+Gloss
+		 in both 		 = 571
+		 only in Freq 		 = 5
+		 only in All+Gloss 	 = 3
+ 
+ 
+== BLCs verb Descendents 100 ==
+Rel. Files:
+	 All three have same BLC 	 = 12219
+	 Two synsets have same 		 = 1004
+	 Diferents BLC 			 = 544
+ 
+	 Total BLCS 			 = 13767
+ 
+	 in All and All+Gloss 		 = 12765
+	 in All and Freq 		 = 12759
+	 in Freq and All+Gloss 		 = 12677
+ 
+List. Files:
+	 Blcs All 	 = 572
+	 Blcs All+Gloss  = 572
+	 Blcs Freq 	 = 573
+	 All vs All+Gloss
+		 in both 		 = 568
+		 only in All 		 = 4
+		 only in All+Gloss 	 = 4
+	 All vs Freq
+		 in both 		 = 571
+		 only in All 		 = 1
+		 only in Freq 		 = 2
+	 Freq vs All+Gloss
+		 in both 		 = 569
+		 only in Freq 		 = 4
+		 only in All+Gloss 	 = 3
+ 
+ 

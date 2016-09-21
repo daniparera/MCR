@@ -1,0 +1,499 @@
+Variant-1	Literal	SituationType	Cause	Experience	"Physical;Mental"	Existence	Condition	Quantity	Location	Purpose	Communication	Possession	Usage	Social	Manner	Time	Modal	Domain	TO3	Gloss	Hyperonym	
+abandon 3	00345074-v	BoundedEvent	Agentive		Mental														BCE	"stop maintaining; of ideas, claims, etc.; ""He abandoned the thought of asking for her hand in marriage"""		
+ability 1	03601639-n	Property															Modal		ModalState	"the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment"	quality 1	
+ability 2	03841132-n	Property															Modal		ModalState	possession of the qualities (especially mental qualities) required to do something or get something done	cognition 1	
+abstract 1	03965572-n	Static			Mental													cognition	MentalObject	"a concept or idea not associated with any specific instance; ""he loved her only in the abstract--not in person"""	concept 1	
+abstract thought 1	03919704-n	UnboundedEvent	Agentive		Mental					Purpose								cognition	MentalAct	thinking that is coherent and logical	cerebration 1	
+accomplishment 1	00019847-n	BoundedEvent	Agentive							Purpose									Causation	the act of accomplishing something	action 1	
+accomplishment 2	03849803-n	Property								Purpose							Modal		ModalState	an ability that has been acquired by training	ability 2	
+accord 4	08549511-n	Static					Condition							Social					SocialState	"harmony of people's opinions or actions or characters; the two parties were in accord"""	concord 2	
+account 13	01289475-v	BoundedEvent	Agentive		Mental	Existence				Purpose	Communication								Represent			keep an account of 1
+accumulate 2	00796914-v	Dynamic	Agentive					Quantity											BCE	accumulate evidence		
+accumulate 3	01311458-v	Dynamic			Physical				Location										BCE	get together	hive away 1	
+acquire 3	01261345-v	Dynamic										Possession							PossessionChange	"come into the possession of something concrete or abstract; She got a lot of paintings from her uncle""; ""They acquired a new pet""; ""Get your results the next day"""		
+acquiring 1	00041613-n	Dynamic										Possession							BCE	"the act of contracting or assuming or acquiring possession of something; ""the acquisition of wealth"""	deed 1	
+act 1	00016649-n	Dynamic	Cause																Dynamic	something that people do or cause to happen		
+act 12	01341700-v	Dynamic	Agentive																Dynamic	"carry out an action; be an agent; carry into effect; Think before you act""; ""Let's not act rashly"""		
+act 2	03885466-n	Dynamic	Agentive		Mental													cognition	MentalAct	"the performance of some composite mental activity; the process of thinking""; ""the act of remembering"""	cognition 1				
+act 7	00007021-v	UnboundedEvent	Agentive											Social	Manner			Behavior	Behavior	"behave in a certain manner; show a certain behavior; conduct or comport oneself; You should act like an adult""; ""Don't behave like a fool"""					
+act together 2	01346535-v	Dynamic	Agentive											Social				Behavior	Behavior	act together with others	act 12	interact 1			
+action 1	00021098-n	Dynamic	Cause																Dynamic	"something done (usually as opposed to something said); there were stories of murders and other unnatural actions"""	act 1				
+action 2	00527228-n	Dynamic	Agentive							Purpose				Social				conflict	Fighting	"a military engagement; ""he saw action in Korea"""	group action 1				
+action 7	08239425-n	Dynamic	Phenomenal																Phenomenon	"a process existing in or produced by nature (rather than by the intent of human beings); ""the action of natural forces"""	process 6				
+activity 1	00228990-n	Dynamic	Agentive							Purpose									Activity	"any specific activity or pursuit; they avoided all recreational activity"""	act 1				
+activity 4	08274118-n	UnboundedEvent			Physical														Activity	"an organic process that takes place in the body; ""respiratory activity"""	biological process 1				
+actuation 1	00058021-n	Dynamic			Physical				Location						Manner			movement	Motion	the act of propelling	deed 1				
+add 1	00110396-v	BoundedEvent	Agentive					Quantity											BCE	"make an addition (to); join with others; increase by another or several; ""We added two students to that dorm room""; ""She added a personal note to her letter""; ""Add insult to injury"""					
+adjoin 1	00685874-v	Relation			Physical				Location										LocationState	be in contact with					
+admit defeat 1	00611702-v	BoundedEvent	Agentive		Mental						Communication								MentalAct	give up in the face of defeat of lacking hope					
+adorn 2	00959417-v	BoundedEvent	Cause		Physical		Condition												PhysicalChange		alter 3				
+affair 1	03869121-n	Dynamic																	MentalObject	"a vaguely specified concern; ""several matters to attend to""; ""it is none of your affair"";  ""things are going well"""	concern 1				
+affect 5	01007544-v	Dynamic	Stimulating	Experience	Mental														Stimulus	"have an emotional or cognitive impact upon; ""This struck me as odd"""		make an impression on 1	move 12	strike 19	
+affirm 1	00374169-v	BoundedEvent	Agentive		Mental					Purpose	Communication								Communication			corroborate 1	substantiate 2	support 15	sustain 2
+agency 3	08565692-n	Property								Purpose				Social					BCE	the state of serving as an official and authorized delegate or agent	state 1		
+agree 2	00452960-v	Property			Mental						Communication			Social					MentalState	"be in accord; be in agreement; We agreed on the terms of the settlement""; ""I can't agree with you!"""			
+agree 5	01503041-v	Relation																	Relation	"be similar or consistent; coincide in their characteristics; The two stories don't agree in many details"""	be 10		
+aid 1	00383106-n	Dynamic	Agentive				Condition			Purpose				Social				Caring	Caring	"the work of caring for or attending to someone or something; no medical care was required""; ""the old car needed constant attention"""	work 1		
+aid 2	00664219-n	Dynamic	Agentive				Condition			Purpose				Social				Caring	Caring	"the activity of contributing to the fulfillment of a need or furtherance of an effort or purpose: could not walk without assistance""; ""rescue party went to their aid""; ""offered his help in unloading"""""	activity 1		
+aid 6	01442355-v	UnboundedEvent	Cause				Condition							Social				Caring	Caring		back up 4		
+aim 4	05477280-n	Relation			Physical				Location										BCE	the direction or path along which something moves or along which it lies	direction 7		
+allow 3	00451248-v	BoundedEvent	Agentive							Purpose	Communication			Social					Causation	"give permission; She permitted her son to visit her estranged husband""; ""I won't let the police search her basement""; ""I cannot allow you to see your exam"""			
+allow 6	01371393-v	Dynamic	Cause																BCE	"make it possible for something to happen; ""This permits the water to rush in""; ""This sealed door won't allow the water come into the basement"""			
+alter 2	00071241-v	Dynamic																	BCE	"make or become different in some particular way, without permanently losing one's or its former characteristics or essence; ""her mood changes in accordance with the weather""; ""Prices vary according to the season"""			
+alter 3	00072540-v	Dynamic	Cause																Change	"cause to change; make different; cause a transformation; ""The advent of the automobile may have altered the growth pattern of the city""; ""The discussion has changed my thinking about the issue"""			
+alteration 3	04697176-n	Dynamic	Cause																Change	"an event that occurs when something passes from one state or phase to another: the change was intended to increase sales""; ""this storm is certainly a change for the worse"""""	happening 1		
+ameliorate 2	00123997-v	Dynamic					Condition												Change	When so or sth ameliorates a situation, they make it better or easier in some way	alter 3		
+amount of time 1	09065837-n	BoundedEvent						Quantity								Time			Time	"a length of time; government services began during the colonial period"""""	amount 1		
+amusement 1	00295035-n	UnboundedEvent	Agentive							Purpose				Social				Recreation	Recreation	an activity that entertains	diversion 2		
+analyse 3	00362566-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	"consider in detail and subject to an analysis in order to discover essential features or meaning; ""analyze a sonnet by Shakespeare""; ""analyze the evidence in a criminal trial""; ""analyze your real motives"""		examine 1	study 14
+appear 6	01217877-v	Property															Modal		ModalState	"give a certain impression or have a certain outward aspect; She seems to be sleeping""; ""This appears to be a very difficult problem""; ""This project looks fishy"""	be 4					
+appearance 4	03314728-n	Property	Stimulating		Physical														PhysicalState	outward or visible aspect of a person or thing	quality 1					
+apply 4	00658243-v	BoundedEvent	Agentive							Purpose			Usage						Operation	"put into service; use your head!"" ""I can't make use of this tool""; ""Apply a magnetic field here""; ""This thinking was applied to many projects"""						
+appoint 3	01401683-v	BoundedEvent	Agentive							Purpose				Social				Management	Management	to assign a task to someone						
+argumentation 1	03920287-n	UnboundedEvent	Agentive		Mental					Purpose	Communication			Social				cognition	MentalAct	"methodical reasoning; ""I can't follow your line of reasoning"""	abstract thought 1					
+arouse 5	01003070-v	Dynamic	Stimulating	Experience	Mental														Stimulus	"call forth; of emotions, feelings, and responses"	create 2	enkindle 1	evoke 5	fire 14	kindle 1	provoke 3
+arrange 2	00416049-v	Dynamic	Agentive		Mental					Purpose									MentalAct	"arrange thoughts, ideas, temporal events, etc.; arrange my schedule;"" ""set up one's life""; ""I put these memories with those of bygone times"""						
+arrange 4	00842219-v	BoundedEvent	Cause				Condition												BCE		lay 3					
+arrangement 4	03898749-n	Static	Agentive							Purpose								cognition	MentalObject		structure 4					
+arrive 1	01144761-v	BoundedEvent							Location										Motion	"reach a destination, either a location or a state; arrive by movement or by making progress; She got home by 7 o'clock""; ""He got into college"""						
+art 1	00518008-n	Dynamic	Agentive			Existence				Purpose	Communication			Social				Art	Art	"the creation of beautiful or significant things; he was a patron of art"""""	creation 2					
+ascertain 3	00517007-v	BoundedEvent	Agentive		Mental														MentalAct	after a calculation or investigation		find 7	find out 3			
+ask 1	00422854-v	BoundedEvent	Agentive							Purpose	Communication								Communication	"make a request or demand; She asked him for a loan"""	communicate 1					
+asking 1	04638292-n	BoundedEvent	Agentive							Purpose	Communication			Social					Communication		speech act 1					
+assail 1	00633037-v	BoundedEvent	Agentive		Physical					Purpose				Social				Fighting	Fighting	"launch an attack or assult on; begin hostilities with, as in warfare; Hitler attacked Poland on September 1, 1939 and started World War II"""	fight 5					
+assay 3	01432563-v	BoundedEvent	Agentive							Purpose									Causation	"make an effort or attempt; He tried to shake off his fears""; ""The infant had essayed a few wobbly steps""; ""The police attempted to stop the thief""; ""He sought to improve himself"""	act 12					
+athletics 1	00240760-n	Dynamic	Agentive		Physical					Purpose				Social				Recreation	Recreation	an active diversion requiring physical exertion and competition	diversion 2		
+atmospheric condition 1	06529389-n	Static	Phenomenal				Condition												WeatherPhenomenon		atmospheric phenomenon 1		
+atmospheric phenomenon 1	06472551-n	Dynamic	Phenomenal		Physical														Phenomenon	a physical phenomenon associated with the atmosphere	physical phenomenon 1		
+attach 3	00743265-v	BoundedEvent			Physical				Location										PhysicalChange		connect 4		
+attack 5	00540241-n	BoundedEvent	Agentive							Purpose				Social				conflict	Fighting	"the beginning of an offensive; the attack began at dawn"""""	operation 6		
+attribute 1	00017586-n	Property																	Static	an abstraction belonging to or characteristic of an entity	abstraction 1		
+await 1	00405636-v	Property			Mental														MentalState	"expect or hope for; anticipate; I look to hear from you soon""; ""She is expecting a promotion"""			
+back up 4	01446559-v	UnboundedEvent	Cause				Condition							Social				Caring	Caring	be supportive of		lend support to 1	support 23
+bad luck 1	04701573-n	Dynamic	Phenomenal																Phenomenon		trouble 3		
+basic cognitive process 1	03885854-n	Dynamic	Agentive		Mental													cognition	MentalAct		act 2		
+batch 3	08432825-n	Static						Quantity											Measure	"a large number or amount or extent: ""a batch of letters""; ""a deal of trouble""; ""a lot of money"""	large indefinite quantity 1		
+battle 2	00527805-n	BoundedEvent	Agentive							Purpose				Social				conflict	Fighting	"a hostile meeting of opposing military forces in the course of a war;  Grant won a decisive victory in the battle of Chickamauga"""""	action 2		
+be 10	01506899-v	Relation						Quantity											Relation	"be equivalent to: One dollar equals 1,000 rubles these days!"""			
+be 3	01471536-v	Property				Existence													ExistentialState	"have an existence, be extant; Is there a God?"" """			
+be 4	01472320-v	Static																	Static	"copula, used with an adjective or a predicate noun: John is rich""; ""This is not a good answer"""			
+be 6	01477879-v	Property				Existence													BCE	Our great leader is no more			
+be 8	01482115-v	Property																	BCE	"This money is my only income; ""The stone wall was the backdrop for the performance""; ""These constitute my entire belonging""; ""The children made up the chorus""; ""This sum represents my entire income for a year"""	
+be 9	01501697-v	Relation							Location										LocationState	"be somewhere; Where is my umbrella?"" ""The toolshed is in the back""; also for abstract situations and relations: ""What is behind this behavior?"""	
+be about 2	01513147-v	Relation									Communication								Relation	"be relevant to; refer, pertain, or relate to"	
+be ill with 1	00041140-v	Property			Physical		Condition												BCE	She has arthritis	be in pain 1
+become 1	00089026-v	BoundedEvent																	Change	"enter or assume a certain state or condition; He became annoyed when he heard the bad news""; ""It must be getting more serious""; ""her face went red with anger""; ""The know came loose""; ""Your wish will come true"""	change state 1
+behavior 3	03433579-n	UnboundedEvent												Social	Manner			Behavior	Behavior		trait 1
+believe 3	00387631-v	Property			Mental														MentalState	"consider, judge, or believe; I think he is very smart""; ""I believe her to be very smart""; ""I think that he is her boyfriend"""	form an opinion of 1
+berth 1	00344376-n	Static												Social				Work	Work	"a job in an organization or hierarchy; he ocupied a post in the treasury"""""	employment 1
+biological process 1	08258903-n	Dynamic	Phenomenal		Physical														Phenomenon	a process occurring in living organisms	action 7
+biological science 1	04052506-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education	the science that studies living organisms	life science 1
+blank space 1	04211782-n	Relation			Physical				Location										BCE	"a blank area; ""write your name in the space provided"""	area 2
+blow 2	00647048-n	BoundedEvent	Agentive		Physical				Location	Purpose					Manner			conflict	Motion	"a powerful stroke with the fist or a weapon; a blow on the head"""""	stroke 2
+branch of knowledge 1	04035790-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education	"a branch of knowledge; in what discipline is his doctorate?""; ""anthropology is the study of human beings"""""	knowledge base 1
+break 19	00154558-v	BoundedEvent	Cause		Physical		Condition												PhysicalChange	inflict damage upon	change 11
+break 20	00201526-v	BoundedEvent			Physical		Condition												PhysicalChange	"The figurine broke; The freshly baked loaf fell apart"""	change integrity 1
+break 21	00201902-v	BoundedEvent	Cause		Physical		Condition												BCE	He broke the glass	divide 5
+break 23	00218979-v	BoundedEvent	Cause																Causation	prevent completion	bring to an end 1					
+break 26	00258338-v	BoundedEvent											Usage						BCE	"stop operating or functioning; ""The engine finally went""; ""The caur died on the road""; ""The bus we travelled in broke down on the way to town""; ""his hearing is starting to go""; ""Her eyesight is going"""	change 11					
+break 31	00787971-v	BoundedEvent	Cause		Physical		Condition												BCE		destroy 3					
+break into fragments 1	00203548-v	BoundedEvent			Physical		Condition												BCE		break 20					
+break into parts 1	00237247-v	BoundedEvent			Physical		Condition												BCE		change integrity 1					
+bring 1	00078946-v	BoundedEvent	Cause																BCE	this may land you in jail	alter 3					
+bring 2	00823804-v	BoundedEvent	Agentive		Physical				Location			Possession							BCE	"bring or fetch; ""Get me those books over there, please""; ""Could you bring over the wine?""; ""The dog fetched the hat"""	channel 7					
+bring 3	00824200-v	BoundedEvent	Agentive		Physical				Location			Possession							BCE	"take something to a certain destination; ""Take these letters to the boss""; ""Bring this present to the the birthday boy"""	channel 7					
+bring 5	00827521-v	BoundedEvent			Physical				Location										Motion		alter 3					
+bring 8	01188762-v	BoundedEvent	Agentive		Physical				Location										BCE	"take something or somebody somewhere; ""Bring me the box from the other room""; also metaphorical, as in ""This brings me to the main point"""	carry 15					
+bring to a close 1	00402474-v	BoundedEvent	Cause				Condition												BCE		cease 2					
+bring to an end 1	00213455-v	BoundedEvent	Cause			Existence													Change		alter 3					
+bump into 2	01280035-v	BoundedEvent			Mental														MentalAct	We find this idea in Plato 		come across 5	come upon 3	encounter 7	find 14	happen upon 1
+business 2	00341191-n	UnboundedEvent	Agentive							Purpose				Social				Work	Work	"the principal activity in your life; he's not in my line of business"""""	activity 1					
+business 3	00606634-n	UnboundedEvent	Agentive									Possession		Social					BCE	"the activity of providing goods and services involving financial and commercial and industrial aspects; ""computers are now widely used in business"""	commerce 1					
+calendar day 1	09094027-n	BoundedEvent						Quantity								Time			Time	a day reckoned from midnight to midnight	amount of time 1					
+calendar month 1	09131680-n	BoundedEvent						Quantity								Time			Time	"one of the twelve divisions of the calendar year; he paid the bill last month"""""	amount of time 1			
+call back 1	00341396-v	BoundedEvent	Agentive		Mental														MentalAct	"recall knowledge from memory; have a recollection: I can't remember saying any such thing""; ""I can't think what her last name was""; ""can you remember her phone number?"" ""Do you remember that he once loved you?"""				
+can 8	01539155-v	Property	Cause														Modal		ModalState	be able to, have the ability to				
+care for 1	00048767-v	UnboundedEvent	Agentive		Physical		Condition			Purpose				Social				Caring	Caring	provide treatment for				
+care for 4	01378917-v	UnboundedEvent	Agentive							Purpose				Social				Management	Management	"be in charge of, act on, or dispose of; I can handle this crew of workers""; ""This blender can't handle nuts"""	command 10			
+carry 27	01537537-v	Property			Physical				Location			Possession							BCE	"have with oneself; have on one's person; ""She always takes an umbrealla""; ""I always carry money""; ""She packs a gun when she goes into the mountains"""	feature 4			
+carry out 4	01448761-v	Dynamic	Agentive																Dynamic	"engage in: make love, not war""; ""make an effort""; ""do research""; ""do nothing"""				
+carrying into action 1	00055898-n	Dynamic	Agentive							Purpose									Causation	"the act of doing something successfully; using knowledge as distinguished from merely possessing it; ""experience generally improves performance"""	action 1			
+carve up 1	01396914-v	BoundedEvent	Agentive		Physical		Condition												BCE	"divide the cake into three equal parts; ""The British carved up the Ottoman Empire after World War I"""	change integrity 1			
+cast 7	03316776-n	Property	Stimulating		Physical														BCE	the delicate cast of his features	appearance 4			
+categorization 2	03900455-n	Dynamic	Agentive		Mental					Purpose								cognition	MentalAct		basic cognitive process 1			
+cater 2	00671827-v	Dynamic	Cause							Purpose		Possession							PossessionChange	provide what is desired or needed	give 16			
+cause 6	00432532-v	BoundedEvent	Cause																Causation	"cause to do; cause to act in a specified manner: The ads induced me to buy a VCR""; ""My children finally got me to buy a computer""; ""My wife made me buy a new sofa"""				
+cause 7	00941367-v	BoundedEvent	Cause				Condition												Causation	"make a big stink; make revolution""; ""do harm""; ""do wrong"""	create 2			
+cause pain 1	00040663-v	UnboundedEvent	Cause	Experience	Physical														PhysicalChange		cause to feel unwell 1	hurt 6		
+cause to appear 1	01219939-v	Dynamic	Stimulating	Experience	Physical						Communication								Communication	She showed her talent for cooking		make noticeable 1	make visible 1	show 14
+cause to be heard 1	01241976-v	Dynamic	Stimulating																Sound	"make a certain noise; She went `Mmmmm'""; ""The gun went `bang'"""	cause to be perceived 1		
+cause to be perceived 1	01212141-v	Dynamic	Stimulating																Stimulus				
+cause to feel unwell 1	00040824-v	BoundedEvent	Cause	Experience	Physical														PhysicalChange		alter 3		
+cause to have 1	01317872-v	BoundedEvent	Cause																Causation	"in the abstract sense: He gave her trouble""; ""She gave him a black eye"""			
+cause to move by striking 1	00809580-v	BoundedEvent	Cause		Physical				Location						Manner				BCE	hit a ball	impel 1		
+cause to spread 1	00792958-v	Dynamic	Cause		Physical				Location										Motion			extend 9	spread 11
+cease 2	00211850-v	BoundedEvent																	BCE	The war ended after three months	change state 1		
+cease 3	01515268-v	BoundedEvent	Cause																Causation	put an end to a state or an activity			
+cerebrate 1	00354465-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	"use or exercise the mind in order to make a decision or arrive at a solution; I've been thinking all day and getting nowhere"""			
+cerebration 1	03918967-n	Dynamic	Agentive		Mental					Purpose								cognition	MentalAct	"the process of thinking (especially thinking carefully); ""thinking always made him frown""; ""she paused for thought"""	higher cognitive process 1		
+chance 3	06467144-n	Dynamic	Phenomenal																Phenomenon	an unknown and unpredictable natural phenomenon that causes an event to result one way rather than another	phenomenon 1		
+change 1	00108829-n	BoundedEvent	Cause																Change	"the act of changing something; the change of government had no impact on the economy""; ""his change on abortion cost him the election"""""	action 1		
+change 11	00064108-v	Dynamic																	Change	"undergo a change; become different in essence; losing one's or its original nature; She changed completely as she grew older""; ""The weather changed last night"""			
+change integrity 1	00081466-v	BoundedEvent			Physical														PhysicalChange	change in physical make_up	change 11		
+change magnitude 1	00101800-v	Dynamic						Quantity											QuantityChange		change 11		
+change of location 1	00157028-n	BoundedEvent			Physical				Location									movement	Motion	the act of changing your location from one place to another	change 1		
+change of magnitude 1	00196939-n	BoundedEvent	Cause		Physical			Quantity											QuantityChange	the act of changing the amount or sixe of something	change 1
+change of position 1	00186555-n	Dynamic			Physical				Location									movement	Motion	"motion that does not entail a change of location; the reflex movements of his eyebrows revealed his surprise""; """	change 1
+change of state 1	00113334-n	Dynamic	Cause																Change	the act of changing something into something different in essential characteristics	change 1
+change position 1	01043075-v	Dynamic							Location										Motion		
+change state 1	00086015-v	BoundedEvent																	Change	"undergo a transformation or a change of position; ""We turned from Socialism to Capitalism"""	change 11
+character 2	03963513-n	Property																	BCE	a characteristic property that defines the apparent individual nature of something	attribute 2
+character 3	04001822-n	BoundedEvent	Agentive							Purpose	Communication			Social				Art	Art	"an actor's portrayal of someone in a play; ""she played the part of Desdemona"""	acting out 1
+check 28	01421427-v	BoundedEvent	Agentive							Purpose				Social				Management	Management		govern 2
+choice 1	00091731-n	BoundedEvent	Agentive		Mental					Purpose								cognition	MentalAct	"the act of choosing or selecting; your choice of colors was unfortunate"""""	action 1
+choose 1	00379073-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	"pick out, select, or choose; Take any one of these cards"""	decide 1
+chore 1	00398968-n	BoundedEvent	Agentive							Purpose				Social				Work	Work	"a specific piece of work required to be done as a duty: the job of repairing the engine took several hours""; ""the endless task of classifying the samples""; ""the farmer's morning chores"""""	duty 1
+class 1	00492074-n	UnboundedEvent	Agentive							Purpose				Social				Education	Education	"education imparted in a series of lessons or class meetings; ""he took a course in basket weaving""; ""flirting is not unknown in college classes"""	education 2
+clean 2	00023287-v	Dynamic	Agentive		Physical		Condition												BCE	"clean one's body or parts thereof, as by washing; ""clean up before you see your grandparents""; ""clean your fingernails before dinner"""	groom 4
+clean 4	00106393-v	Dynamic	Agentive		Physical		Condition												BCE	"remove shells or husks from; ""clean grain before milling it"""	remove 2
+clean 5	00109110-v	Dynamic	Agentive		Physical		Condition											Chemistry	BCE	as in chemistry	remove 2
+clean 7	00881979-v	Dynamic	Agentive		Physical					Purpose									PhysicalChange	"make clean by removing dirt, filth, or unwanted substances from; Clean the stove!""; ""The dentist cleaned my teeth"""	alter 3
+cleaning 1	00139539-n	BoundedEvent	Agentive		Physical		Condition												PhysicalChange	"the act of making something clean; he gave his shoes a good cleaning"""""	improvement 1		
+close 5	00772512-v	BoundedEvent	Cause		Physical				Location										Motion	make close or shut			
+cognition 1	00012878-n	Dynamic		Experience	Mental														MentalState	the psychological result of perception and learning and reasoning	psychological feature 1		
+cognize 1	00333362-v	Property		Experience	Mental														MentalState	"be cognizant or aware of a fact or a specific piece of information; I know that the President lied to the people""; ""I want to know who is winning the game!""; ""I know it's time"""			
+collect 2	00794237-v	BoundedEvent	Cause		Physical	  			Location										BCE	get together			
+collide with 1	00704074-v	BoundedEvent			Physical				Location										Motion	"come into sudden contact with; The arrow hit the target"""	touch 18		
+color 2	03463765-n	Property	Stimulating		Physical														PhysicalState	a visual attribute of things that results from the light they emit or transmit or reflect	visual property 1		
+come 6	01054590-v	BoundedEvent							Location										Motion	"move toward, travel toward something or somebody; ""He came singing down the road""; ""Come with me to the Casbah"""			
+come about 1	00204516-v	Dynamic																	Dynamic	"What is happening?; The meeting passed off without an incidence"""			
+come down 3	01122509-v	Dynamic							Location										Motion	"move downward but not necessarily all the way ; The barometer is falling"""	go 14		
+come down 4	01558020-v	Dynamic	Phenomenal		Physical				Location									Wheather	Motion	of rain, snow, sleet, or hail			
+come in 5	01152122-v	BoundedEvent							Location										Motion				
+command 10	01381843-v	UnboundedEvent	Agentive							Purpose				Social				Management	Management	exert control over		have control over 1	have power over 1
+communicate 1	00416793-v	UnboundedEvent	Agentive								Communication								Communication	He communicated his anxieties to the psychiatrist	act together 2	transmit feelings 1	transmit thoughts 1
+communicate by writing 1	00559904-v	UnboundedEvent	Agentive			Existence				Purpose	Communication								Communication	Please write to me every week	communicate 1		
+communicating 1	04138929-n	UnboundedEvent	Agentive							Purpose	Communication			Social					Communication	the activity of communicating	act 1		
+compete 1	00605050-v	Dynamic	Agentive							Purpose				Social				Behavior	Behavior	"compete for something; engage in a contest; measure oneself against others"		vie 1
+competition 3	04771851-n	BoundedEvent	Agentive							Purpose				Social				Recreation	Recreation	an occasion on which a winner is selected from among two or more contestants	social event 1	
+complete 2	00285198-v	BoundedEvent	Agentive																BCE		bring to an end 1	
+composition 8	04561287-n	BoundedEvent	Stimulating							Purpose				Social					Sound		music 4	
+conclusion 2	00119310-n	BoundedEvent	Cause																Change	the act of ending something	change of state 1	
+condition 4	08520221-n	Property					Condition												Condition	"a mode of being or form of existence of a person or things: the human condition"""""	state 1	
+condition 5	08520394-n	Property					Condition												Condition	"a condition or state at a particular time: a condition (or state) of disrepair""; ""the current status of the arms negotiations"""""	state 1	
+conduct 5	01141779-v	Dynamic	Agentive						Location										Motion	"take somebody somewhere; We lead him to our chief""; ""can you take me to the main entrance?"""		
+connect 4	00778333-v	BoundedEvent			Physical														PhysicalChange			
+connectedness 1	08440487-n	Relation																	Relation	"a relation between things or events (as in the case of one causing the other or sharing features with it); there was a connection between eating that pickle and having that nightmare"""""	relation 1	
+consequence 3	06465491-n	Dynamic	Phenomenal																CausalRelation	a phenomenon that follows and is caused by some previous phenomenon	phenomenon 1	
+conserve 2	01268422-v	BoundedEvent	Agentive		Physical	Existence	Condition												Represent		hold on to 2	save 3
+consider 1	00388394-v	Property			Mental														MentalState	"consider to be; regard; I see this matter differently""; ""She views this quite differently from me"""	believe 3	
+constitution 1	00134247-n	BoundedEvent				Existence													BCE	"the act of forming something; ""the constitution of the jury"""	beginning 1	
+consume 2	00656714-v	UnboundedEvent			Physical				Location	Purpose			Usage						Motion	"serve onself to, or consume regularly; Have another bowl of chicken soup!"" ""I don't take sugar in my coffee"""		
+continue 1	00068138-v	Static																	Aspect	"stay the same; remain in a certain state; The dress remained wet after repeated attempts to dry it""; ""rest assured""; ""stay alone""; ""He remained unmoved by her tears"""	be 4	
+continue 2	00210630-v	UnboundedEvent																	Aspect	Let's go on meeting once a week		
+continue 7	01517254-v	SituationType																	Causation	"continue a certain state or activity; Keep on working!"""	act 12	
+convey 1	00522332-v	Dynamic	Agentive								Communication								Communication	"make known; pass on, of information"	communicate 1	
+course 7	05477560-n	Relation			Physical				Location										BCE	"general line of orientation: ""the river takes a southern course""; ""the northeastern trend of the coast"""	direction 7	
+course 8	05666985-n	Relation							Location										LocationState	"a line or route along which something travels or moves: ""the hurricane demolished houses in its path""; ""the course of the river"""	line 21	
+cover 16	00763269-v	Dynamic	Cause		Physical														Motion	provide with a covering		
+cozen 3	01456537-v	Dynamic	Agentive								Communication			Social				Behavior	Behavior	"be false to; be dishonest with"	make a victim of 1	
+create 1	00926188-v	BoundedEvent	Cause		Physical	Existence													ExistentialChange	"cause something to be or to become; cause to come into existence; God created Man"""		
+create 2	00926361-v	BoundedEvent	Cause		Physical	Existence													ExistentialChange	"cause to be or to become; He made a mess""; ""make friends and enemies""; ""create a commotion"""		
+create again 1	00928226-v	BoundedEvent	Cause		Physical	Existence													ExistentialChange		create 2	recreate 2
+create from raw material 1	00945714-v	BoundedEvent	Agentive		Physical	Existence													ExistentialChange	make from scratch	create 2	
+creation 2	00505014-n	BoundedEvent	Agentive			Existence													ExistentialChange	the human act of creating	activity 1	
+cut 32	00894185-v	BoundedEvent	Agentive		Physical				Location										Motion		disunite 1	
+dance 1	00299543-n	Dynamic	Agentive		Physical					Purpose				Social				Art	Art/Motion	taking a series of rhythmical steps (and movements) in time to music	diversion 2	
+dark 5	09100431-n	BoundedEvent	Phenomenal	Experience				Quantity								Time			Time	the time after sunset and before sunrise while it is dark outside	amount of time 1	
+day 2	09071807-n	BoundedEvent						Quantity								Time			Time	"some point or period in time; ""it should arrive any day now""; ""after that day she never trusted him again""; ""those were the days"""	time 5	
+day 3	09081414-n	BoundedEvent						Quantity						Social		Time		Work	Time	"the amount of time that a worker must work for an agreed daily wage; ""they worked an 8-hour day"""	work time 1
+day 4	09092722-n	BoundedEvent						Quantity								Time		science	Time	"time for Earth to make a complete rotation on its axis; ""two days later they left"""	time unit 1
+day 5	09094193-n	BoundedEvent						Quantity		Purpose						Time			Time	"a day assigned to a particular purpose or observance; Mother's Day"""""	calendar day 1
+day 6	09098948-n	BoundedEvent														Time			BCE	"the time after sunrise and before sunset while it is light outside; ""the dawn turned night into day"""	amount of time 1
+day 7	09130776-n	BoundedEvent														Time			BCE	the time for one complete rotation of the earth relative to a particular star, about 4 minutes shorter than a mean solar day	time unit 1
+day 8	09130983-n	BoundedEvent														Time			BCE	"the period of time taken by a particular planer (e.g. Mars) to make a complete rotation on its axis; ""how long is a day on Jupiter?"""	amount of time 1
+death 5	08781169-n	Static				Existence													ExistentialState	"a final state; ""he came to a bad end""; ""the so-called glorious experiment came to an inglorious end"""	state 1
+decease 2	00216283-v	BoundedEvent			Physical	Existence													BCE	"pass from physical life and lose all all bodily attributes and functions necessary to sustain life; ""She died from cancer""; ""They children perished in the fire""; ""The patient went peacefully"""	change state 1
+decide 1	00392710-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	reach, make, or come to a decision about something	
+declaration 2	04390828-n	BoundedEvent	Agentive							Purpose	Communication			Social	Manner				Communication	emphatic or explicit statement	statement 4
+declare 5	00570287-v	BoundedEvent	Agentive							Purpose	Communication								Communication	He declared that he was innocent	say 8
+decline 5	00122638-v	Dynamic					Condition												Change	Conditions in the slum worsened	change state 1
+decrease 1	00197092-n	BoundedEvent	Cause		Physical			Quantity											QuantityChange	the act of decreasing or reducing something	change of magnitude 1
+decrease 5	00090574-v	Dynamic						Quantity											QuantityChange	"decrease in size, extent, or range; The amount of homework decreased towards the end of the semester"""	change magnitude 1
+decrease 6	00262983-v	BoundedEvent	Agentive					Quantity											QuantityChange	He decreased his staff	alter 3
+deed 1	00020244-n	Dynamic	Agentive				Condition			Purpose									Dynamic	"a notable achievement: the book was her finest effort"""""	accomplishment 1
+defect 3	08738373-n	Property					Condition												Condition		imperfection 1					
+deficiency 2	08731035-n	Property					Condition												Condition	"the state of needing something that is absent or unavailable; there is a serious lack of insight into the problem""; ""water is the critical deficiency in desert regions""; ""for want of a nail the shoe was lost"""""	demand 5					
+definite quantity 1	08310215-n	Static						Quantity											Measure	a specific measure of amount	amount 1					
+degree 1	03540591-n	Relation																	Manner	"a position on a scale of intensity or amount or quality: a moderate degree of intelligence""; ""a high level of care is required"""""	measure 5					
+degree 6	08531278-n	Relation							Location										Manner	"a specific identifiable position in a continuum or series or esp in a process; a remarkable degree of frankness""; ""at what stage are the social sciences?"""""	state 1					
+degree 7	08535290-n	Relation					Condition							Social					SocialState	position in a social hierarchy	position 13					
+demonstrate 1	00373148-v	BoundedEvent	Stimulating							Purpose	Communication								Communication	"establish the validity of something; This behavior shows his true nature"""	affirm 1					
+depart 1	01054314-v	BoundedEvent							Location										Motion	"travel away from a place into another direction; Go away before I start to cry""; ""When did he go to work today?"" ""The train departs at noon"""						
+describe 1	00366972-v	BoundedEvent	Agentive		Physical	Existence					Communication								BCE	as in in botany or biology, for example						
+desire 2	04788545-n	Dynamic		Experience	Mental														MentalState	the feeling that accompanies an unsatisfied state	feeling 1					
+desire 4	01040073-v	SituationType		Experience	Mental														MentalState	"feel or have a desire for; want strongly; I want to go home now; ""I want my own room"""						
+determine 2	00393722-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct		form a resolution about 1					
+development 1	00139142-n	Dynamic	Agentive				Condition												BCE	act of improving by expanding or enlarging or refining	improvement 1					
+development 6	08283435-n	UnboundedEvent					Condition												Change	"a process in which something changes to a more advanced stage; the development of Greek civilization"" or ""the development of the tumor"" or ""the slow evolution of his skill as a writer"""""	process 6					
+devise 3	00396499-v	BoundedEvent	Agentive		Mental	Existence		  		Purpose									MentalAct	make plans for something	cerebrate 1					
+differentiate 4	00365740-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	"mark as different; ""We distinguish several kinds of maple"""	identify 2	secern 1	secernate 1	separate 5	severalize 1	tell 1
+dignity 3	08719491-n	Static					Condition							Social				Work	SocialState	"high office or rank or station: he respected the dignity of the emissaries"""""	position 13
+direct 10	01100714-v	BoundedEvent	Agentive		Physical				Location	Purpose									BCE	"direct the course; determine the direction of travelling"	command 10
+direction 7	05477069-n	Relation							Location										LocationState	"a line leading to a place or point: he looked the other direction""; ""didn't know the way home"""""	path 3
+direction 8	08463109-n	Relation			Physical				Location										LocationState	"the spatial relation between something and the course along which it points or moves; he checked the direction and velocity of the wind"""""	spatial relation 1
+discover 5	00937054-v	BoundedEvent		Experience	Mental														BCE	"make a discovery, make a new finding; ""Roentgen discovered X-rays"""	conceive 2
+disease 1	08592183-n	Property			Physical		Condition											health	Condition	an impairment of health or a condition of abnormal functioning	illness 1
+disorder 1	08550427-n	Static					Condition							Social					SocialState	a disturbance of the peace or of public order	state 1
+disorder 2	08586618-n	Property			Physical		Condition												Condition	"a disturbance of normal functioning; the doctor prescribed some medicine for the disorder""; ""everyone gets stomach upsets from time to time"""""	condition 5
+displace 3	01055491-v	Dynamic	Cause						Location										Motion	cause to move	
+disposition 2	03287725-n	Dynamic		Experience	Mental														BCE	your usual mood	nature 1
+disposition 4	04113320-n	Dynamic		Experience	Mental														MentalState	"an attitude of mind esp one that favors one alternative over others; he had an inclination to give up too easily""; ""a tendency to be too strict"""""	attitude 3
+distance 1	03536009-n	Relation			Physical				Location										LocationState	the space between two objects or points	spacing 1
+disturbance 7	08693431-n	Dynamic		Experience	Mental														MentalState		disorder 2
+disunite 1	00897572-v	BoundedEvent	Cause		Physical				Location										Motion	"He separated the fighting children; Moses parted the Red Sea"""	displace 3
+diversion 2	00238878-n	UnboundedEvent	Agentive							Purpose				Social				Recreation	Recreation	an activity that diverts or amuses or stimulates	activity 1
+divide 5	01161526-v	Dynamic			Physical				Location										Motion	make a divison or separation	
+do 6	00980842-v	Dynamic	Agentive																Dynamic		create again 1			
+duty 1	00398775-n	Dynamic	Agentive							Purpose				Social				Work	Work	"work that you are obliged to perform for moral or legal reasons: ""the duties of the job"""	work 1			
+eat 3	00663538-v	Dynamic	Agentive		Physical				Location	Purpose			Usage						BCE	take in solid food	consume 2			
+elbow room 1	08434357-n	Relation			Physical				Location										LocationState	"space for movement; room to pass""; ""make way for"": ""hardly enough elbow room to turn around"""""	space 1			
+emit 2	00554586-v	Dynamic	Stimulating		Physical														Sound	"utter sounds; not necessarily words"				
+emotion 1	04785784-n	Dynamic		Experience	Mental														MentalState	any strong feeling	feeling 1			
+employment 1	00342842-n	Static												Social				Work	Work	"the occupation for which you are paid; he is looking for a job"""""	business 2			
+end 16	01475351-v	Property																	Aspect	"have an end, in a temporal or spatial sense: My property ends by the bushes""; ""The symphony ends in a pianissimo"""				
+enter 1	00563886-v	BoundedEvent	Agentive			Existence				Purpose	Communication								Represent	set down in permanent form	conserve 2			
+error 1	00038929-n	BoundedEvent	Agentive																CausalRelation	a wrong action attributable to bad judgment or ignorance or inattention	failure 1			
+event 1	00016459-n	BoundedEvent																	Dynamic	something that happens at a given place and time				
+evince 1	00531321-v	Dynamic	Agentive								Communication								Communication	"give expression to; She showed her disappointment"""	convey 1			
+examine 4	01226339-v	BoundedEvent	Agentive	Experience			Condition			Purpose									BCE					
+exchange for money 1	01277199-v	Dynamic	Agentive							Purpose		Possession		Social					BCE		change 19			
+excite 2	01004175-v	Dynamic	Stimulating	Experience	Mental														Stimulus	"as of senses or emotions; ""These stories shook the community"""	arouse 5	shake up 3	stimulate 6	stir 5
+exert effort 1	01366212-v	Dynamic	Agentive							Purpose									Dynamic	do mental or physical work				
+experience 6	01008772-v	SituationType		Experience	Mental														MentalState	"undergo an emotional sensation; She felt resentful""; ""He felt regret"""			
+experience 7	01203891-v	Dynamic		Experience															Perception	"of mental or bodily states or experiences: get an idea""; ""experience vertigo""; ""get nauseous""; ""undergo a strange sensation""; ""The fluid undergoes shear""; ""receive injuries""; ""have a feeling"""			
+experience 8	01204902-v	Dynamic		Experience															Dynamic		participate 2	live through 1	undergo 3
+explain 2	00528672-v	BoundedEvent	Agentive							Purpose	Communication								Communication	give an explanation for	give information 1		
+express 5	00529407-v	Dynamic	Agentive								Communication								Communication	"express verbally; She expressed her anger""; ""He uttered a curse"""			
+express indirectly 1	00469225-v	BoundedEvent	Stimulating	Experience							Communication								BCE	be a symbol of	intend 4		
+expressive style 1	04575747-n	UnboundedEvent	Agentive								Communication				Manner				Manner		communication 1		
+faculty 1	03857413-n	Property			Mental												Modal	cognition	ModalState	one of the inherent cognitive or perceptual powers of the mind	ability 2		
+fail to keep 1	01301401-v	BoundedEvent	Cause				Condition												Change	"cease to have, either phsyically or in an anstract sense; fail to keep in mind or in sight"			
+fail to profit 1	01302104-v	BoundedEvent	Cause				Condition					Possession							PossessionChange	fail to make money in a business			
+failure 1	00035229-n	BoundedEvent	Agentive																Causation	the act of failing to accomplish something	nonaccomplishment 1		
+family relationship 1	08453309-n	Relation												Social					Relation	state of relatedness or connection by blood or marriage or adoption	relation 1		
+fashion 2	03450012-n	Static													Manner			behavior	Manner	"a manner of performance; a manner of living""; ""a way of life"""""	property 2		
+fasten 3	00768642-v	BoundedEvent	Cause		Physical														PhysicalChange		attach 3		
+feel 12	01202814-v	Dynamic		Experience	Physical														Perception	"perceive by a physical sensation, e.g., coming from the skin or muscles; He felt the wind""; ""She felt an object brushing her arm""; ""He felt his flesh crawl""; ""She felt the heat when she got out of the car"""			
+feeling 1	00013522-n	Dynamic		Experience	Mental														MentalState	the psychological feature of experiencing affective and emotional states	psychological feature 1		
+fight 5	00615347-v	UnboundedEvent	Agentive		Physical									Social				Fighting	Fighting	"be engaged in a fight; carry on a fight"			
+fill 5	00268884-v	BoundedEvent			Physical				Location										Motion	fill a container, for example	alter 3		
+find 3	00307705-v	Dynamic		Experience															Dynamic	"receive a specified treatment (abstract); ""These aspects of civilization do not find expression or receive an interpretation""; ""His movie received a good review"""	change 11	obtain 1	receive 2
+flush 4	08682700-n	Dynamic					Condition												Condition		symptom 2		
+foot 8	01084973-v	Dynamic	Agentive		Physical				Location						Manner				Motion	"use one's feet to advance; advance by steps"	go 14		
+forge 6	00949570-v	BoundedEvent	Cause		Physical														PhysicalChange	to fix the form of something	create from raw material 1		
+form 1	00014558-n	Property			Physical														PhysicalState	the spatial arrangement of something as distinct from its substance			
+form 12	00083270-v	BoundedEvent	Cause		Physical														PhysicalChange	cause to shape or form	alter 3		
+form 6	04003083-n	Property	Stimulating		Physical														BCE	a perceptual structure	structure 4		
+form a resolution about 1	00392562-v	BoundedEvent	Agentive		Mental					Purpose				Social					MentalAct		decide 1	resolve 5	
+form an opinion of 1	00376571-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct				
+function 1	00399406-n	Dynamic	Agentive											Social				Work	Work	"the actions and activities assigned to or required or expected of a person or group: ""the function of a teacher""; ""the government must do its part"" or ""play its role"" or ""do its duty"""	duty 1		
+furnish 1	01323715-v	BoundedEvent	Cause		Physical				Location			Possession							PossessionChange		give 16		
+game 1	00254052-n	BoundedEvent	Agentive							Purpose				Social				Recreation	Recreation	a contest with rules to determine a winner	activity 1		
+get hold of 2	00691086-v	BoundedEvent			Physical				Location			Possession							Motion	"get into one's hands, take physically; Take a cookie!"" ""Can you take this bag, please"""			
+get rid of 2	01267839-v	BoundedEvent	Agentive		Physical				Location	Purpose		Possession							Motion	"Get rid of these old shoes! ""The company got rid of all the dead wood"""			
+gift 4	01255335-v	BoundedEvent	Agentive							Purpose		Possession							PossessionChange	make a gift of	
+give 16	01254390-v	BoundedEvent	Agentive									Possession							PossessionChange	"transfer possession of something concrete or abstract to somebody; ""I gave her my money""; ""can you give me lessons?"""	transfer 12
+give information 1	00467082-v	Dynamic	Agentive								Communication								Communication		communicate 1
+go 14	01046072-v	Dynamic							Location										Motion	"change location; move, travel, or proceed; How fast does your new car go?"" ""We travelled from Rome to Naples by bus""; ""The policemen went from door to door looking for the suspect"""	
+go 25	01518088-v	Relation							Location										BCE	"lead. extend, or afford access; ""This door goes to the basement""; ""The road runs South"""	be 9
+go away 3	01147140-v	BoundedEvent							Location										Motion		depart 1
+go by 3	01172741-v	BoundedEvent							Location										Motion	A black limousine passed by when she looked out the window	go 14
+governance 1	00622561-n	Dynamic	Agentive							Purpose				Social				Management	Management	the exercise of authority over a political unit	social control 1
+group action 1	00597858-n	Dynamic	Agentive							Purpose				Social					Dynamic	action taken by a group of people	act 1
+growth 4	08647140-n	Dynamic	Phenomenal		Physical		Condition												PhysicalChange	an abnormal proliferation of tissue	illness 1
+happening 1	04690182-n	BoundedEvent																	Dynamic	an event that happens	event 1
+harm 3	08665752-n	Property			Physical		Condition												Condition	any physical damage	health problem 1
+have 12	01256853-v	Relation										Possession							PossessionRelation	"have or possess, either in a concrete or an abstract sense: She has $1,000 in the bank""; ""He has got two beautiful daughters""; ""She holds a Master's degree from Harvard"""	
+have 13	01257491-v	Relation										Possession							PossessionRelation	have ownership of	
+have 15	01260836-v	Dynamic										Possession							BCE	"get something; come into possession of; ""receive payment""; ""receive a gift""; ""receive letters from the front"""	acquire 3
+head 28	01381333-v	UnboundedEvent	Agentive							Purpose				Social				Management	Management	Who is heading this project?	direct 13
+health problem 1	08586350-n	Property			Physical		Condition											health	Condition		physiological state 1	
+higher cognitive process 1	03918844-n	Dynamic	Agentive		Mental					Purpose								cognition	MentalAct		act 2	
+hit 15	00806352-v	BoundedEvent	Cause		Physical				Location										BCE	"deal a blow to; ""He hit her hard in the face"""	touch 18	
+hold 26	01515519-v	SituationType					Condition												Static	"keep in a certain state; e.g., keep clean""; ""hold in place"""""		
+hold on to 2	01256282-v	Relation										Possession							PossessionRelation	retain possession of	have 12	
+humor 3	04827440-n	Dynamic		Experience	Mental														MentalState	a characteristic or habitual state of feeling	feeling 1	
+identify 2	00348034-v	BoundedEvent	Agentive		Mental					Purpose									MentalAct	establish the identity of someone or something	determine 2	recognize as being 1
+illness 1	08587853-n	Property			Physical		Condition												Condition	impairment of normal physiological function affecting part or all of an organism	health problem 1	
+impel 1	00869132-v	Dynamic	Cause		Physical				Location										Motion		displace 3	propel 1
+improvement 1	00138272-n	Dynamic	Agentive				Condition			Purpose									Change	"the act of improving something: ""Their improvements increased the value of the property"""	change of state 1	
+inability 2	03854243-n	Property															Modal		ModalState	lack of ability (esp mental ability) to do something	cognition 1	
+increase 1	00204508-n	BoundedEvent	Cause		Physical			Quantity											QuantityChange	the act of increasing something	change of magnitude 1	
+increase 3	04725113-n	BoundedEvent						Quantity											QuantityChange		alteration 3	
+increase 6	00091455-v	Dynamic	Cause					Quantity											QuantityChange	make bigger or more	alter 3	
+increase 7	00093597-v	Dynamic						Quantity											QuantityChange	The amount of work increased	change magnitude 1	
+indefinite quantity 1	08310433-n	Static						Quantity											Measure	an estimated quantity	amount 1	
+injure 1	00043545-v	BoundedEvent	Cause		Physical		Condition												PhysicalChange	cause injuries	cause pain 1
+instant 1	09157756-n	BoundedEvent						Quantity								Time			Time	"a particular point in time; the moment he arrived the party began"""""	point 20
+intend 4	00537777-v	Relation	Agentive							Purpose	Communication								MeaningRelation	"mean or intend to express or convey; You never understand what I mean!"" ""what do his words intend?"""	convey 1
+interpret 5	00966090-v	BoundedEvent	Agentive		Physical	Existence				Purpose	Communication								Represent	create an image of	create again 1
+journey 1	00172823-n	Dynamic			Physical				Location	Purpose								movement	Motion	the act of traveling from one place to another	travel 2
+keep 12	01387332-v	BoundedEvent	Cause																Causation	"prevent from doing something or being in a certain state; ""We must prevent the cancer from spreading"""	
+kill 1	00124269-n	BoundedEvent	Agentive		Physical	Existence													ExistentialChange	the act of terminating a life	conclusion 2
+kill 5	00758542-v	BoundedEvent	Cause		Physical	Existence	  												BCE	cause to die	
+language 5	04598615-n	Dynamic	Agentive							Purpose	Communication			Social					Communication	"communication by word of mouth; his speech was slurred"" or ""he used harsh language"""""	auditory communication 1
+lay 3	00859635-v	BoundedEvent	Cause		Physical				Location										Motion	"put into a certain place: Put your things here""; also with abstract objects and locations: ""Place emphasis on a certain point"""	displace 3
+leave 4	00079704-v	SituationType																	BCE	leave it as is	
+leave 6	00291924-v	BoundedEvent	Cause																BCE		leave 4
+leave a mark on 1	00297919-v	BoundedEvent	Cause		Physical														PhysicalChange		alter 3
+let 4	00433082-v	BoundedEvent	Agentive																BCE	I let it be known that I was not interested	cause 6
+life 13	09084835-n	BoundedEvent		Experience		Existence										Time			BCE	"the period from the present until death; ""he appointed himself emperor for life"""	amount of time 1
+life 3	03941565-n	UnboundedEvent		Experience															BCE	"the experience of living; the course of human events and activities; ""he could no longer cope with the complexities of life"""	experience 2
+life 8	08543710-n	UnboundedEvent		Experience		Existence													BCE	"the course of existence of an individual; the actions and events that occur in living; ""he hoped for a new life in Australia""; ""he wanted to live his own life without interference from others"""	being 2
+life science 1	04052323-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education		natural science 1
+light 12	06502153-n	Dynamic	Phenomenal		Physical														BCE	"(physics) electromagnetic radiation that can produce a visual sensation; ""the light was filtered through a soft glass window"""	actinic radiation 1
+locomotion 1	00159178-n	Dynamic			Physical				Location										BCE	self-propelled movement	change of location 1
+look 8	01216027-v	Dynamic	Agentive	Experience	Physical														Perception	"perceive with attention; direct one's gaze towards; She looked over the expanse of land""; ""Look at your child!"" ""Look--a deer in the backyard!"""	
+lose 7	01301277-v	Dynamic										Possession							BCE		
+loss 1	00036401-n	BoundedEvent					Condition					Possession							PossessionChange	"the act of losing; his loss was unexpected"""""	failure 1
+magnitude 1	03539122-n	Property			Physical			Quantity											Measure	relative size or extent	property 2
+magnitude relation 1	08454813-n	Relation			Physical			Quantity											Measure/Relation		relation 1
+make 15	00929175-v	BoundedEvent	Agentive		Physical	Existence				Purpose									ExistentialChange	"create or manufacture a man-made product: ""We produce more cars than we can sell""; ""The company has been making toys for two centuries"""	create 1
+make a payment 1	01281885-v	BoundedEvent	Agentive							Purpose		Possession		Social					PossessionChange		give 16
+maneuver 3	00323663-n	BoundedEvent	Agentive		Physical				Location	Purpose								movement	Motion	"a deliberate coordinated movement requiring dexterity and skill; he made a great play"""""	change of position 1
+means 1	00096919-n	Dynamic	Cause							Purpose									CausalRelation	"how a result is obtained or an end is achieved; a means of communcation""; ""the true way to success"""""	effectuation 1
+measure 5	03539714-n	Static	Cause					Quantity											Measure	magnitude as determined by measurement or calculation	magnitude 1
+medical aid 1	00384138-n	Dynamic	Agentive		Physical		Condition			Purpose				Social				Caring	Caring	professional care for illness or injury	aid 1
+medical science 1	04053427-n	UnboundedEvent	Agentive				Condition			Purpose				Social				Science	Education		life science 1
+meeting 1	00069655-n	Dynamic	Agentive		Physical				Location									movement	Motion	the act of putting two things together with no space betweeen them	deed 1
+motion 5	04704743-n	Dynamic			Physical				Location									movement	Motion	a natural event that involves a change in the position or location of something	happening 1
+motivation 1	00013299-n	Static	Stimulating		Mental														MentalState	the psychological feature that arouses an organism to action	psychological feature 1
+mouth 6	00530290-v	Dynamic	Agentive								Communication								Communication	"express in speech; She talks a lot of nonsense"""	communicate 1
+music 1	00313161-n	UnboundedEvent	Agentive							Purpose				Social				Art	Art	"a musical diversion; his music was his central interest"""""	diversion 2
+music 4	04552184-n	UnboundedEvent			Physical					Purpose	Communication			Social				Art	Art	an artistic form of auditory communication incorporating instrumental or vocal tones in a structured and continuous manner	art 2
+natural phenomenon 1	06464347-n	Dynamic	Phenomenal																Phenomenon	all non-artificial phenomena	phenomenon 1
+natural philosophy 1	04066626-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education		natural science 1
+natural science 1	04037783-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education	the sciences involved in the study of the physical world and its phenomena	science 3
+natural state 1	08530753-n	Static												Social					Static	"a wild primitive state untounched by civilization; he lived in the wild""; ""they tried to preserve nature as they found it"""""	state 1
+nature 2	03340632-n	Property																	BCE	the essential characteristics by which something is recognized	quality 1
+neaten 1	00026120-v	UnboundedEvent	Agentive		Physical										Manner				PhysicalChange	care for the external appearance	beautify 1
+need 5	00675532-v	Property					Condition												BCE	"have need of: ""This piano wants the attention of a competent tuner"""	be 4
+need 6	00675686-v	Property					Condition												BCE	"have or feel a need for: ""always wanting for friends and money"""	
+night 4	09100717-n	BoundedEvent														Time			BCE	"the time between sunset and midnight; ""he watched television every night"""	amount of time 1
+night 5	09100842-n	BoundedEvent		Experience												Time			BCE	"the period spent sleeping; ""I had a restless night"""	amount of time 1
+nonaccomplishment 1	00035066-n	BoundedEvent	Agentive																Causation	an act that does not achieve its intended goal	act 1
+number 10	08317731-n	Property						Quantity											Measure	"a concept of quantity derived from zero and units; every number has a unique position in the sequence"""""	definite quantity 1
+number 2	03553723-n	Static						Quantity											Measure	"a sum or total or indefinite quantity of units or individuals; he had a number of chores to do""; ""the number of parameters is small"""""	amount 2
+number 5	04231864-n	Property						Quantity											BCE	"the number is used in calling a particular phone; ""he has an unlisted number"""	sign 3
+operation 3	00338477-n	BoundedEvent	Agentive							Purpose									Operation	"a process or series of acts esp of a practical or mechanical nature involved in a particular form of work: the operations in building a house""; ""certain machine tool operations"""""	work 1
+operation 6	00528736-n	BoundedEvent	Agentive							Purpose				Social				conflict	Fighting	a military or naval action (as a maneuver or campaign)	action 2
+order 6	04629714-n	BoundedEvent	Agentive							Purpose	Communication			Social					Communication	"(often plural) a command given by a superior (e.g., a military or law enforcement officer) that must be obeyed; the British ships dropped anchor and waited for orders from London"""""	bid 4
+party 1	04769704-n	BoundedEvent	Agentive							Purpose	Communication			Social				Recreation	Recreation	an occasion for social interaction and entertainment	affair 2
+party 2	05255204-n	BoundedEvent	Agentive							Purpose	Communication			Social				Recreation	Recreation	a social gathering for pleasure	social gathering 1
+pass 39	01531792-v	Dynamic	Cause													Time			Dynamic	as of time	
+passage 1	00114479-n	Dynamic																	Motion	the act of passing from one stage to the next	change of state 1
+path 3	05441398-n	Relation			Physical				Location										BCE	an established line of travel or access	line 21
+pattern 1	00230674-n	UnboundedEvent													Manner				Activity	"a customary way of operation or behavior; it is their practice to give annual raises""; ""they changed their dietary pattern"""""	activity 1
+penalization 1	00639819-n	Dynamic	Agentive							Purpose				Social					Management	the act of punishing	social control 1
+perception 2	03890199-n	Dynamic	Stimulating	Experience	Physical														Perception	the process of perceiving	basic cognitive process 1
+performance 4	04487114-n	BoundedEvent	Agentive							Purpose	Communication			Social				Art	Art	"a dramatic or musical entertainment; the play ran for 100 performances"" or ""the frequent performances of the symphony testify to its popularity"""""	show 3
+phenomenon 1	00019295-n	Dynamic	Phenomenal	Experience	Physical														Phenomenon	any state or process known through the senses rather than by intuition or reasoning	
+physical phenomenon 1	06467898-n	Dynamic	Phenomenal		Physical														Phenomenon	a natural phenomenon involving the physics of matter and energy	natural phenomenon 1
+physiological state 1	08577911-n	Property			Physical		Condition												Condition	the condition of the body or bodily functions	condition 5
+place 3	03837930-n	Static			Mental				Location										MentalState	"an abstract mental location; ""he has a special place in my thoughts""; ""a place in my heart""; ""a political system with no place for the less prominent groups"""	cognition 1
+plant disease 1	08658681-n	Property			Physical		Condition											health	Condition		disease 1
+play 16	08569341-n	Property												Social			Modal		BCE	"a state in which action is feasible; ""the ball was still in play""; ""insiders said the company's stock was in play"""	action 8
+play 21	00605818-v	Dynamic	Agentive							Purpose				Social				Recreation	Recreation	"play games, play sports; We played hockey all afternoon""; ""play cards"""	compete 1
+play 24	00652908-v	BoundedEvent	Agentive											Social				Games	BCE	"put (a card or piece) into play during a game: ""He is playing his cards close to his chest"""	deploy 1
+pleasance 1	04792478-n	Dynamic		Experience	Mental														MentalState	a fundamental feeling that is hard to define but that people desire to experience	feeling 1
+position 12	08522029-n	Static																	BCE	"a condition or position in which you find yourself: ""the unpleasant situation (or position) of having to choose between two evils""; ""found herself in a very fortunate situation"""	condition 5
+position 13	08534455-n	Relation					Condition							Social					SocialState	"the relative position or standing of things or esp persons in a society: he had the status of a minor""; ""the novel attained the status of a classic""; ""atheists do not enjoy a favorable position in American life"""""	state 1
+potency 2	03596179-n	Property												Social			Modal		BCE	possession of controlling influence	quality 1
+process 4	03885684-n	Dynamic		Experience	Mental	Existence													BCE	"a mental process that you are not directly aware of; ""the process of denial"""	cognition 1
+process 6	08239006-n	UnboundedEvent																	Change	"a sustained phenomenon or one marked by gradual changes; events now in process""; ""the process of calcification begins later for boys than for girls"""""	phenomenon 1
+processing 1	08300433-n	UnboundedEvent	Agentive		Physical					Purpose					Manner				Dynamic	"preparing or putting through a prescripted procedure: the processing of newly arrived immigrants""; ""the processing of ore to obtain minerals"""""	process 6
+production 1	00507790-n	BoundedEvent	Cause			Existence													ExistentialChange	the act of producing something	act 1
+project 2	00442844-n	BoundedEvent	Agentive											Social				Work	Work	any piece of work	work 1
+project through the air 1	00867132-v	BoundedEvent	Cause		Physical				Location	  					Manner				Motion	throw a frisbee	impel 1
+property 2	03444246-n	Property																	Static	an attribute shared by objects	attribute 1
+psychological feature 1	00012517-n	Property			Mental														MentalState	a feature of the mental life of a living organism	
+push 1	00064101-n	Dynamic	Cause		Physical				Location						Manner				Motion	the act of applying force in order to move something away	actuation 1
+quality 1	03338771-n	Property																	Static	essential attribute of something or someone	attribute 1
+quantity 3	03966324-n	Static						Quantity											Measure	something that has a magnitude and can be represented in mathematical expressions by a constant or a variable	concept 1
+rank 3	08717824-n	Relation												Social					BCE	relative status	position 13
+ratio 1	08457189-n	Relation			Physical			Quantity											Relation	the relative magnitudes of two quantities (usually expressed as a quotient)	magnitude relation 1
+reaction 2	00478685-n	UnboundedEvent	Phenomenal		Physical														Dynamic	"a bodily process occurring due to the effect of some foregoing Stimulating or agent; ""his reactions have slowed with age""; ""a bad reaction to the medicine"""	activity 4
+reality 1	03940989-n	Dynamic		Experience															MentalObject	"all of your experiences that determine how things appear to you; ""his world was shattered""; ""we live in different worlds""; ""for them demons were as much a part of reality as trees were"""	experience 2
+relation 1	00017862-n	Relation																	Relation	an abstraction belonging to or characteristic of two entities or parts together	abstraction 1
+relationship 1	08436181-n	Relation																	BCE	"often used where ""relation"" would serve; preferred usage of ""relationship"" is for personal relations or states of relatedness; ""the relationship between unemployment and inflation"""	relation 1
+relationship 3	08523567-n	Relation												Social					Relation	"a state of connectedness between people (especially an emotional connection); he didn't want his wife to know of the relationship"""""	state 1
+relationship 4	08523811-n	Relation												Social					Relation	a state involving mutual dealings between people or parties or countries	state 1
+remember 2	00342479-v	UnboundedEvent	Agentive		Mental														BCE	"keep in mind for attention or consideration; ""Remember the Alamo""; ""Remember to call your mother every day!"""	
+remember 3	00343621-v	UnboundedEvent	Agentive		Mental														BCE	"recapture the past; indulge in memories; ""he remembered how he used to pick flowers"""	
+remove 2	00104355-v	BoundedEvent			Physical				Location										Motion	"remove something concrete, as by lifting, pushing, taking off, etc.; or remove something abstract; remove a threat""; ""remove a wrapper""; ""Remove the dirty dishes from the table""; ""take the gun from your pocket"""	
+represent 3	00556972-v	BoundedEvent	Agentive		Physical	Existence					Communication								BCE	serve as a means of expressing something	express 5
+rhetorical device 1	04590378-n	BoundedEvent	Agentive							Purpose	Communication		Usage		Manner				Manner	a use of language that creates a literary effect (but often without regard for literal significance)	device 4
+ride 8	01114042-v	Dynamic							Location						Manner				Motion	"be carried or travel on or in a vehicle; I ride to work in a bus""; ""He rides the subway downtown every day"""	travel 5
+say 8	00569629-v	Dynamic	Agentive								Communication								Communication	"express an idea, etc. orally, in writing, or with gestures; He said that he wanted to marry her""; ""Her face told me that she was sorry""; ""We asked what happened, but she wouldn't say""; ""I'm tired,"" she said"""	express 5
+science 2	04037192-n	UnboundedEvent			Mental					Purpose				Social					BCE	the domain of knowledge obtained by the systematic study of nature	knowledge base 1
+science 3	04037371-n	UnboundedEvent	Agentive							Purpose				Social				Science	Education	a particular branch of scientific knowledge	branch of knowledge 1
+sell 7	01546360-v	Property	Agentive							Purpose		Possession		Social					PossessionChange	"be sold at a certain price or in a certain way: These books sell like hot cakes"""	
+sensation 1	03892008-n	Dynamic	Stimulating	Experience	Physical														Perception	an unelaborated elementary awareness of stimulation	perception 2
+sense 2	03858744-n	Property		Experience	Physical												Modal		Perception	the faculty through which the external world is apprehended	faculty 1
+sex 1	00469903-n	Dynamic	Agentive		Physical					Purpose								Behavior	Behavior	"activities associated with sexual intercourse; they had sex in the back seat"""""	activity 4
+show 1	00297544-n	BoundedEvent	Agentive							Purpose	Communication			Social				Art	Art	"a public entertainment or exhibition; a remarkable show of skill"""""	amusement 1
+show 3	04326789-n	BoundedEvent	Agentive							Purpose	Communication			Social				Art	Art	"a public exhibition or entertainment; they wanted to see some of the shows on Broadway"""""	communication 1
+sign 3	04425761-n	BoundedEvent	Agentive		Physical					Purpose	Communication								BCE	any communication that encodes a message	communication 1
+sign 6	04479492-n	BoundedEvent	Agentive		Physical					Purpose	Communication								BCE		body language 1
+situation 4	08522741-n	Property					Condition												Static	"the general state of things; the combination of circumstances at a given time; the present international situation is dangerous""; ""wondered how such a state of affairs had come about""; ""eternal truths will be neither true nor eternal unless they have fr"	state 1
+small indefinite quantity 1	08423016-n	Static						Quantity											Measure		indefinite quantity 1
+social control 1	00621770-n	UnboundedEvent	Agentive							Purpose				Social					Management		group action 1
+social relation 1	00018392-n	Relation												Social					SocialState	"a relation between living organisms; esp between people"	relation 1
+song 3	04567799-n	BoundedEvent	Stimulating							Purpose				Social				Art	Sound	a short musical composition with words	composition 8
+sound 5	04731716-n	BoundedEvent	Stimulating		Physical														Sound	"the sudden occurrence of an audible event; the sound awakened them"""""	happening 1
+space 1	00015245-n	Relation							Location										LocationState	the unlimited 3-dimensional expanse in which everything is located	abstraction 1
+spacing 1	03535737-n	Relation							Location										LocationState		spatial property 1
+spatial property 1	03524985-n	Relation			Physical				Location										LocationState	any property relating to or occupying space	property 2
+spatial relation 1	08462976-n	Relation			Physical				Location										LocationState/Relation		relation 1
+speak 2	00542186-v	UnboundedEvent	Agentive								Communication								Communication	"exchange thoughts; talk with;  We often talk business""; also used metaphorically: ""Actions talk louder than words"""	communicate 1
+speech act 1	04625000-n	BoundedEvent	Agentive							Purpose	Communication			Social					Communication	the use of speech to perform some act	act 1
+state 1	00015437-n	Static																	Static	"the way something is with respect to its main attributes; the current state of knowledge""; ""his state of health""; ""in a weak financial state"""""	
+statement 4	04388724-n	BoundedEvent	Agentive							Purpose	Communication			Social					Communication	"a message that is stated or declared; a communication (oral or written) setting forth particulars or facts etc"	content 3
+stay in one place 1	01492762-v	Relation							Location										LocationState		
+stroke 2	00318118-n	BoundedEvent			Physical				Location						Manner				Motion	a single complete movement	change of position 1
+stroke 3	00329906-n	BoundedEvent	Agentive		Physical				Location	Purpose				Social	Manner			Recreation	Motion	(sports) the act of swinging or striking at a ball with a club or racket or bat or fist	maneuver 3
+structure 2	03451157-n	Property			Physical										Manner				BCE	"the manner of construction of something; ""architects must study the structure of buildings"""	composition 4
+style 6	03961040-n	Property			Physical										Manner				BCE	"a particular kind (as to appearance); ""this style of shoe is in demand"""	form 5
+symptom 2	08671032-n	Dynamic	Phenomenal				Condition												Phenomenon	any sensation or change in bodily function associated with a particular disease	evidence 1
+system 4	03864615-n	Static	Cause							Purpose								behavior	MentalObject	a complex of methods or rules governing behavior	method 2
+therapy 1	00385186-n	Dynamic	Agentive				Condition			Purpose				Social				Caring	Caring	the act of caring for someone (as by medication or remedial training etc.)	medical aid 1
+thing 11	08533938-n	SituationType																	BCE	"a special situation; ""this thing has got to end""; ""it is a remarkable thing"""	situation 4
+thing 4	03283615-n	Property																	Static	"any attribute or quality considered as having its own existence: ""the thing I like about her is ..."""	attribute 1
+thing 6	03966203-n	Static																	MentalObject	"a special abstraction; ""a thing of the spirit""; ""things of the heart"""	abstract 1
+time 1	00014882-n	UnboundedEvent		Experience												Time			Time	the continuum of experience in which events pass from the future through the present to the past	abstraction 1
+time 4	04704458-n	BoundedEvent														Time			Dynamic	"an instance or occasion for some event; ""This time he succeeded"" or ""He called four times"""	case 12
+time 5	09071447-n	BoundedEvent						Quantity								Time			Time	"an indefinite period marked by specific attributes; ""the time of year for planting""; ""he was a great actor is his time"""	amount of time 1
+time 6	09077332-n	Property														Time			Time	"the time as given by a clock; do you know what time it is?""; ""the time is 10 o'clock"""""	meter reading 2
+time 9	09171650-n	BoundedEvent						Quantity		Purpose			Usage			Time			Time	"a period of time considered as a resource under your control and sufficient to accomplish something; ""take time to smell the roses""; ""I didn't have time to finish""; ""it took more than half my time"""	amount of time 1
+touch 18	00686113-v	BoundedEvent			Physical				Location										Motion	"make physical contact with, come in contact with; Touch the stone for good luck""; ""She never touched her husband""; ""The two buildings almost touch"""	
+trait 1	03282629-n	Property																	Static	a distinguishing feature of one's personal nature	attribute 1
+transfer 12	01266189-v	BoundedEvent	Agentive							Purpose		Possession							PossessionChange	cause to change ownership	
+travel 2	00166345-n	Dynamic	Agentive		Physical				Location	Purpose								movement	Motion	"the act of going from one place to another; ""he enjoyed selling but he hated the travel"""	change of location 1
+travel 5	01049627-v	Dynamic							Location										Motion	undergo transporation, as in a vehicle	go 14
+trouble 3	04692813-n	Dynamic	Stimulating	Experience															PhysicalChange	"an event causing distress or pain; ""what is the trouble?""; ""heart trouble"""	happening 1
+turn 22	01086483-v	Dynamic							Location										Motion	"change orientation or direction; ""Turn towards me"""	change position 1
+twelvemonth 1	09127492-n	BoundedEvent						Quantity								Time			Time	"a period of time containing 365 (or 366) days; ""she is 4 years old"""	amount of time 1
+understand 1	00330150-v	Property		Experience	Mental														MentalState	"know and comprehend the nature or meaning of; ""She did not understand her husband""; ""I understand what she means"""	
+union 9	08711637-n	Static																	Relation	the state of being united	state 1
+unit 6	08313335-n	Static						Quantity		Purpose			Usage	Social					Measure	"any division of quantity accepted as a standard of measurement or exchange; the dollar is the US unit of currency"" or ""a unit of wheat is a bushel"""""	definite quantity 1
+value 2	03564110-n	Property					Condition							Social					Static	"the quality (positive or negative) that renders something desirable or valuable; the Shakespearean Shylock is of dubious value in the modern world"""""	worth 1
+visual property 1	03460270-n	Property	Stimulating		Physical														PhysicalState		property 2
+vocalization 1	04599795-n	BoundedEvent	Stimulating		Physical														Sound	the sound made by the vibration of vocal folds modified by the resonance of the vocal tract	communication 1
+war 1	00540597-n	BoundedEvent	Agentive							Purpose				Social				conflict	Fighting	the waging of armed conflict against an enemy	action 2
+way 7	03930651-n	Property			Mental					Purpose									BCE	"doing as one pleases or chooses: ""if I had my way"""	choice 2
+wind 7	06529752-n	Dynamic	Phenomenal		Physical														WeatherPhenomenon	air moving (sometimes with considerable force) from an area of high pressure to an area of low pressure	atmospheric condition 1
+work 1	00337364-n	UnboundedEvent	Agentive							Purpose				Social				Work	Work	"activity directed toward making or doing something; she checked several points needing further work"""""	activity 1
+worth 1	03563866-n	Property					Condition							Social					Static	the quality that renders something desirable or valuable or useful	quality 1
+year 2	09125664-n	BoundedEvent						Quantity								Time		Science	Time	"the period of time that it takes for a planet (as, e.g., Earth or Mars) to make a complete revolution around the sun; ""a Martian year takes 687 of our days"""	amount of time 1
+year 4	09127774-n	BoundedEvent						Quantity								Time			Time	"a period of time occupying a regular part of a calendar year that is used for some particular activity; ""a school year"""	amount of time 1

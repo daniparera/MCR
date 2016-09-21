@@ -34,13 +34,12 @@ def buildTree(syn,level):
 if __name__ == '__main__':
 
 	argument_parser = argparse.ArgumentParser(
-		 prog='tree-blc.py',
+		 prog='show_synset_tree-blc.py',
 		 formatter_class=argparse.RawDescriptionHelpFormatter,
 		 description=textwrap.dedent('''\
-		 build tree of blcs
+		 show tree of blcs
 		 --------------------------------
-			 python tree-blc.py --blcsfile blcs.list --inputfile data.data --sonsfile sons.txt [[--synset synset]]
-			 example of use $python3 %(prog)s --blcsfile blcs.list --inputfile data.data --sonsfile sons.txt [[--synset synset]]
+			 example of use: $ python3 %(prog)s --blcsfile blcs.list --inputfile data.data --sonsfile sons.txt [[--synset synset]]
 		 '''))
 
 	argument_parser.add_argument('--blcsfile', dest='blcsfile', required=True, type=str , help='file of blcs (required)')

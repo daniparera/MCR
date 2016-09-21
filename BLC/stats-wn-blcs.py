@@ -57,8 +57,8 @@ if __name__ == '__main__':
 	     description=textwrap.dedent('''\
 		 Extract blcs statistical information from MCR
 		 --------------------------------
-		     python stats-wn-blcs.py --infile dict/wn30/data.noun --outfile data/wn.stats --sonsfile dict/wn30/sons_n.txt [--log]
-		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
+		     example of use: $ python3 %(prog)s --infile dict/wn30/data.noun --outfile data/wn.stats --sonsfile dict/wn30/sons_n.txt [--log]
+		                     $ python3 %(prog)s --infile dict/wn30/data.verb --outfile data/wn.stats --sonsfile dict/wn30/sons_v.txt [--log]
 		 '''))
 
 

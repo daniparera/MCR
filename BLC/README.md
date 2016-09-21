@@ -44,3 +44,8 @@ To verify that one synset has correct blcs assigned, we can use show_synset_tree
 python tree-blc.py --blcsfile out/wn30/freqmin20/all/BLCnoun --sonsfile dict/wn30/sons_n.txt --infile dict/wn30/data.noun --select 00001740-n
 ```
 
+To generate SQL for MCR:
+```
+python sqlBLC.py --inputfiles wn30/freqmin20/all/BLCnoun --inputfiles wn30/freqmin20/all/BLCverb
+```
+

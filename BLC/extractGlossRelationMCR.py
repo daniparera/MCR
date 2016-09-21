@@ -12,8 +12,7 @@ parserarg = argparse.ArgumentParser(
      description=textwrap.dedent('''\
          extract number of gloss's relations from MCR
          --------------------------------
-             python extractGlossRelationMCR.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 > glossRel.txt
-             example of use $python3 %(prog)s --host host --db database --user user --pwd password
+             example of use: $ python3 %(prog)s --host host --db database --user user --pwd password > outfile_glossRel.txt
          '''))
 
 parserarg.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
