@@ -21,8 +21,8 @@ if __name__ == '__main__':
 	     description=textwrap.dedent('''\
 		 extract synset-variants-csco tuples from MCR
 		 --------------------------------
-		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
-		     python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 [[--language spa-30]] [[--language cat-30]] [[...]]
+		     example of use: $ python3 %(prog)s --host host --db database --user user --pwd password [[--language spa-30]] [[--language cat-30]] [[...]]
+                     outfile directory: out/matrix-language_0.tab, one file for each language.
 		 '''))
 
 	argument_parser.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')

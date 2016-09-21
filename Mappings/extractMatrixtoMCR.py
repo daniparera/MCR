@@ -75,6 +75,7 @@ if __name__ == '__main__':
 
 	header = line.split()
 	lex_names = line.split()[3:]
+	print(lex_names)
 
 	# Initialize counters
 	cnt = {}
@@ -159,9 +160,9 @@ if __name__ == '__main__':
 
 			elif csco == 49 :
 
-				if ko:
-					select = '49_ko'
-				else:
+				#if ko:
+				#	select = '49_ko'
+				#else:
 					select = '49_ok'
 
 			elif csco >= 0 :
@@ -181,12 +182,15 @@ if __name__ == '__main__':
 			for idx,elem in enumerate(line.split()[3:]):
 				# if in other language is present in MCR, change csco 
 				if "_cl" in lex_names[idx] and float(elem) > 0:
-					ok = 1
-				# if in other language is present in resource and... 
-				elif "_cl" in lex_names[idx] and float(elem) < 0:
 					ok_lng = 1
-				# ... also is not in babelnet
-				elif lex_names[idx] != 'babelnet' and elem != '0':
+				# if in other language is present in resource and... 
+				#elif "_cl" in lex_names[idx] and float(elem) < 0:
+				#	ok_lng = 1
+
+				## ... also is not in babelnet
+				#elif lex_names[idx] != 'babelnet' and elem != '0':
+				#	ok_rcs = 1
+				elif elem != '0':
 					ok_rcs = 1
 
 			if ok or (ok_lng and ok_rcs):

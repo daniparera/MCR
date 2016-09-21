@@ -22,14 +22,14 @@ if __name__ == '__main__':
 	     description=textwrap.dedent('''\
 		 update synset-variant-csco matrix with new lexicon
 		 --------------------------------
-		     example of use $python3 %(prog)s --file_matrix matrix.txt --file_lexicon lexicon.txt --new_field_name field_name
+		     example of use: $ python3 %(prog)s --file_matrix matrix.txt --file_lexicon lexicon.txt --new_field_name field_name
 		     python updateMatrix.py --file_matrix out/matrix_eng-30.tab --file_lexicon data/wn-cldr-eng_clean.tab --new_field_name cldr
 		 '''))
 
 	argument_parser.add_argument('--file_matrix', dest='file_matrix', required=True, type=str , help='matrix\'s file (required)')
 	argument_parser.add_argument('--file_lexicon', dest='file_lexicon', required=True, type=str , help='resource lexicon\'s file (required)')
 	argument_parser.add_argument('--new_field_name', dest='nfn', required=True, type=str , help='new field name (required)')
-	argument_parser.add_argument('--cross_lingual', dest='cl', action='store_false', default='TRUE', help='to append only coincidence')
+	argument_parser.add_argument('--cross_lingual', dest='cl', action='store_false', default='True', help='to append only coincidence (optional)')
 
 	args = argument_parser.parse_args()
 	cl = not(bool(args.cl))

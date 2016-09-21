@@ -26,7 +26,7 @@ python3 updateMatrix.py --file_matrix out/matrix-spa-30_2.tab --file_lexicon dat
 python3 updateMatrix.py --file_matrix out/matrix-spa-30_3.tab --file_lexicon data/VariantsFromPM_spa.txt --new_field_name PM
 python3 updateMatrix.py --file_matrix out/matrix-spa-30_4.tab --file_lexicon data/wn-torevise-spa.txt --new_field_name torevise
 python3 updateMatrix.py --file_matrix out/matrix-spa-30_5.tab --file_lexicon data/ancora.spa --new_field_name ancora
-python3 updateMatrix.py --file_matrix out/matrix-spa-30_6.tab --file_lexicon data/babelnet.spa --new_field_name babelnet
+python3 updateMatrix.py --file_matrix out/matrix-spa-30_6.tab --file_lexicon data/wordnet-babelnet.es.v4.txt --new_field_name babelnet
 python3 updateMatrix.py --file_matrix out/matrix-spa-30_7.tab --file_lexicon data/fase1.txt --new_field_name fase1
 python3 updateMatrix.py --file_matrix out/matrix-spa-30_8.tab --file_lexicon data/fase2.txt --new_field_name fase2
 
@@ -39,7 +39,7 @@ python3 updateMatrix.py --file_matrix out/matrix-cat-30_3.tab --file_lexicon dat
 python3 updateMatrix.py --file_matrix out/matrix-cat-30_4.tab --file_lexicon data/wn-torevise-cat.txt --new_field_name torevise
 python3 updateMatrix.py --file_matrix out/matrix-cat-30_5.tab --file_lexicon data/revisats-cat.txt --new_field_name revisats
 python3 updateMatrix.py --file_matrix out/matrix-cat-30_6.tab --file_lexicon data/ancora.cat --new_field_name ancora
-python3 updateMatrix.py --file_matrix out/matrix-cat-30_7.tab --file_lexicon data/babelnet.cat --new_field_name babelnet
+python3 updateMatrix.py --file_matrix out/matrix-cat-30_7.tab --file_lexicon data/wordnet-babelnet.ca.v4.txt --new_field_name babelnet
 
 echo Update Galician Matrix with lexicon resources
 mv out/matrix-glg-30DB.tab out/matrix-glg-30_0.tab
