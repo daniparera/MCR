@@ -9,6 +9,17 @@ import pymysql
 
 from collections import defaultdict
 from collections import OrderedDict
+from collections import Counter
+
+def merge_dicts(*dict_args):
+    '''
+    Given any number of dicts, shallow copy and merge into a new dict,
+    precedence goes to key value pairs in latter dicts.
+    '''
+    result = {}
+    for dictionary in dict_args:
+        result.update(dictionary)
+    return result
 
 # to get POS correspondence in sense.index file
 def translation_ss_type(ss):
@@ -30,27 +41,27 @@ if __name__ == '__main__':
 	     prog='calculateSenses.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 calculate new variant's senses from MCR
+		 calculate variant's senses from MCR
 		 --------------------------------
-		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
-		     python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 [[--language spa-30]] [[--language cat-30]] [[...]]
+		     example of use: $ python3 %(prog)s --host host --db database --user user --pwd password --weight all+gloss --csco all --outdir output_dir [[--language spa-30]] [[--language cat-30]] [[...]] 
 		 '''))
 
-
-	argument_parser.add_argument('--relation', dest='relation', required=False, type=str , choices=['all','all+gloss','freq'], default='freq', help='relation type (optional, default freq)')
+	argument_parser.add_argument('--weight', dest='weight', required=False, type=str , choices=['all','gloss','all+gloss','freq','all+freq','gloss+freq','all+gloss+freq'], default='freq', help='weight type (optional, default freq)')
 	argument_parser.add_argument('--csco', dest='csco', required=False, type=str , choices=['visible','all'], default='all', help='filter by csco (optional, default all)')
 	argument_parser.add_argument('--log_files', dest='log_files', required=False, choices=['simple','detail','no'], default='no', help='create log files (optional, default no)')
 
-	argument_parser.add_argument('--datafile', dest='datafile', required=False, type=str , help='input data file (required for all and all+gloss relations options)')
-	argument_parser.add_argument('--sensefile', dest='sensefile', required=False, type=str , help='sense file (required for frequency option)')
-	argument_parser.add_argument('--glossfile', dest='glossfile', required=False, type=str , help='gloss file (required for all+gloss relations option)')
+	argument_parser.add_argument('--datafile', dest='datafile', required=False, type=str , help='input data file (required for all weight option)')
+	argument_parser.add_argument('--sensefile', dest='sensefile', required=False, type=str , help='sense file (required for frequency weight option)')
+	argument_parser.add_argument('--glossfile', dest='glossfile', required=False, type=str , help='gloss file (required for gloss weight option)')
 
 	argument_parser.add_argument('--host', dest='host_db', required=True, type=str , help='host url\'s database (required)')
 	argument_parser.add_argument('--user', dest='user_db', required=True, type=str , help='user\'s database (required)')
 	argument_parser.add_argument('--pwd', dest='pwd_db', required=True, type=str , help='password\'s database (required)')
 	argument_parser.add_argument('--db', dest='db_db', required=True, type=str , help='database\'s selection (required)')
 
-	argument_parser.add_argument('--language', dest='lng', action='append', required=False, type=str , help='language (default all, optional)')
+	argument_parser.add_argument('--outdir', dest='outdir', required=True, type=str , help='out directory (required)')
+
+	argument_parser.add_argument('--language', dest='lng', action='append', required=False, type=str , help='language (optional, default all)')
 
 	args = argument_parser.parse_args()
 
@@ -83,21 +94,25 @@ if __name__ == '__main__':
 
 	#################################################### LOAD DATA
 
-	relation_opt = args.relation
+	outdir = args.outdir
+
+	weight_opt = args.weight
 	csco = args.csco
 
 	datafile =  args.datafile
 	sensefile = args.sensefile
 	glossfile = args.glossfile
 
+	synsets_weight = {}
+
 	#################################################### LOAD SENSE FILE
 
-	if relation_opt == "freq" and sensefile is None:
-		print("Frequency relation option need sensefile.\n")
+	if weight_opt in ["freq","all+freq","gloss+freq","all+gloss+freq"] and sensefile is None:
+		print("Frequency weight option need sensefile.\n")
 		exit()
-	elif relation_opt == "freq":
+	elif weight_opt in ["freq","all+freq","gloss+freq","all+gloss+freq"]:
 
-		synsets_weight = {}
+		synsets_frequency = {}
 
 		print("Loading "+sensefile+"...\n")
 	
@@ -112,21 +127,23 @@ if __name__ == '__main__':
 
 			ss_type,lex_filenum,lex_id,head_word,head_id = lex_sense.split(':')
 
+			pos = translation_ss_type(ss_type)
+
 			try:
-				synsets_weight[synset_offset+'-'+translation_ss_type(ss_type)] = synsets_weight[synset_offset+'-'+translation_ss_type(ss_type)] + int(tag_cnt)
+				synsets_frequency[synset_offset+'-'+pos] = synsets_frequency[synset_offset+'-'+pos] + int(tag_cnt)
 			except KeyError:
-				synsets_weight[synset_offset+'-'+translation_ss_type(ss_type)] = int(tag_cnt)
+				synsets_frequency[synset_offset+'-'+pos] = int(tag_cnt)
 	
 		sfile.close()
 
 	#################################################### LOAD GLOSS FILE
 
-	if relation_opt == "all+gloss" and (glossfile is None or datafile is None):
-		print("all+gloss relation option need glossfile and datafile.\n")
+	if weight_opt in ["gloss","all+gloss","gloss+freq","all+gloss+freq"] and glossfile is None:
+		print("Gloss weight option need glossfile.\n")
 		exit()
-	elif relation_opt == "all+gloss":
+	elif weight_opt in ["gloss","all+gloss","gloss+freq","all+gloss+freq"]:
 
-		gloss_synsets = {}
+		synsets_gloss = {}
 
 		print("Loading "+glossfile+"...\n")
 	
@@ -137,18 +154,21 @@ if __name__ == '__main__':
 
 			synset_offset,rel_gloss = line.split()
 
-			gloss_synsets[synset_offset] = int(rel_gloss)
+			synsets_gloss[synset_offset] = int(rel_gloss)
 	
 		sfile.close()
 
 	#################################################### LOAD DATA FILE
 
-	if relation_opt == "all" and datafile is None:
-		print("all relation option need datafile.\n")
+	if weight_opt in ["all","all+gloss","all+freq","all+gloss+freq"] and datafile is None:
+		print("All weight option need datafile.\n")
 		exit()
-	elif relation_opt == "all+gloss" or relation_opt == "all":
+	elif weight_opt in ["all","all+gloss","all+freq","all+gloss+freq"]:
 
-		synsets_weight = {}
+# cal repensar lo de les diferent opcions i com tractarles de forma adecuada sense ometre que les pesos no quedin correctament carregats, ara tenim un munt més de posiblitats
+# potser cal distribuir la creacio de la array de pesosz
+
+		synsets_data = {}
 
 		files = [datafile+'.noun',datafile+'.verb',datafile+'.adj',datafile+'.adv']
 
@@ -175,23 +195,61 @@ if __name__ == '__main__':
 					else:
 						pos = datalist[2]
 
-					# WEIGHT RELATED TO RELATION OPTION
-					if relation_opt == "all+gloss":
-						weight = int(datalist[pointer])+gloss_synsets[str(datalist[0])+"-"+pos]
-					elif relation_opt == "all":
-						weight = int(datalist[pointer])
-	
-					# store synset's frequency list
-					synsets_weight[str(datalist[0])+"-"+pos] = weight
+					synsets_data[str(datalist[0])+"-"+pos] = int(datalist[pointer])	
 
 			sfile.close()
 
+	synsets_weight = {}
+
+	# WEIGHT RELATED TO weight OPTION	# store synset's weight list
+
+	if weight_opt == "all":
+		synsets_weight = synsets_data
+	elif weight_opt == "gloss":
+		synsets_weight = synsets_gloss
+	elif weight_opt == "freq":
+		synsets_weight = synsets_frequency
+	elif weight_opt == "all+gloss":
+		inp = [dict(x) for x in (synsets_data,synsets_gloss)]
+	elif weight_opt == "all+freq":
+		inp = [dict(x) for x in (synsets_data,synsets_frequency)]
+	elif weight_opt == "gloss+freq":
+		inp = [dict(x) for x in (synsets_gloss,synsets_frequency)]
+	elif weight_opt == "all+gloss+freq":
+		inp = [dict(x) for x in (synsets_data,synsets_gloss,synsets_frequency)]
+	else:
+		print("ERROR: not weight_opt present.\n")
+		exit()
+
+	if weight_opt in ['all+gloss','all+freq','gloss+freq','all+gloss+freq']:
+		synsets_weight = sum((Counter(y) for y in inp), Counter())
+
+	# create directories #####################
+
+	dirs = outdir.split('/')
+	acc_d = ''
+
+	for d in dirs:
+
+		acc_d = acc_d+d+"/"
+		if not os.path.exists(acc_d):
+			os.makedirs(acc_d)
+
+	acc_d = acc_d+"/"+weight_opt
+	if not os.path.exists(acc_d):
+		os.makedirs(acc_d)
+
+	if not os.path.exists(outdir+"_sql"):
+		os.makedirs(outdir+"_sql")
+
+	##########################################
+
 	# create output dir if not exists
-	if not os.path.exists('out'):
-		os.makedirs('out')
+	#if not os.path.exists('out'):
+	#	os.makedirs('out')
 
 	pos_list = ['n','v','a','r']
-	frequencies_dict = {}
+	order_dict = {}
 	words_dict = {}
 
 	# for each language, calculate new senses
@@ -203,7 +261,7 @@ if __name__ == '__main__':
 
 		for pos in pos_list:
 
-			frequencies_dict[pos] = defaultdict(dict)
+			order_dict[pos] = defaultdict(dict)
 			words_dict[pos] = defaultdict(dict)
 
 			if csco == 'visible':
@@ -213,7 +271,7 @@ if __name__ == '__main__':
 
 			rows = cur.fetchall()
 
-			# for each row in SQL result extract synset-variant tuple and assign frequency/weight to it.
+			# for each row in SQL result extract synset-variant tuple and assign weight to it.
 			for row in rows:
 
 				synset = "-".join(row['offset'].split("-")[-2:])
@@ -228,10 +286,10 @@ if __name__ == '__main__':
 					else:
 						words_dict[pos][word][synset] = 0
 
-			# step 1) for each word in dictionary order synsets by frequency value. step 2) for each ordered list (created in previous step) assign sense value
+			# step 1) for each word in dictionary order synsets by weight value. step 2) for each ordered list (created in previous step) assign sense value
 			for word,values_list in words_dict[pos].items():
-				frequencies_dict[pos][word] = OrderedDict(sorted(values_list.items(), key=lambda t: t[1], reverse=True))
-				for sense,synset in enumerate(frequencies_dict[pos][word].keys()):
+				order_dict[pos][word] = OrderedDict(sorted(values_list.items(), key=lambda t: t[1], reverse=True))
+				for sense,synset in enumerate(order_dict[pos][word].keys()):
 					senses_dict[word][synset] = sense+1
 
 		# order dictionary for logs, two levels of keys. Order first by inner key (synset) and later order by outer key (word)
@@ -241,12 +299,11 @@ if __name__ == '__main__':
 		ord_senses_dict = OrderedDict(sorted(ord_bysyn_senses_dict.items(), key=lambda t: t[0], reverse=False))
 
 		# create descriptor and write header to output file
-		output_file_sql = open('out/senses-'+relation_opt+'-'+lang+'.sql', "w")
-		output_file_sql.write("SET NAMES utf8;\n")
+		ofile_sql = open(outdir+"_sql/"+weight_opt+"-"+lang+".sql",'w')
+		ofile_sql.write("SET NAMES utf8;\n")
 
-		
 		if args.log_files != 'no':
-			output_file_log = open('out/senses-'+relation_opt+'-'+lang+'.tab', "w")
+			ofile_log = open(outdir+"/"+weight_opt+"/"+lang+".tab", "w")
 			#output_file_log.write('word\tsynset\tsense\n')
 
 		# for each synset-variant tuple write data to a output file
@@ -255,20 +312,20 @@ if __name__ == '__main__':
 
 				word_r = word.replace("'", "\\'")
 
-				output_file_sql.write("UPDATE `wei_"+lang+"_variant` SET `sense`="+str(sense)+" WHERE `offset` = '"+lang+"-"+synset+"' AND `word` LIKE '"+word_r+"';\n")
+				ofile_sql.write("UPDATE `wei_"+lang+"_variant` SET `sense`="+str(sense)+" WHERE `offset` = '"+lang+"-"+synset+"' AND `word` LIKE '"+word_r+"';\n")
 				if args.log_files != 'no':
-					output_file_log.write(word+'#'+synset+'\t'+str(sense)+'\n')
+					ofile_log.write(word+'#'+synset+'\t'+str(sense)+'\n')
 
 			if args.log_files == 'detail':
-				output_file_log.write("FREQUENCY LIST:\n")
+				ofile_log.write("FREQUENCY LIST:\n")
 				for pos in pos_list:
-					output_file_log.write("\tPOS "+pos+":\n")
-					output_file_log.write("\t\t"+str(frequencies_dict[pos][word])+"\n")
-				output_file_log.write("SENSES LIST\n")
-				output_file_log.write("\t"+str(senses_dict[word])+"\n\n")
-				output_file_log.write("============================================================================\n")
+					ofile_log.write("\tPOS "+pos+":\n")
+					ofile_log.write("\t\t"+str(order_dict[pos][word])+"\n")
+				ofile_log.write("SENSES LIST\n")
+				ofile_log.write("\t"+str(senses_dict[word])+"\n\n")
+				ofile_log.write("============================================================================\n")
 
-		output_file_sql.close()
+		ofile_sql.close()
 		if args.log_files != 'no':
-			output_file_log.close()
+			ofile_log.close()
 

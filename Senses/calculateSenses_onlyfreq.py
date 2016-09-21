@@ -30,10 +30,9 @@ if __name__ == '__main__':
 	     prog='calculateSenses_onlyfreq.py',
 	     formatter_class=argparse.RawDescriptionHelpFormatter,
 	     description=textwrap.dedent('''\
-		 extract synset-variants-csco tuples from MCR
+		 calculate variant's senses from MCR
 		 --------------------------------
-		     example of use $python3 %(prog)s --host host --db database --user user --pwd password
-		     python createMatrix.py --host adimen.si.ehu.es --user guest --pwd guest --db mcr9 [[--language spa-30]] [[--language cat-30]] [[...]]
+		     example of use: $ python3 %(prog)s --host host --db database --user user --pwd password --weight all+gloss --csco all --outdir output_dir --sensefile data/index.sense [[--language spa-30]] [[--language cat-30]] [[...]] 
 		 '''))
 
 	argument_parser.add_argument('--sensefile', dest='sensefile', required=False, type=str , help='sense file (required)')
@@ -143,7 +142,6 @@ if __name__ == '__main__':
 		# create descriptor and write header to output file
 		output_file_sql = open('out/senses-'+lang+'.sql', "w")
 		output_file_sql.write("SET NAMES utf8;\n")
-
 		if args.log_files:
 			output_file = open('out/senses-'+lang+'.tab', "w")
 			output_file.write('synset\tword\tsense\n')
