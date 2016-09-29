@@ -19,6 +19,13 @@ Dict datasets from Princeton WordNet web.
 https://wordnet.princeton.edu/wordnet/download/
 ```
 
+...or to easy and quickly use download already generated...
+
+```
+http://adimen.si.ehu.es/web/files/BLC-2016/dict.tar.gz
+```
+
+
 Script's execution
 -------
 
